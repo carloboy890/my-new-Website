@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,500;1,500&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --shadow-buttonShadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  --font-Jost: Jost, sans-serif;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+@keyframes pic-slide {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-pic-slide {
+  animation: pic-slide 0.8s ease-out forwards;
+}
+
+@keyframes uppertext-slide {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-upper-slide {
+  animation: uppertext-slide 0.8s ease-out forwards;
+}
+
+@keyframes lowertext-slide {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-lower-slide {
+  animation: lowertext-slide 0.8s ease-out forwards;
+}
+
+@keyframes pic-slide1 {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-pic-slide1 {
+  animation: pic-slide1 0.8s ease-out forwards;
+}
+
+@keyframes pic-slide2 {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-pic-slide2 {
+  animation: pic-slide2 0.8s ease-out forwards;
+}
+
+@keyframes sm-lg {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+.animate-sm-lg {
+  animation: sm-lg 0.8s ease-out forwards;
+}
+
+@keyframes line-expand {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.animate-line-expand {
+  animation: line-expand 0.8s ease-out forwards;
+}
+
+.line {
+  width: 0;
+  opacity: 0;
+  transition: width 0.4s ease-out, opacity 0.8s ease-out;
+}
+
+.line-container:hover .line {
+  width: 100%;
+  opacity: 1;
+}
+
+.fade {
+  opacity: 0.7;
+  transition: width 0.4s ease-out;
+}
+
+.fade-cont:hover .fade {
+  opacity: 1;
+}
+
+@keyframes arrow-forward {
+  from {
+    right: 180px;
+  }
+  to {
+    right: 160px;
+  }
+}
+.animate-arrow-forward {
+  animation: arrow-forward 1.5s ease-out infinite;
+}
+
+@keyframes arrow-backward {
+  from {
+    left: 180px;
+  }
+  to {
+    left: 160px;
+  }
+}
+.animate-arrow-backward {
+  animation: arrow-backward 1.5s ease-out infinite;
+}
+
+@layer components {
+  .hoverEffect {
+    @apply hover:scale-105 transition duration-300 ease-in-out cursor-pointer hover:bg-[rgba(255,255,255,0.05)];
+  }
+}

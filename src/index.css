@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,500;1,500&display=swap");
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* background-image: linear-gradient(to bottom right, #804a4e, #181e41);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 400vh; */
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(51, 50, 50));
+}
+
+@layer utilities {
+  .buttonColor {
+    background-image: linear-gradient(to bottom, #e9615e, #ec9956);
+  }
+}
+
+@theme {
+  --shadow-buttonShadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  --font-Jost: Jost, sans-serif;
+}

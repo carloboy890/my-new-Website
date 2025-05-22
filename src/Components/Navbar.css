@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,500;1,500&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --shadow-buttonShadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  --font-Jost: Jost, sans-serif;
+}

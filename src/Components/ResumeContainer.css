@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,500;1,500&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --shadow-buttonShadow: 5px 5px 10px rgba(233, 223, 223, 0.2);
+  --font-Jost: Jost, sans-serif;
+  --bg-body: linear-gradient(to right, rgb(0, 0, 0), rgb(51, 50, 50));
+}
+
+@keyframes popOut {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-pop-out {
+  animation: popOut 0.8s ease-out forwards;
+}
