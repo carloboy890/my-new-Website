@@ -28,7 +28,7 @@ const HomeContainer = () => {
       <div className="w-[10%]"></div>
       <div className="pt-30 w-[40%] font-Jost">
         <div className="fade-cont line-container animate-pic-slide w-[60%]">
-          <p className="fade text-[1.5rem] text-white ">
+          <p className="fade text-[1.5rem] text-white max-xl:text-[1.3rem]">
             Currently Available For Freelance Worldwide{" "}
             <span className="ml-5">
               <FontAwesomeIcon icon={faSquareArrowUpRight} />
@@ -38,22 +38,26 @@ const HomeContainer = () => {
         </div>
         <div
           id="homeText"
-          className="motion-safe:motion-fade-in w-[110%] scale-x-110 font-Jost ml-10 text-base/18 mt-[6rem] text-[3.5rem] text-white"
+          className="motion-safe:motion-fade-in w-[110%] max-xl:text-[3rem] scale-x-110 font-Jost ml-10 text-base/18 mt-[6rem] text-[3.5rem] text-white"
         >
-          <p className="text-[1.8rem] ">Hi! I'm</p>
+          <p className="text-[1.8rem] max-xl:text-[1.6rem]">Hi! I'm</p>
           <p className="animate-bounce">CARLO DAMALERIO,</p>
           <p>A JUNIOR FRONT-END DEVELOPER</p>
         </div>
         <div className="animate-pic-slide mt-10 flex">
           <div>
-            <img src={arrowView} alt="" />
+            <img
+              src={arrowView}
+              alt="arrowView"
+              className="max-xl:w-[100%] max-xl:h-[80px]"
+            />
           </div>
           <div className="">
             <div playback>
               <img
                 src={playButton}
                 alt="playButton"
-                className="h-[110px] w-[110px]"
+                className="h-[110px] w-[110px] max-xl:w-[90px] max-xl:h-[90px]"
               />
             </div>
           </div>
@@ -61,25 +65,13 @@ const HomeContainer = () => {
       </div>
       <div design index-1></div>
       <div className="animate-pic-slide2 relative w-[40%]">
-        <div className="absolute bottom-5 w-[48rem] h-[45rem]">
+        <div className="absolute bottom-5 w-[48rem] h-[45rem] max-xl:w-[42rem] max-xl:h-[45rem]">
           <img
             className="opacity-90 absolute left-[1px] w-[100rem] h-[55rem]"
             src={profilePic}
             alt="MyPic"
           />
         </div>
-      </div>
-      <div className="w-[10%] pt-65">
-        {/* <p className="font-Jost rotate-90 text-[1.4rem] text-white ml-25">
-          FOLLOW ME
-        </p>
-        <div className="">
-          <img className="w-30 h-40 ml-30.5 mt-15" src={Arrow} alt="Arrow" />
-        </div>
-        <div Fb Icon></div>
-        <div Twitter Icon></div>
-        <div Instagram Icon></div>
-        <div LinkedIn Icon></div> */}
       </div>
     </div>
   );
