@@ -4,16 +4,20 @@ const SmEdu = (props) => {
   return (
     <>
       <div className="animate-upper-slide text-justify h-[33.33%] pl-8 pr-8">
-        <div className="font-bold text-[1.4rem] max-xl:text-[1.1rem]">
+        <div className="font-bold text-[1.4rem] 
+        max-2xl:text-[1.1rem]">
           {props.title}
         </div>
-        <div className="mt-2 text-[1.2rem] max-xl:text-[1rem]">
+        <div className="mt-2 text-[1.2rem] 
+        max-2xl:text-[1rem]">
           {props.level}
         </div>
-        <div className="mt-1 text-[1.1rem] max-xl:text-[0.9rem]">
+        <div className="mt-1 text-[1.1rem] 
+        max-2xl:text-[0.9rem]">
           {props.course}
         </div>
-        <div className="mt-6 text-[1rem] max-xl:text-[0.8rem]">
+        <div className="mt-6 text-[1rem] 
+        max-2xl:text-[0.8rem] max-2xl:mt-3">
           {props.description}
         </div>
       </div>
