@@ -28,7 +28,7 @@ const AboutContainer = () => {
             max-2xl:mt-20"></div>
           </div>
           <div className="animate-pic-slide2 absolute bottom-21.5 left-29 h-[20%] w-[20%] 
-          max-2xl:left-33 max-2xl:bottom-27">
+            max-2xl:left-33 max-2xl:bottom-27">
             <div className="h-0.5 w-[100%] mt-40 ml-[-30px] bg-white 
             max-2xl:ml-[-80px]"></div>
             <div className="h-0.5 w-[100%] rotate-90 ml-[-164px] mt-[-150px] bg-white 
@@ -128,16 +128,16 @@ const AboutContainer = () => {
           <div className="animate-pic-slide1 absolute top-8.5 right-29 h-[20%] w-[20%] 
           max-2xl:right-32 max-2xl:top-3.5">
             <div className="h-0.5 w-[100%] mt-10 ml-[30px] bg-white 
-            max-2xl:ml-20"></div>
+          max-2xl:ml-20"></div>
             <div className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[164px] 
-            max-2xl:mt-20"></div>
+          max-2xl:mt-20"></div>
           </div>
           <div className="animate-pic-slide1 absolute bottom-21.5 right-29 h-[20%] w-[20%] 
           max-2xl:right-32 max-2xl:bottom-27">
             <div className="h-0.5 w-[100%] mt-40 ml-[30px] bg-white 
-            max-2xl:ml-20"></div>
+          max-2xl:ml-20"></div>
             <div className="h-0.5 w-[100%] rotate-90 ml-[164px] mt-[-150px] bg-white 
-            max-2xl:mt-[-88px]"></div>
+          max-2xl:mt-[-88px]"></div>
           </div>
         </div>
       </div>
