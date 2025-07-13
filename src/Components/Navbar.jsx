@@ -10,30 +10,28 @@ const Navbar = () => {
       <div className="w-[18%]">
         <Link to="/" className="justify-end flex"></Link>
       </div>
-      <ul className="z-50 justify-end w-[64%] text-shadow-lg/30 list-none font-[500] flex space-x-25 text-[18px] pt-4">
+      <ul className="z-50 justify-end w-[64%] text-shadow-lg/30 list-none font-[500] flex space-x-25 text-[18px] pt-4 max-xl:text-[1rem]">
         <li className="fade-cont line-container relative inline-block">
           <Link to="/" className="inline-block">
-            <span className="fade text-white max-xl:text-[1.1rem]">HOME</span>
+            <span className="fade text-white">HOME</span>
             <span className="line absolute left-0 -bottom-1 h-[2px] bg-white"></span>
           </Link>
         </li>
         <li className="fade-cont line-container relative inline-block">
           <Link to="/about" className="inline-block">
-            <span className="fade text-white max-xl:text-[1.1rem]">ABOUT</span>
+            <span className="fade text-white">ABOUT</span>
             <span className="line absolute left-0 -bottom-1 h-[2px] bg-white"></span>
           </Link>
         </li>
         <li className="fade-cont line-container relative inline-block">
           <Link to="/resume" className="inline-block">
-            <span className="fade text-white max-xl:text-[1.1rem]">RESUME</span>
+            <span className="fade text-white">RESUME</span>
             <span className="line absolute left-0 -bottom-1 h-[2px] bg-white"></span>
           </Link>
         </li>
         <li className="fade-cont line-container relative inline-block">
           <Link to="/contact" className="inline-block">
-            <span className="fade text-white max-xl:text-[1.1rem]">
-              CONTACT
-            </span>
+            <span className="fade text-white">CONTACT</span>
             <span className="line absolute left-0 -bottom-1 h-[2px] bg-white"></span>
           </Link>
         </li>

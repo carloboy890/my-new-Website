@@ -16,13 +16,13 @@ const ModalExperience = ({ title, onClose, children }) => {
         >
           <FontAwesomeIcon icon={faTimes} />
         </button>
-        <div className="animate-pic-slide2 absolute top-[-110px] left-0 h-[20%] w-[20%]">
-          <div className=" h-1 w-[100%] mt-10 ml-[5px] bg-white"></div>
-          <div className="h-1 w-[100%] bg-white rotate-90 mt-36.5 ml-[-164px]"></div>
+        <div className="animate-pic-slide2 absolute top-8.5 left-29 h-[20%] w-[20%] max-xl:left-33">
+          <div className="h-0.5 w-[100%] mt-10 ml-[-30px] bg-white max-xl:ml-[-80px]"></div>
+          <div className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[-164px] max-xl:mt-20"></div>
         </div>
-        <div className="animate-pic-slide2 absolute bottom-[-50px] left-0 h-[20%] w-[20%]">
-          <div className="h-1 w-[100%] mt-40 bg-white"></div>
-          <div className="h-1 w-[100%] rotate-90 ml-[-164px] mt-[-150px] bg-white"></div>
+        <div className="animate-pic-slide2 absolute bottom-21.5 left-29 h-[20%] w-[20%] max-xl:left-33">
+          <div className="h-0.5 w-[100%] mt-40 ml-[-30px] bg-white max-xl:ml-[-80px]"></div>
+          <div className="h-0.5 w-[100%] rotate-90 ml-[-164px] mt-[-150px] bg-white max-xl:-mt-22"></div>
         </div>
         <div className="relative">{children}</div>
       </div>

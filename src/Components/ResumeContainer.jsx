@@ -11,8 +11,6 @@ import { useNavigate } from "react-router-dom";
 function ResumeContainer(props) {
   const navigate = useNavigate();
   const [openPic, setOpenPic] = useState(false);
-  const [openAbout, setOpenAbout] = useState(false);
-  const [openEducation, setOpenEducation] = useState(false);
   const [openExperience, setOpenExperience] = useState(false);
 
   return (
@@ -20,12 +18,12 @@ function ResumeContainer(props) {
       <div className="overflow-hidden relative w-[100%] h-screen bg-transparent bg-body flex justify-center items-center border-white font-Jost">
         <div className="mb-10 w-[85%] h-[80vh] bg-black/50 flex items-center border-white">
           <div className="animate-pic-slide border-white w-[40%] h-[100%] space-y-10">
-            <div className="text-white text-[4rem] font-bold text-center mt-10">
+            <div className="text-white text-[4rem] font-bold text-center mt-10 max-xl:mt-15 max-xl:text-[3rem]">
               RESUME
             </div>
             <div
               onClick={() => setOpenPic(true)}
-              className="hover:shadow-buttonShadow cursor-pointer border-3 border-white h-[60%] w-[70%] rounded-[100%] ml-[15%]"
+              className="max-xl:h-[50%] max-xl:w-[90%] max-xl:ml-10 max-xl:mt-20 hover:shadow-buttonShadow cursor-pointer border-3 border-white h-[60%] w-[70%] rounded-[100%] ml-[15%]"
             >
               <img
                 src={prof2}
@@ -77,10 +75,6 @@ function ResumeContainer(props) {
                 }}
               />
             ))}
-            {/* {openAbout && <AboutModal onClose={() => setOpenAbout(false)} />} */}
-            {/* {openEducation && (
-              <ModalEducation onClose={() => setOpenEducation(false)} />
-            )} */}
             {openExperience && (
               <ModalExperience onClose={() => setOpenExperience(false)}>
                 <Experience />
