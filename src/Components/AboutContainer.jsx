@@ -20,19 +20,31 @@ const AboutContainer = () => {
           >
             ×
           </button>
-          <div className="animate-pic-slide2 absolute top-8.5 left-29 h-[20%] w-[20%] 
-            max-2xl:left-33 max-2xl:top-3.5">
-            <div className="h-0.5 w-[100%] mt-10 ml-[-30px] bg-white 
-            max-2xl:ml-[-80px]"></div>
-            <div className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[-164px] 
-            max-2xl:mt-20"></div>
+          <div
+            className="animate-pic-slide2 absolute top-8.5 left-29 h-[20%] w-[20%] 
+            max-2xl:invisible"
+          >
+            <div
+              className="h-0.5 w-[100%] mt-10 ml-[-30px] bg-white 
+            max-2xl:invisible"
+            ></div>
+            <div
+              className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[-164px] 
+            max-2xl:invisible"
+            ></div>
           </div>
-          <div className="animate-pic-slide2 absolute bottom-21.5 left-29 h-[20%] w-[20%] 
-            max-2xl:left-33 max-2xl:bottom-27">
-            <div className="h-0.5 w-[100%] mt-40 ml-[-30px] bg-white 
-            max-2xl:ml-[-80px]"></div>
-            <div className="h-0.5 w-[100%] rotate-90 ml-[-164px] mt-[-150px] bg-white 
-            max-2xl:-mt-22"></div>
+          <div
+            className="animate-pic-slide2 absolute bottom-21.5 left-29 h-[20%] w-[20%] 
+            max-2xl:invisible"
+          >
+            <div
+              className="h-0.5 w-[100%] mt-40 ml-[-30px] bg-white 
+            max-2xl:invisible"
+            ></div>
+            <div
+              className="h-0.5 w-[100%] rotate-90 ml-[-164px] mt-[-150px] bg-white 
+            max-2xl:invisible"
+            ></div>
           </div>
           <div className="animate-sm-lg w-[40%] h-[100%] flex justify-center items-center">
             <img
@@ -43,19 +55,24 @@ const AboutContainer = () => {
             />
           </div>
           <div
-            className="w-[60%] h-[100%] text-white pr-[5%] pl-[5%] "
+            className="w-[60%] h-[100%] text-white pr-[5%] pl-[5%]
+            max-2xl:mt-30"
             desc
             cont
           >
             <div className="animate-sm-lg">
               <div cont className="mt-[5%]">
-                <div className="text-[3rem] font-bold 
-                max-2xl:text-[2rem]">
+                <div
+                  className="text-[3rem] font-bold 
+                max-2xl:text-[2rem]"
+                >
                   ABOUT ME
                 </div>
               </div>
-              <div className="flex space-x-4 font-bold text-[1.3rem] mt-[3%] mb-[4%] 
-              max-2xl:text-[1rem] max-2xl:mb-[3%]">
+              <div
+                className="flex space-x-4 font-bold text-[1.3rem] mt-[3%] mb-[4%] 
+              max-2xl:text-[1rem] max-2xl:mb-[3%]"
+              >
                 <div age>28 years</div>
                 <div>/</div>
                 <div fulltime>Full-Time</div>
@@ -83,8 +100,11 @@ const AboutContainer = () => {
                 most of the time playing video games in my game room
               </div>
             </div>
-            <div line className="animate-sm-lg h-0.5 border-1 mb-8 
-            max-2xl:mb-2"></div>
+            <div
+              line
+              className="animate-sm-lg h-0.5 border-1 mb-8 
+            max-2xl:mb-2"
+            ></div>
             <div className="animate-sm-lg">
               <div
                 title
@@ -95,12 +115,17 @@ const AboutContainer = () => {
               </div>
               <div cont className="flex justify-between">
                 <div cont1 className="w-[40%] p-3 max-2xl:h-[10%]">
-                  <div className="w-13 h-13 bg-transparent mb-6 
-                  max-2xl:w-7 max-2xl:h-7">
+                  <div
+                    className="w-13 h-13 bg-transparent mb-6 
+                  max-2xl:w-7 max-2xl:h-7"
+                  >
                     <img src={UIUX} alt="UI/UX" />
                   </div>
-                  <div title className="font-bold mb-3 
-                  max-2xl:text-[0.9rem] max-2xl:mb-2">
+                  <div
+                    title
+                    className="font-bold mb-3 
+                  max-2xl:text-[0.9rem] max-2xl:mb-2"
+                  >
                     UI/UX DESIGN
                   </div>
                   <div className="max-2xl:text-[0.8rem]">
@@ -109,12 +134,16 @@ const AboutContainer = () => {
                   </div>
                 </div>
                 <div className="w-[40%] p-3">
-                  <div className="w-13 h-13 mb-6 
-                  max-2xl:w-7 max-2xl:h-7">
+                  <div
+                    className="w-13 h-13 mb-6 
+                  max-2xl:w-7 max-2xl:h-7"
+                  >
                     <img src={responsiveDes} alt="Responsive Design" />
                   </div>
-                  <div className="font-bold mb-3 
-                  max-2xl:text-[0.9rem] max-2xl:mb-2">
+                  <div
+                    className="font-bold mb-3 
+                  max-2xl:text-[0.9rem] max-2xl:mb-2"
+                  >
                     RESPONSIVE WEB DESIGN
                   </div>
                   <div className="max-2xl:text-[0.8rem]">
@@ -125,19 +154,31 @@ const AboutContainer = () => {
               </div>
             </div>
           </div>
-          <div className="animate-pic-slide1 absolute top-8.5 right-29 h-[20%] w-[20%] 
-          max-2xl:right-32 max-2xl:top-3.5">
-            <div className="h-0.5 w-[100%] mt-10 ml-[30px] bg-white 
-          max-2xl:ml-20"></div>
-            <div className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[164px] 
-          max-2xl:mt-20"></div>
+          <div
+            className="animate-pic-slide1 absolute top-8.5 right-29 h-[20%] w-[20%] 
+          max-2xl:invisible"
+          >
+            <div
+              className="h-0.5 w-[100%] mt-10 ml-[30px] bg-white 
+          max-2xl:invisible"
+            ></div>
+            <div
+              className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[164px] 
+          max-2xl:invisible"
+            ></div>
           </div>
-          <div className="animate-pic-slide1 absolute bottom-21.5 right-29 h-[20%] w-[20%] 
-          max-2xl:right-32 max-2xl:bottom-27">
-            <div className="h-0.5 w-[100%] mt-40 ml-[30px] bg-white 
-          max-2xl:ml-20"></div>
-            <div className="h-0.5 w-[100%] rotate-90 ml-[164px] mt-[-150px] bg-white 
-          max-2xl:mt-[-88px]"></div>
+          <div
+            className="animate-pic-slide1 absolute bottom-21.5 right-29 h-[20%] w-[20%] 
+          max-2xl:invisible"
+          >
+            <div
+              className="h-0.5 w-[100%] mt-40 ml-[30px] bg-white 
+          max-2xl:invisible"
+            ></div>
+            <div
+              className="h-0.5 w-[100%] rotate-90 ml-[164px] mt-[-150px] bg-white 
+          max-2xl:invisible"
+            ></div>
           </div>
         </div>
       </div>

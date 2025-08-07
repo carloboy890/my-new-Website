@@ -50,17 +50,23 @@ const SkillsContainer = () => {
     <HomeDesign>
       <div className="text-white w-[90%] mr-auto ml-auto h-screen border-white font-Jost flex justify-center items-center">
         <div
-          className=" h-[90vh] w-[80%] bg-black/50 overflow-scroll"
+          className="relative h-[90vh] w-[80%] bg-black/50 overflow-scroll"
           ref={scrollRef}
         >
           <button
             onClick={() => navigate("/resume")}
-            className="animate-fade-in absolute top-16 right-73 z-50 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition"
+            className="animate-fade-in absolute top-5 right-10 z-50 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition
+            max-2xl:text-2xl"
           >
             ×
           </button>
           <div className="w-full animate-pic-slide">
-            <div className="font-bold text-center text-[5rem] mb-2">SKILLS</div>
+            <div
+              className="font-bold text-center text-[5rem] mb-2
+            max-2xl:text-[3.5rem]"
+            >
+              SKILLS
+            </div>
             <div className="h-0.5 bg-white mr-auto ml-auto w-60 right-0"></div>
           </div>
 
@@ -69,7 +75,8 @@ const SkillsContainer = () => {
               <img
                 src={facingComp}
                 alt="facingComp"
-                className="h-[430px] w-[430px] ml-10"
+                className="h-[430px] w-[430px] ml-10
+                max-2xl:h-[300px]"
               />
             </div>
 
@@ -78,11 +85,16 @@ const SkillsContainer = () => {
                 <img
                   src={skillLogo}
                   alt="skillLogo"
-                  className="w-[110px] h-[110px]"
+                  className="w-[110px] h-[110px]
+                  max-2xl:w-[70px] 
+                  max-2xl:h-[70px]"
                 />
               </div>
 
-              <div className="text-[1.3rem] text-justify leading-10">
+              <div
+                className="text-[1.3rem] text-justify leading-10 
+              max-2xl:text-[1rem]"
+              >
                 A Front End Developer crafts the user-facing aspects of websites
                 and applications, ensuring a seamless and engaging experience
                 for users. They use programming languages like HTML, CSS, and
@@ -93,11 +105,16 @@ const SkillsContainer = () => {
               </div>
 
               {showDownArrow && (
-                <div className="min-h-[100px] mt-8 flex justify-center">
+                <div
+                  className="min-h-[100px] mt-8 flex justify-center
+                max-2xl:mt-15"
+                >
                   <img
                     src={arrowDown}
                     alt="arrowDown"
-                    className="animate-bounce h-[100px] w-[100px] mr-100 mt-10"
+                    className="animate-bounce h-[100px] w-[100px] mr-100 mt-10
+                    max-2xl:h-[80px] 
+                    max-2xl:w-[80px]"
                   />
                 </div>
               )}

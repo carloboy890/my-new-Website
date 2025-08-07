@@ -36,7 +36,7 @@ const SkillCardDesc = [
   {
     id: 3,
     logo: javascriptLogo,
-    circleAnimation: circle70,
+    circleAnimation: circle80,
     title: "JAVASCRIPT",
     description:
       "JavaScript is a scripting or programming language that allows you to implement complex features on web pages.",

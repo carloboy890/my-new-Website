@@ -27,10 +27,14 @@ const HomeContainer = () => {
     <div className="animate-fade-in relative h-[76.5vh] flex w-[100%] text-white">
       <div className="w-[10%]"></div>
       <div className="pt-30 w-[40%] font-Jost">
-        <div className="fade-cont line-container animate-pic-slide w-[60%]
-        max-2xl:w-[]">
-          <p className="fade text-[1.5rem]text-white 
-          max-2xl:text-[1.3rem]">
+        <div
+          className="fade-cont line-container animate-pic-slide w-[60%]
+        max-2xl:w-[]"
+        >
+          <p
+            className="fade text-[1.5rem]text-white 
+          max-2xl:text-[1.3rem]"
+          >
             Currently Available For Freelance Worldwide{" "}
             <span className="ml-5">
               <FontAwesomeIcon icon={faSquareArrowUpRight} />
@@ -43,8 +47,12 @@ const HomeContainer = () => {
           className="motion-safe:motion-fade-in w-[110%] scale-x-110 font-Jost ml-10 text-base/18 mt-[6rem] text-[3.5rem] text-white
             max-2xl:w-[80%] max-2xl max-2xl:text-[2rem] max-2xl:text-base/13"
         >
-          <p className="text-[1.8rem] 
-          max-2xl:text-[1.6rem]">Hi! I'm</p>
+          <p
+            className="text-[1.8rem] 
+          max-2xl:text-[1.6rem]"
+          >
+            Hi! I'm
+          </p>
           <p className="animate-bounce">CARLO DAMALERIO,</p>
           <p>A JUNIOR FRONT-END DEVELOPER</p>
         </div>
@@ -70,8 +78,10 @@ const HomeContainer = () => {
       </div>
       <div design index-1></div>
       <div className="animate-pic-slide2 relative w-[40%]">
-        <div className="absolute bottom-5 w-[48rem] h-[45rem] 
-        max-2xl:w-[42rem] max-2xl:h-[45rem]">
+        <div
+          className="absolute bottom-5 w-[48rem] h-[45rem] 
+        max-2xl:w-[42rem] max-2xl:h-[45rem]"
+        >
           <img
             className="opacity-90 absolute left-[1px] w-[100rem] h-[55rem]"
             src={profilePic}
