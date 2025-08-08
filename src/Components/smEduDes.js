@@ -17,7 +17,7 @@ const smEduDes = [
   },
   {
     id: 3,
-    title: "SAINT THOMAS AQUINAS COLLEGE",
+    title: "UDEMY ONLINE COURSE",
     level: "Front-End Development",
     course: "WEB DEVELOPMENT BOOTCAMP",
     description:

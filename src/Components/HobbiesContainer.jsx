@@ -11,11 +11,16 @@ const HobbiesContainer = ({ onClose }) => {
   return (
     <HomeDesign>
       <div className="animate-fade-in relative text-white w-[100%] mr-auto ml-auto h-screen border-white font-Jost flex justify-center items-center">
-        <div className=" mb-10 w-[85%] h-[80vh] bg-black/50 ">
+        <div
+          className=" mb-10 w-[85%] h-[80vh] bg-black/50
+        max-2xl:h-[75vh]
+        max-xl:h-[70vh]"
+        >
           <button
             onClick={() => navigate("/resume")}
-            className="absolute top-25 right-44 z-50 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition
-            max-2xl:"
+            className="absolute top-25 right-44 z-50 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition 
+            max-2xl:top-32
+            max-xl:top-38 max-xl:right-35"
           >
             ×
           </button>
@@ -23,27 +28,15 @@ const HobbiesContainer = ({ onClose }) => {
             className="animate-pic-slide2 absolute top-8.5 left-29 h-[20%] w-[20%] 
             max-2xl:invisible"
           >
-            <div
-              className="h-0.5 w-[100%] mt-10 ml-[-30px] bg-white 
-            max-2xl:invisible"
-            ></div>
-            <div
-              className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[-164px] 
-            max-2xl:invisible"
-            ></div>
+            <div className="h-0.5 w-[100%] mt-10 ml-[-30px] bg-white"></div>
+            <div className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[-164px]"></div>
           </div>
           <div
             className="animate-pic-slide2 absolute bottom-21.5 left-29 h-[20%] w-[20%] 
             max-2xl:invisible"
           >
-            <div
-              className="h-0.5 w-[100%] mt-40 ml-[-30px] bg-white 
-            max-2xl:invisible"
-            ></div>
-            <div
-              className="h-0.5 w-[100%] rotate-90 ml-[-164px] mt-[-150px] bg-white 
-            max-2xl:invisible"
-            ></div>
+            <div className="h-0.5 w-[100%] mt-40 ml-[-30px] bg-white"></div>
+            <div className="h-0.5 w-[100%] rotate-90 ml-[-164px] mt-[-150px] bg-white"></div>
           </div>
           <div sm cont className="h-[30%] w-[100%]">
             <div cont>

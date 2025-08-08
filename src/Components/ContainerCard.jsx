@@ -13,33 +13,46 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
         className="relative w-full h-screen text-white flex justify-center items-center font-Jost"
         onClick={onClick}
       >
-        <div className="mb-10 w-[85%] h-[80vh] bg-black/50">
+        <div
+          className="mb-10 w-[85%] h-[80vh] bg-black/50 
+        max-2xl:h-[75vh]"
+        >
           <button
             onClick={() => navigate("/resume")}
-            className="animate-fade-in absolute top-26 right-230 z-50 text-white text-5xl font-bold px-3 rounded hover:bg-white/10 transition"
+            className="animate-fade-in absolute top-26 right-230 z-50 text-white text-4xl font-bold px-3 rounded hover:bg-white/10 transition \
+            max-2xl:text-3xl max-2xl:top-33 max-2xl:right-185
+            max-xl:right-150"
           >
             ×
           </button>
-          <div className="animate-pic-slide2 absolute top-8.5 left-29 h-[20%] w-[20%] max-xl:left-33">
-            <div className="h-0.5 w-[100%] mt-10 ml-[-30px] bg-white max-xl:ml-[-80px]"></div>
-            <div className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[-164px] max-xl:mt-20"></div>
+          <div className="animate-pic-slide2 absolute top-8.5 left-29 h-[20%] w-[20%] max-2xl:invisible">
+            <div className="h-0.5 w-[100%] mt-10 ml-[-30px] bg-white"></div>
+            <div className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[-164px]"></div>
           </div>
-          <div className="animate-pic-slide2 absolute bottom-21.5 left-29 h-[20%] w-[20%] max-xl:left-33">
-            <div className="h-0.5 w-[100%] mt-40 ml-[-30px] bg-white max-xl:ml-[-80px]"></div>
-            <div className="h-0.5 w-[100%] rotate-90 ml-[-164px] mt-[-150px] bg-white max-xl:-mt-22"></div>
+          <div className="animate-pic-slide2 absolute bottom-21.5 left-29 h-[20%] w-[20%] max-2xl:invisible">
+            <div className="h-0.5 w-[100%] mt-40 ml-[-30px] bg-white"></div>
+            <div className="h-0.5 w-[100%] rotate-90 ml-[-164px] mt-[-150px] bg-white"></div>
           </div>
           <div className="w-[100%] h-[14%] pl-10 pr-10 pt-10">
             <div className="animate-sm-lg flex justify-between">
-              <div className="max-xl:text-[2rem] text-[2.5rem] font-bold mb-3">
+              <div
+                className="text-[2.5rem] font-bold mb-3 
+              max-2xl:text-[2rem]
+              max-xl:text-[1.6rem]"
+              >
                 {props.title}
               </div>
-              <div className="max-xl:text-[2rem] text-[2.5rem] font-bold">
+              <div
+                className="text-[2.5rem] font-bold 
+              max-2xl:text-[2rem]
+              max-xl:text-[1.6rem]"
+              >
                 {props.number}
               </div>
             </div>
             <div className="animate-sm-lg w-[100%] border-1 mr-auto ml-auto"></div>
           </div>
-          <div sm cont className="relative w-[100%] h-[86%] flex">
+          <div sm cont className="w-[100%] h-[86%] flex">
             {props.id !== 1 && (
               <div left arrow className="z-5 animate-fade-in w-[5%] h-[100%]">
                 <img
@@ -49,27 +62,31 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
                     e.stopPropagation();
                     onArrowLeft?.();
                   }}
-                  className="max-xl:h-[40px] max-xl:w-[40px] max-xl:left-[-180px] h-[60px] w-[60px] mt-60 absolute left-40 cursor-pointer animate-arrow-backward"
+                  className="h-[60px] w-[60px] mt-60 absolute cursor-pointer animate-arrow-backward
+                  max-2xl:h-[40px] max-2xl:w-[40px]"
                 />
               </div>
             )}
             <div
               logo
-              className={` border-1 max-xl:w-[20%] animate-sm-lg w-[20%] h-[100%] flex justify-center items-center ${
-                props.isId2 ? "max-xl:w-[5%]" : "w-[26%]"
-              }`}
+              className={`animate-sm-lg w-[20%] h-[100%] flex justify-center items-center
+                max-2xl:w-[25%] ${props.isId2 ? "max-xl:w-[5%]" : "w-[26%]"}`}
             >
               {props.id !== 2 && (
                 <img
                   src={props.logo}
                   alt={props.company + " logo"}
                   className={`w-[60%] mr-8 ${
-                    props.isId2 ? "max-xl:w-[10%]" : ""
-                  }`}
+                    props.isId2 ? "max-2xl:w-[10%]" : ""
+                  } ${props.isId3 ? "max-xl:ml-35 max-xl:mt-[-40px]" : null}`}
                 />
               )}
             </div>
-            <div line className="animate-sm-lg w-[1%] h-[100%] mt-11">
+            <div
+              line
+              className="animate-sm-lg w-[1%] h-[95%] mt-11 
+            max-xl:invisible"
+            >
               <div className="w-[30px] h-[30px] ml-[-25px] mt-1 bg-white rounded-full"></div>
               <div
                 className={`border-r2 w-[20%] bg-white ml-[-12px] ${
@@ -77,18 +94,26 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
                 } `}
               ></div>
             </div>
-            <div className="border-1 animate-sm-lg h-[100%] w-[60%] pt-10 pl-4 pr-4">
+            <div
+              className={`animate-sm-lg h-[100%] w-[60%] pt-10 pl-4 pr-4
+            max-2xl:pt-11
+            ${props.isId2 ? "max-xl:ml-22 max-xl:mt-4" : null} ${
+                props.isId3 ? "max-xl:ml-8 max-xl:mt-5" : null
+              }`}
+            >
               <div cont>
                 <div
                   title
-                  className="max-xl:text-[1.5rem] text-[2rem] font-bold"
+                  className="text-[1.8rem] font-bold 
+                  max-2xl:text-[1.5rem]"
                 >
                   {" "}
                   {props.company}
                 </div>
                 <div
                   work
-                  className="max-xl:text-[1.1rem] flex space-x-4 text-[1.5rem] mt-[3%] mb-[2.5%]"
+                  className="flex space-x-4 text-[1.3rem] mt-[2%] mb-[2%] 
+                  max-2xl:text-[1.1rem]"
                 >
                   <div>{props.job}</div>
                   {props.id !== 2 && (
@@ -102,29 +127,41 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
                 </div>
                 <div
                   date
-                  className={`max-xl:text-[1.1rem] text-[1.5rem] mb-[5%] ${
-                    props.isId1 ? "max-xl:mb-[10%]" : ""
-                  }`}
+                  className={`text-[1.2rem] mb-[3%]
+                    max-2xl:text-[0.9rem] ${props.isId1 ? "max-xl:mb-6" : ""}`}
                 >
                   {props.date}
                 </div>
                 <div
-                  desc
-                  className="max-xl:text-[1rem] text-[1.1rem] text-justify mb-10"
+                  className="text-[1rem] text-justify mb-10
+                  max-xl:mb-6
+                max-2xl:text-[0.9rem]"
                 >
-                  {props.description}
+                  {props.description.split("\n").map((line, index) => (
+                    <p key={index} className="mb-4">
+                      {line}
+                    </p>
+                  ))}
                 </div>
-                <div line className="h-0.5 border-1 mb-10"></div>
+                <div
+                  line
+                  className="h-0.5 border-1 mb-10
+                max-xl:mb-6"
+                ></div>
               </div>
               <div cont className="flex justify-between">
                 <div skill cont>
-                  <div className=" max-xl:text-[1.2rem] font-bold text-[1.5rem] mb-6">
+                  <div
+                    className="font-bold text-[1.5rem] mb-6 
+                  max-2xl:text-[1.3rem]"
+                  >
                     {props.skillTitle}
                   </div>
                   <ul
-                    className={`max-xl:text-[0.8rem] list-disc ml-5 space-y-2 text-[0.9rem] ${
-                      props.isId2 || props.isId3 ? "space-y-6" : ""
-                    }`}
+                    className={`list-disc ml-5 space-y-2 text-[0.9rem] 
+                      max-2xl:text-[0.8rem] ${
+                        props.isId2 || props.isId3 ? "space-y-4" : ""
+                      }`}
                   >
                     {props.li1 && <li>{props.li1}</li>}
                     {props.li2 && <li>{props.li2}</li>}
@@ -133,13 +170,17 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
                   </ul>
                 </div>
                 <div software cont>
-                  <div className="max-xl:text-[1.2rem] font-bold text-[1.5rem] mb-6">
+                  <div
+                    className="font-bold text-[1.5rem] mb-6 
+                  max-2xl:text-[1.3rem]"
+                  >
                     {props.softwareTitle}
                   </div>
                   <ul
-                    className={`max-xl:text-[0.8rem] list-disc ml-5 space-y-2 text-[0.9rem] ${
-                      props.isId2 || props.isId3 ? "mt-12 space-y-8" : ""
-                    } `}
+                    className={`list-disc ml-5 space-y-2 text-[0.9rem] 
+                      max-2xl:text-[0.8rem] ${
+                        props.isId2 || props.isId3 ? "mt-12 space-y-4" : ""
+                      } `}
                   >
                     {props.li5 && <li>{props.li5}</li>}
                     {props.li6 && <li>{props.li6}</li>}
@@ -149,7 +190,7 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
               </div>
             </div>
             {props.id !== 3 && (
-              <div className="relative h-[100%] w-[9%] animate-fade-in">
+              <div className="h-[100%] w-[9%] animate-fade-in left-10">
                 <img
                   src={RightArrow}
                   alt="Right Arrow"
@@ -157,19 +198,25 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
                     e.stopPropagation();
                     onArrowRight?.();
                   }}
-                  className={`max-xl:h-[40px] max-xl:w-[40px] h-[60px] z-5 w-[60px] right-[500px] max-xl:right-5 mt-60 absolute cursor-pointer animate-arrow-forward
-                  `}
+                  className={`h-[60px] absolute z-5 w-[60px] mt-60 ml-20 cursor-pointer animate-arrow-forward 
+                    max-2xl:h-[40px] max-2xl:w-[40px]`}
                 />
               </div>
             )}
           </div>
-          <div className="animate-pic-slide absolute top-8.5 right-29 h-[20%] w-[20%] max-xl:right-33">
-            <div className=" h-0.5 w-[100%] mt-10 ml-[30px] bg-white max-xl:ml-20"></div>
-            <div className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[164px] max-xl:mt-20"></div>
+          <div
+            className="animate-pic-slide absolute top-8.5 right-29 h-[20%] w-[20%] 
+          max-2xl:invisible"
+          >
+            <div className=" h-0.5 w-[100%] mt-10 ml-[30px] bg-white"></div>
+            <div className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[164px]"></div>
           </div>
-          <div className="animate-pic-slide absolute bottom-21.5 right-29 h-[20%] w-[20%] max-xl:right-33">
-            <div className="h-0.5 w-[100%] mt-40 ml-[30px] bg-white max-xl:ml-20"></div>
-            <div className="h-0.5 w-[100%] rotate-90 ml-[164px] mt-[-150px] bg-white max-xl:mt-[-88px]"></div>
+          <div
+            className="animate-pic-slide absolute bottom-21.5 right-29 h-[20%] w-[20%]
+          max-2xl:invisible"
+          >
+            <div className="h-0.5 w-[100%] mt-40 ml-[30px] bg-white"></div>
+            <div className="h-0.5 w-[100%] rotate-90 ml-[164px] mt-[-150px] bg-white"></div>
           </div>
         </div>
       </div>

@@ -63,7 +63,8 @@ const SkillsContainer = () => {
           <div className="w-full animate-pic-slide">
             <div
               className="font-bold text-center text-[5rem] mb-2
-            max-2xl:text-[3.5rem]"
+            max-2xl:text-[3.5rem]
+            max-xl:text-[3rem]"
             >
               SKILLS
             </div>

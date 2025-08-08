@@ -15,7 +15,7 @@ const ContainerCardDesc = [
     locationType: "HYBRID",
     date: "JAN 2020 - FEB 2025",
     description:
-      "Driven Gasoline Station Manager with over 5 years of experience in management. Hardworking team leader, trains and guides staff to develop advanced-level product knowledge. Enthusiastic about exceeding sales goals and helping businesses to thrive.",
+      "Driven Gasoline Station Manager with over 5 years of experience in management. Hardworking team leader, trains and guides staff to develop advanced-level product knowledge. Enthusiastic about exceeding sales goals and helping businesses to thrive.\n\n I have experienced more through projects outside the company. I have the ability to use Microsoft Office, Google Drive, Communication (Sales & Market), Ecommerce and etc. I believe that I can be a perfect employee for your company as I have made a better contribution to my previous companies.",
     skillTitle: "SKILLS",
     li1: "RETAIL MARKETING",
     li2: "PAYROLL MANAGEMENT",
@@ -54,7 +54,7 @@ const ContainerCardDesc = [
     employmentType: "FULL-TIME",
     date: "SEPT 2018 - DEC 2019",
     description:
-      "As a Sales Specialist, I focus on understanding customer needs, presenting tailored product solutions, and building strong relationships to drive sales. I specialize in guiding clients through purchasing decisions, ensuring a positive experience from initial contact to post-sale support. With strong communication skills, product knowledge, and a commitment to service, I help businesses grow and customers find the right solutions for their needs.",
+      "As a Real Estate Sales Specialist at Amaia Corporation, I was responsible for assisting clients throughout the entire property buying process—from initial inquiry to final purchase. I conducted property presentations, coordinated site visits, and provided expert guidance on project offerings, pricing, and payment terms. My role required strong communication, negotiation, and customer service skills, which allowed me to build trusted relationships with clients. I consistently met and exceeded sales targets and contributed to the team’s overall performance by staying updated with market trends and company inventory.",
     skillTitle: "SKILLS",
     li1: "PRODUCT KNOWLEDGE",
     li2: "RELATIONSHIP BUILDING",

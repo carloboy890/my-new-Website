@@ -110,7 +110,8 @@ const ContactContainer = () => {
                 src={followLogo}
                 alt="followLogo"
                 className="h-[400px] w-[400px] ml-50 mt-[-40px]  animate-pulse
-                max-2xl:h-[330px] max-2xl:w-[330px] max-2xl:mt-[-30px]"
+                max-2xl:h-[330px] max-2xl:w-[330px] max-2xl:mt-[-30px]
+                max-xl:h-[280px] max-xl:w-[280px] max-xl:mt-[-20px] max-xl:ml-[160px]"
               />
             </div>
             <div
@@ -123,14 +124,16 @@ const ContactContainer = () => {
                   src={waterSplash}
                   alt="WaterSplash"
                   className="h-[150px] w-[80%] ml-20 absolute top-0 z-10 pointer-events-none
-                  max-2xl:z-1 max-2xl:h-[130px] max-2xl:w-[70%] max-2xl:ml-50"
+                  max-2xl:z-1 max-2xl:h-[130px] max-2xl:w-[70%] max-2xl:ml-50
+                  max-xl:w-[50%] max-xl:ml-55"
                 />
               )}
             </div>
             {showLogos && (
               <div
                 className="absolute flex gap-6 mt-[-50px] ml-70 z-20 pointer-events-auto 
-                max-2xl:z-21 max-2xl:ml-60 max-2xl:mt-[-60px]"
+                max-2xl:z-21 max-2xl:ml-60 max-2xl:mt-[-60px]
+                max-xl:ml-42"
               >
                 <div className="border-3 h-10.5 w-10.5 animate-bounce rounded-full hover:scale-110 hover:shadow-lg hover:shadow-blue-100 transition duration-300 ease-in-out cursor-pointer">
                   <img
@@ -165,7 +168,8 @@ const ContactContainer = () => {
             <div
               onClick={handleClick}
               className="left-80 top-120 hover:scale-105 transition duration-300 ease-in-out animate-pulse mt-10 cursor-pointer z-50 absolute h-[180px] w-[180px]
-              max-2xl:left-70 max-2xl:top-110"
+              max-2xl:left-70 max-2xl:top-110 
+              max-xl:left-60"
               style={{ visibility: hideClick ? "hidden" : "visible" }}
             >
               <img

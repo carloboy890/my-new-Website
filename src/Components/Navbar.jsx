@@ -10,8 +10,11 @@ const Navbar = () => {
       <div className="w-[18%]">
         <Link to="/" className="justify-end flex"></Link>
       </div>
-      <ul className="z-50 justify-end w-[64%] text-shadow-lg/30 list-none font-[500] flex space-x-25 text-[18px] pt-4 
-      max-2xl:text-[1rem]">
+      <ul
+        className="z-50 justify-end w-[64%] text-shadow-lg/30 list-none font-[500] flex space-x-25 text-[18px] pt-4 
+      max-2xl:text-[1rem]
+      max-xl:justify-center max-xl:text-[1.2rem]"
+      >
         <li className="fade-cont line-container relative inline-block">
           <Link to="/" className="inline-block">
             <span className="fade text-white">HOME</span>

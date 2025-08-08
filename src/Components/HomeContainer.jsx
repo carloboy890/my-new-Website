@@ -27,12 +27,9 @@ const HomeContainer = () => {
     <div className="animate-fade-in relative h-[76.5vh] flex w-[100%] text-white">
       <div className="w-[10%]"></div>
       <div className="pt-30 w-[40%] font-Jost">
-        <div
-          className="fade-cont line-container animate-pic-slide w-[60%]
-        max-2xl:w-[]"
-        >
+        <div className="fade-cont line-container animate-pic-slide w-[60%]">
           <p
-            className="fade text-[1.5rem]text-white 
+            className="fade text-[1.5rem] text-white 
           max-2xl:text-[1.3rem]"
           >
             Currently Available For Freelance Worldwide{" "}
@@ -80,7 +77,8 @@ const HomeContainer = () => {
       <div className="animate-pic-slide2 relative w-[40%]">
         <div
           className="absolute bottom-5 w-[48rem] h-[45rem] 
-        max-2xl:w-[42rem] max-2xl:h-[45rem]"
+        max-2xl:w-[42rem] max-2xl:h-[45rem]
+        max-xl:w-[38rem] max-xl:h-[45rem]"
         >
           <img
             className="opacity-90 absolute left-[1px] w-[100rem] h-[55rem]"
