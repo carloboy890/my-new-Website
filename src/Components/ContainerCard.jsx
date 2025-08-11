@@ -15,12 +15,12 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
       >
         <div
           className="mb-10 w-[85%] h-[80vh] bg-black/50 
-        max-2xl:h-[75vh]"
+        max-2xl:h-[86vh]"
         >
           <button
             onClick={() => navigate("/resume")}
             className="animate-fade-in absolute top-26 right-230 z-50 text-white text-4xl font-bold px-3 rounded hover:bg-white/10 transition \
-            max-2xl:text-3xl max-2xl:top-33 max-2xl:right-185
+            max-2xl:text-3xl max-2xl:top-15 max-2xl:right-185
             max-xl:right-150"
           >
             ×
@@ -33,18 +33,18 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
             <div className="h-0.5 w-[100%] mt-40 ml-[-30px] bg-white"></div>
             <div className="h-0.5 w-[100%] rotate-90 ml-[-164px] mt-[-150px] bg-white"></div>
           </div>
-          <div className="w-[100%] h-[14%] pl-10 pr-10 pt-10">
+          <div className="w-[100%] h-[14%] pl-10 pr-10 pt-6">
             <div className="animate-sm-lg flex justify-between">
               <div
                 className="text-[2.5rem] font-bold mb-3 
-              max-2xl:text-[2rem]
+              max-2xl:text-[1.6rem]
               max-xl:text-[1.6rem]"
               >
                 {props.title}
               </div>
               <div
                 className="text-[2.5rem] font-bold 
-              max-2xl:text-[2rem]
+              max-2xl:text-[1.6rem]
               max-xl:text-[1.6rem]"
               >
                 {props.number}
@@ -84,7 +84,7 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
             </div>
             <div
               line
-              className="animate-sm-lg w-[1%] h-[95%] mt-11 
+              className="animate-sm-lg w-[1%] h-[95%] mt-3 
             max-xl:invisible"
             >
               <div className="w-[30px] h-[30px] ml-[-25px] mt-1 bg-white rounded-full"></div>
@@ -96,7 +96,7 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
             </div>
             <div
               className={`animate-sm-lg h-[100%] w-[60%] pt-10 pl-4 pr-4
-            max-2xl:pt-11
+            max-2xl:pt-3
             ${props.isId2 ? "max-xl:ml-22 max-xl:mt-4" : null} ${
                 props.isId3 ? "max-xl:ml-8 max-xl:mt-5" : null
               }`}

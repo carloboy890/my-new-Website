@@ -21,11 +21,12 @@ const Education = (props) => {
         </div>
         <HomeDesign>
           <div className="relative w-[100%] h-[100vh] text-white bg-trans flex justify-center items-center font-Jost">
-            <div className="animate-fade-in mb-10 w-[85%] h-[80vh] bg-black/50">
+            <div className="animate-fade-in mb-10 w-[85%] h-[80vh] bg-black/50 
+            max-2xl:h-[86vh]">
               <button
                 onClick={() => navigate("/resume")}
                 className="absolute top-24 right-41 z-50 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition 
-                max-2xl:right-38 max-2xl:top-24
+                max-2xl:right-38 max-2xl:top-14
                 max-xl:top-24"
               >
                 ×
@@ -106,7 +107,7 @@ const Education = (props) => {
                 </div>
                 <div
                   className="h-[100%] w-[70%] pt-6
-                max-2xl:pt-5 max-2xl: mr-40
+                max-2xl:pt-8 max-2xl:text-base/4.5 max-2xl: mr-40
                 max-xl:mr-20"
                 >
                   {smEduDes.map((value) => (
