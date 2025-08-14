@@ -24,6 +24,13 @@ const Experience = (props) => {
     const prevIndex = currentIndex > 0 ? currentIndex - 1 : currentIndex;
     openModal(prevIndex);
   };
+  const handleDownArrowClick = () => {
+    const nextIndex =
+      currentIndex < ContainerCardDesc.length - 1
+        ? currentIndex + 1
+        : currentIndex;
+    openModal(nextIndex);
+  };
 
   const handleKeyPress = (event) => {
     if (event.key === "ArrowRight") {
@@ -58,6 +65,7 @@ const Experience = (props) => {
           {...currentCard}
           onArrowRight={handleRightArrowClick}
           onArrowLeft={handleLeftArrowClick}
+          onArrowDown={handleDownArrowClick}
           onClick={() => openModal(currentIndex)}
           isId1={currentCard.id === 1}
           isId2={currentCard.id === 2}

@@ -12,32 +12,34 @@ const HobbiesContainer = ({ onClose }) => {
     <HomeDesign>
       <div className="animate-fade-in relative text-white w-[100%] mr-auto ml-auto h-screen border-white font-Jost flex justify-center items-center">
         <div
-          className=" mb-10 w-[85%] h-[80vh] bg-black/50
-        max-2xl:h-[75vh]
-        max-xl:h-[70vh]"
+          className="relative mb-10 w-full h-[80vh] bg-black/50 max-w-screen-2xl
+        max-2xl:h-[75vh] max-2xl:max-w-screen-xl 
+        max-xl:max-w-screen-lg
+        max-lg:max-w-screen-md
+        "
         >
+          <div
+            className="animate-pic-slide2 absolute -top-10 left-3 h-[20%] w-[20%] 
+            max-2xl:invisible"
+          >
+            <div className="h-0.5 w-[100%] mt-10 -ml-12 bg-white"></div>
+            <div className="h-0.5 w-[100%] bg-white rotate-90 mt-30 ml-[-164px]"></div>
+          </div>
+          <div
+            className="animate-pic-slide2 absolute bottom-2.5 left-3 h-[20%] w-[20%] 
+            max-2xl:invisible"
+          >
+            <div className="h-0.5 w-[100%] mt-40 -ml-12 bg-white"></div>
+            <div className="h-0.5 w-[100%] rotate-90 ml-[-164px] -mt-30 bg-white"></div>
+          </div>
           <button
             onClick={() => navigate("/resume")}
-            className="absolute top-25 right-44 z-50 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition 
-            max-2xl:top-32
-            max-xl:top-38 max-xl:right-35"
+            className="absolute top-10 right-15 z-50 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition 
+            max-2xl:top-10
+            max-xl:top-10"
           >
             ×
           </button>
-          <div
-            className="animate-pic-slide2 absolute top-8.5 left-29 h-[20%] w-[20%] 
-            max-2xl:invisible"
-          >
-            <div className="h-0.5 w-[100%] mt-10 ml-[-30px] bg-white"></div>
-            <div className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[-164px]"></div>
-          </div>
-          <div
-            className="animate-pic-slide2 absolute bottom-21.5 left-29 h-[20%] w-[20%] 
-            max-2xl:invisible"
-          >
-            <div className="h-0.5 w-[100%] mt-40 ml-[-30px] bg-white"></div>
-            <div className="h-0.5 w-[100%] rotate-90 ml-[-164px] mt-[-150px] bg-white"></div>
-          </div>
           <div sm cont className="h-[30%] w-[100%]">
             <div cont>
               <img
@@ -62,30 +64,18 @@ const HobbiesContainer = ({ onClose }) => {
             ))}
           </div>
           <div
-            className="animate-pic-slide1 absolute top-8.5 right-29 h-[20%] w-[20%] 
+            className="animate-pic-slide1 absolute -top-10 right-3 h-[20%] w-[20%] 
           max-2xl:invisible"
           >
-            <div
-              className="h-0.5 w-[100%] mt-10 ml-[30px] bg-white 
-            max-2xl:invisible"
-            ></div>
-            <div
-              className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[164px] 
-            max-2xl:invisible"
-            ></div>
+            <div className="h-0.5 w-[100%] mt-10 ml-12 bg-white"></div>
+            <div className="h-0.5 w-[100%] bg-white rotate-90 mt-30 ml-[164px]"></div>
           </div>
           <div
-            className="animate-pic-slide1 absolute bottom-21.5 right-29 h-[20%] w-[20%] 
+            className="animate-pic-slide1 absolute bottom-2.5 right-3 h-[20%] w-[20%] 
           max-2xl:invisible"
           >
-            <div
-              className="h-0.5 w-[100%] mt-40 ml-[30px] bg-white 
-            max-2xl:invisible"
-            ></div>
-            <div
-              className="h-0.5 w-[100%] rotate-90 ml-[164px] mt-[-150px] bg-white 
-            max-2xl:invisible"
-            ></div>
+            <div className="h-0.5 w-[100%] mt-40 ml-12 bg-white"></div>
+            <div className="h-0.5 w-[100%] rotate-90 ml-[164px] -mt-30 bg-white"></div>
           </div>
         </div>
       </div>

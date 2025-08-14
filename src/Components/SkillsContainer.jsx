@@ -50,7 +50,10 @@ const SkillsContainer = () => {
     <HomeDesign>
       <div className="text-white w-[90%] mr-auto ml-auto h-screen border-white font-Jost flex justify-center items-center">
         <div
-          className="relative h-[90vh] w-[80%] bg-black/50 overflow-scroll"
+          className="relative h-[90vh] w-full bg-black/50 overflow-scroll max-w-screen-2xl
+          max-2xl:max-w-screen-xl
+          max-xl:max-w-screen-lg
+          max-lg:max-w-screen-md"
           ref={scrollRef}
         >
           <button
@@ -77,7 +80,8 @@ const SkillsContainer = () => {
                 src={facingComp}
                 alt="facingComp"
                 className="h-[430px] w-[430px] ml-10
-                max-2xl:h-[300px]"
+                max-2xl:h-[300px]
+                max-lg:h-[200]"
               />
             </div>
 
@@ -87,14 +91,15 @@ const SkillsContainer = () => {
                   src={skillLogo}
                   alt="skillLogo"
                   className="w-[110px] h-[110px]
-                  max-2xl:w-[70px] 
-                  max-2xl:h-[70px]"
+                  max-2xl:w-[70px] max-2xl:h-[70px]"
                 />
               </div>
 
               <div
                 className="text-[1.3rem] text-justify leading-10 
-              max-2xl:text-[1rem]"
+              max-2xl:text-[1.2rem]
+              max-xl:text-[1rem]
+              max-lg:text-[0.8rem]"
               >
                 A Front End Developer crafts the user-facing aspects of websites
                 and applications, ensuring a seamless and engaging experience
@@ -114,14 +119,14 @@ const SkillsContainer = () => {
                     src={arrowDown}
                     alt="arrowDown"
                     className="animate-bounce h-[100px] w-[100px] mr-100 mt-10
-                    max-2xl:h-[80px] 
-                    max-2xl:w-[80px]"
+                    max-2xl:h-[80px] max-2xl:w-[80px]
+                    max-lg:h-[60px] max-lg:ml-20"
                   />
                 </div>
               )}
             </div>
           </div>
-          <div className="flex flex-wrap justify-center mt-70">
+          <div className="flex flex-wrap justify-center mt-70 gap-5 max-xl:space-y-30">
             {SkillCardDesc.map((value, index) => (
               <div
                 key={value.id}

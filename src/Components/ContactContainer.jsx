@@ -42,7 +42,13 @@ const ContactContainer = () => {
           >
             ×
           </button>
-          <div sm cont className="animate-sm-lg w-[50%] h-[100%]">
+          <div
+            sm
+            cont
+            className="animate-sm-lg w-full h-[100%] max-w-screen-2xl
+            max-2xl:max-w-screen-xl
+            max-xl:max-w-screen-lg"
+          >
             <div cont className="space-y-10 m-20">
               <div
                 className="text-[2rem]
@@ -52,13 +58,15 @@ const ContactContainer = () => {
               </div>
               <div
                 className="text-[3rem]
-              max-2xl:text-[2.5rem]"
+              max-2xl:text-[2.5rem]
+              max-lg:text-[2.3rem]"
               >
                 CONTACT
               </div>
               <div
                 className="text-[1.2rem]
-              max-2xl:text-[1.1rem]"
+              max-2xl:text-[1.1rem]
+              max-lg:text-[1rem]"
               >
                 I'm here to help and answer any questions you <br /> might have.
                 I'm looking forward to hearing from you!
@@ -71,7 +79,8 @@ const ContactContainer = () => {
                     src={locationLogo}
                     alt="locationLogo"
                     className="h-[60px] w-[60px]
-                    max-2xl:h-[40px] max-2xl:w-[40px]"
+                    max-2xl:h-[40px] max-2xl:w-[40px] 
+                    max-lg:h-[30px] max-lg:w-[30px]"
                   />
                 </div>
                 <div>
@@ -79,7 +88,8 @@ const ContactContainer = () => {
                     src={phoneLogo}
                     alt="phoneLogo"
                     className="h-[60px] w-[60px]
-                    max-2xl:h-[40px] max-2xl:w-[40px]"
+                    max-2xl:h-[40px] max-2xl:w-[40px] 
+                    max-lg:h-[30px] max-lg:w-[30px]"
                   />
                 </div>
                 <div>
@@ -87,7 +97,8 @@ const ContactContainer = () => {
                     src={emailLogo}
                     alt="emailLogo"
                     className="h-[60px] w-[60px]
-                    max-2xl:h-[40px] max-2xl:w-[40px]"
+                    max-2xl:h-[40px] max-2xl:w-[40px] 
+                    max-lg:h-[30px] max-lg:w-[30px]"
                   />
                 </div>
               </div>
@@ -96,7 +107,8 @@ const ContactContainer = () => {
                 desc
                 className="text-[1.5rem] mt-2 space-y-15 ml-10
               max-2xl:text-[1.2rem]
-              max-2xl:space-y-10"
+              max-2xl:space-y-10 
+              max-lg:text-[1rem] max-lg:space-y-9"
               >
                 <div>Caloocan City, Metro Manila</div>
                 <div>+639563370343</div>
@@ -109,67 +121,82 @@ const ContactContainer = () => {
               <img
                 src={followLogo}
                 alt="followLogo"
-                className="h-[400px] w-[400px] ml-50 mt-[-40px]  animate-pulse
+                className="h-[400px] w-[400px] mt-[-40px]  animate-pulse
                 max-2xl:h-[330px] max-2xl:w-[330px] max-2xl:mt-[-30px]
-                max-xl:h-[280px] max-xl:w-[280px] max-xl:mt-[-20px] max-xl:ml-[160px]"
+                max-xl:h-[280px] max-xl:w-[280px] max-xl:mt-[-20px]"
               />
             </div>
             <div
               animation
-              className=" relative mt-30
+              className="relative mt-30
             max-2xl:ml-[-140px] max-2xl:mt-25"
             >
               {waterAnimate && (
                 <img
                   src={waterSplash}
                   alt="WaterSplash"
-                  className="h-[150px] w-[80%] ml-20 absolute top-0 z-10 pointer-events-none
-                  max-2xl:z-1 max-2xl:h-[130px] max-2xl:w-[70%] max-2xl:ml-50
-                  max-xl:w-[50%] max-xl:ml-55"
+                  className="h-[150px] w-[80%] absolute top-0 z-10 pointer-events-none
+                  max-2xl:z-1 max-2xl:h-[130px] max-2xl:w-[70%] max-2xl:ml-20
+                  max-xl:w-[70%] max-xl:"
                 />
               )}
             </div>
             {showLogos && (
               <div
-                className="absolute flex gap-6 mt-[-50px] ml-70 z-20 pointer-events-auto 
-                max-2xl:z-21 max-2xl:ml-60 max-2xl:mt-[-60px]
-                max-xl:ml-42"
+                className="absolute flex gap-6 mt-[-50px] ml-20 z-20 pointer-events-auto 
+                max-2xl:z-21 max-2xl:ml-5 max-2xl:mt-[-60px]"
               >
-                <div className="border-3 h-10.5 w-10.5 animate-bounce rounded-full hover:scale-110 hover:shadow-lg hover:shadow-blue-100 transition duration-300 ease-in-out cursor-pointer">
+                <div
+                  className="border-3 h-10.5 w-10.5 animate-bounce rounded-full hover:scale-110 hover:shadow-lg hover:shadow-blue-100 transition duration-300 ease-in-out cursor-pointer 
+                max-2xl:border-2 max-2xl:h-9.5 max-2xl:w-9.5"
+                >
                   <img
                     src={facebookLogo}
                     alt="facebookLogo"
-                    className="h-[30px] w-[30px] mt-1 ml-0.5"
+                    className="h-[30px] w-[30px] mt-1 ml-0.5 
+                    max-2xl:h-[20px] max-2xl:w-[20px] max-2xl:ml-1.5 max-2xl:mt-1.5"
                   />
                 </div>
-                <div className="animate-bounce h-10.5 w-10.5 border-3 rounded-full hover:scale-110 hover:shadow-lg hover:shadow-pink-100 transition duration-300 ease-in-out cursor-pointer">
+                <div
+                  className="animate-bounce h-10.5 w-10.5 border-3 rounded-full hover:scale-110 hover:shadow-lg hover:shadow-pink-100 transition duration-300 ease-in-out cursor-pointer 
+                max-2xl:border-2 max-2xl:h-9.5 max-2xl:w-9.5"
+                >
                   <img
                     src={instagramLogo}
                     alt="instagramLogo"
-                    className="h-[20px] w-[20px] ml-2 mt-2"
+                    className="h-[20px] w-[20px] ml-2 mt-2 
+                    max-2xl:h-[20px] max-2xl:w-[20px] max-2xl:ml-1.75 max-2xl:mt-1.75"
                   />
                 </div>
-                <div className="animate-bounce h-10.5 w-10.5 rounded-full border-3 hover:scale-110 hover:shadow-lg hover:shadow-sky-100 transition duration-300 ease-in-out cursor-pointer">
+                <div
+                  className="animate-bounce h-10.5 w-10.5 rounded-full border-3 hover:scale-110 hover:shadow-lg hover:shadow-sky-100 transition duration-300 ease-in-out cursor-pointer 
+                max-2xl:border-2 max-2xl:h-9.5 max-2xl:w-9.5"
+                >
                   <img
                     src={twitterLogo}
                     alt="twitterLogo"
-                    className="h-[25px] w-[25px] mt-1.5 ml-1.5"
+                    className="h-[25px] w-[25px] mt-1.5 ml-1.5 
+                    max-2xl:h-[20px] max-2xl:w-[20px] max-2xl:mt-1.75 max-2xl:ml-1.75"
                   />
                 </div>
-                <div className="animate-bounce h-10.5 w-10.5 border-3 rounded-full hover:scale-110 hover:shadow-lg hover:shadow-pink-100 transition duration-300 ease-in-out cursor-pointer">
+                <div
+                  className="animate-bounce h-10.5 w-10.5 border-3 rounded-full hover:scale-110 hover:shadow-lg hover:shadow-pink-100 transition duration-300 ease-in-out cursor-pointer 
+                max-2xl:border-2 max-2xl:h-9.5 max-2xl:w-9.5"
+                >
                   <img
                     src={linkedInLogo}
                     alt="instagramLogo"
-                    className="h-[20px] w-[20px] ml-2 mt-2"
+                    className="h-[20px] w-[20px] ml-2 mt-2 
+                    max-2xl:h-[20px] max-2xl:w-[20px] max-2xl:mt-1.75 max-2xl:ml-1.75"
                   />
                 </div>
               </div>
             )}
             <div
               onClick={handleClick}
-              className="left-80 top-120 hover:scale-105 transition duration-300 ease-in-out animate-pulse mt-10 cursor-pointer z-50 absolute h-[180px] w-[180px]
-              max-2xl:left-70 max-2xl:top-110 
-              max-xl:left-60"
+              className="left-30 top-120 hover:scale-105 transition duration-300 ease-in-out animate-pulse mt-10 cursor-pointer z-50 absolute h-[180px] w-[180px]
+              max-2xl:-ml-10 max-2xl:top-110 
+              max-xl:-ml-15"
               style={{ visibility: hideClick ? "hidden" : "visible" }}
             >
               <img

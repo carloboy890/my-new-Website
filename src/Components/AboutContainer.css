@@ -174,3 +174,41 @@
     @apply hover:scale-105 transition duration-300 ease-in-out cursor-pointer hover:bg-[rgba(255,255,255,0.05)];
   }
 }
+
+@keyframes arrow-downward {
+  from {
+    bottom: 150px;
+  }
+  to {
+    bottom: 140px;
+  }
+}
+.animate-arrow-downward {
+  animation: arrow-downward 1.5s ease-out infinite;
+}
+
+@keyframes arrow-upward {
+  from {
+    top: -210px;
+  }
+  to {
+    top: -220px;
+  }
+}
+.animate-arrow-upward {
+  animation: arrow-upward 1.5s ease-out infinite;
+}
+
+@keyframes swipe-up {
+  from {
+    bottom: 0;
+    opacity: 1;
+  }
+  to {
+    top: -300px;
+    opacity: 0;
+  }
+}
+.animate-swipe-up {
+  animation: swipe-up 1.5s ease-out infinite;
+}

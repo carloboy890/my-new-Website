@@ -1,37 +1,41 @@
-import React from "react";
+import React, { useState, useRef } from "react";
+import { animate } from "motion";
 import HomeDesign from "./HomeDesign";
 import RightArrow from "../assets/RightArrow.png";
 import LeftArrow from "../assets/LeftArrow.png";
 import "./AboutContainer.css";
 import { useNavigate } from "react-router-dom";
 
-const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
+const ContainerCard = ({
+  onArrowRight,
+  onArrowLeft,
+  onArrowDown,
+  onClick,
+  ...props
+}) => {
   const navigate = useNavigate();
+
   return (
     <HomeDesign>
       <div
         className="relative w-full h-screen text-white flex justify-center items-center font-Jost"
         onClick={onClick}
       >
+        {/* sm container */}
         <div
-          className="mb-10 w-[85%] h-[80vh] bg-black/50 
-        max-2xl:h-[86vh]"
+          className="absolute mb-10 w-full h-[80vh] bg-black/50 max-w-screen-2xl
+        max-2xl:h-[75vh] max-2xl:max-w-screen-xl 
+        max-xl:max-w-screen-lg max-xl:h-[70vh]
+        max-lg:max-w-screen-md"
         >
-          <button
-            onClick={() => navigate("/resume")}
-            className="animate-fade-in absolute top-26 right-230 z-50 text-white text-4xl font-bold px-3 rounded hover:bg-white/10 transition \
-            max-2xl:text-3xl max-2xl:top-15 max-2xl:right-185
-            max-xl:right-150"
-          >
-            ×
-          </button>
-          <div className="animate-pic-slide2 absolute top-8.5 left-29 h-[20%] w-[20%] max-2xl:invisible">
-            <div className="h-0.5 w-[100%] mt-10 ml-[-30px] bg-white"></div>
-            <div className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[-164px]"></div>
+          {/* Line Design */}
+          <div className="animate-pic-slide2 absolute top-[-40px] left-[-13px] h-[20%] w-[20%] max-2xl:invisible">
+            <div className="h-0.5 w-90 mt-10 ml-[-30px] bg-white"></div>
+            <div className="h-0.5 w-90 bg-white rotate-90 mt-34 ml-[-164px]"></div>
           </div>
-          <div className="animate-pic-slide2 absolute bottom-21.5 left-29 h-[20%] w-[20%] max-2xl:invisible">
-            <div className="h-0.5 w-[100%] mt-40 ml-[-30px] bg-white"></div>
-            <div className="h-0.5 w-[100%] rotate-90 ml-[-164px] mt-[-150px] bg-white"></div>
+          <div className="animate-pic-slide2 absolute bottom-2.5 left-[-13px] h-[20%] w-[20%] max-2xl:invisible">
+            <div className="h-0.5 w-90 mt-40 ml-[-30px] bg-white"></div>
+            <div className="h-0.5 w-90 rotate-90 ml-[-164px] mt-[-150px] bg-white"></div>
           </div>
           <div className="w-[100%] h-[14%] pl-10 pr-10 pt-6">
             <div className="animate-sm-lg flex justify-between">
@@ -42,6 +46,14 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
               >
                 {props.title}
               </div>
+              <button
+                onClick={() => navigate("/resume")}
+                className="h-10 w-auto animate-fade-in z-50 text-white text-4xl font-bold px-3 rounded hover:bg-white/10 transition
+            max-2xl:text-3xl max-2xl:top-15 max-2xl:right-185
+            max-xl:right-150"
+              >
+                ×
+              </button>
               <div
                 className="text-[2.5rem] font-bold 
               max-2xl:text-[1.6rem]
@@ -52,60 +64,134 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
             </div>
             <div className="animate-sm-lg w-[100%] border-1 mr-auto ml-auto"></div>
           </div>
-          <div sm cont className="w-[100%] h-[86%] flex">
-            {props.id !== 1 && (
-              <div left arrow className="z-5 animate-fade-in w-[5%] h-[100%]">
-                <img
-                  src={LeftArrow}
-                  alt="Left Arrow"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onArrowLeft?.();
-                  }}
-                  className="h-[60px] w-[60px] mt-60 absolute cursor-pointer animate-arrow-backward
-                  max-2xl:h-[40px] max-2xl:w-[40px]"
-                />
-              </div>
-            )}
+          {/* Content Container */}
+          <div className="w-full h-[86%] flex">
+            {/* Left Container */}
             <div
               logo
-              className={`animate-sm-lg w-[20%] h-[100%] flex justify-center items-center
-                max-2xl:w-[25%] ${props.isId2 ? "max-xl:w-[5%]" : "w-[26%]"}`}
+              className={`animate-sm-lg max-w-[30%] h-[100%] flex justify-center items-center
+              max-2xl:w-[25%] 
+              max-lg:items-center max-lg:flex max-lg:flex-col max-lg:justify-around
+              ${props.isId2 ? "w-[30%]" : null}`}
             >
-              {props.id !== 2 && (
-                <img
-                  src={props.logo}
-                  alt={props.company + " logo"}
-                  className={`w-[60%] mr-8 ${
-                    props.isId2 ? "max-2xl:w-[10%]" : ""
-                  } ${props.isId3 ? "max-xl:ml-35 max-xl:mt-[-40px]" : null}`}
-                />
+              {/* Up Arrow */}
+              {props.id !== 1 && (
+                <div
+                  className={`z-5 animate-fade-in w-full invisible
+              max-xl:visible 
+              max-lg:flex max-lg:justify-center 
+              ${props.isId1 ? "max-lg:hidden" : ""}`}
+                >
+                  <img
+                    src={LeftArrow}
+                    alt="Up + Arrow"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onArrowLeft?.();
+                    }}
+                    className={`h-[60px] w-[60px] absolute cursor-pointer animate-arrow-upward
+                  max-2xl:h-[40px] max-2xl:w-[40px]
+                  max-xl:invisible
+                  max-lg:rotate-90 max-lg:visible max-lg:mt-70`}
+                  />
+                </div>
+              )}
+              <div
+                className={`flex ${props.isId1 ? "justify-center" : null}
+                `}
+              >
+                {/* Left Arrow */}
+                {props.id !== 1 && (
+                  <div left arrow className="z-5 animate-fade-in">
+                    <img
+                      src={LeftArrow}
+                      alt="Left Arrow"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onArrowLeft?.();
+                      }}
+                      className={`h-[60px] w-[60px] absolute -ml-38 -mt-5 cursor-pointer animate-arrow-backward
+                      max-2xl:h-[40px] max-2xl:w-[40px] 
+                      max-lg:invisible ${
+                        props.isId2
+                          ? "-mt-21 max-2xl:-mt-17 max-xl:-mt-12"
+                          : null
+                      }
+                       ${props.isId3 ? "max-xl:-mt-0" : null}`}
+                    />
+                  </div>
+                )}
+                {/* Logo */}
+                <div
+                  className={`w-[50%] ${
+                    props.isId3 ? "w-[70%] max-xl:ml-5 max-lg:-mt-50" : null
+                  }`}
+                >
+                  {props.id !== 2 && (
+                    <img
+                      src={props.logo}
+                      alt={props.company + " logo"}
+                      className={`w-full ${props.isId2 ? "max-2xl:w-[10%]" : ""}
+                      ${props.isId1 ? "max-lg:mt-25" : null}
+                      ${props.isId3 ? "max-lg:ml-5" : null}
+                      `}
+                    />
+                  )}
+                </div>
+              </div>
+              {/* Down Arrow */}
+              {props.id !== 3 && (
+                <div
+                  className="animate-fade-in invisible
+              max-xl:visible
+              max-lg:flex max-lg:justify-center"
+                >
+                  <img
+                    src={RightArrow}
+                    alt="Down + Arrow"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onArrowDown?.();
+                    }}
+                    className={`h-[60px] z-5 absolute cursor-pointer animate-arrow-downward 
+                    max-2xl:h-[40px] max-2xl:w-[40px]
+                    max-xl:invisible
+                    max-lg:rotate-90 max-lg:visible max-lg:-mb-15`}
+                  />
+                </div>
               )}
             </div>
+            {/* Line container */}
             <div
               line
-              className="animate-sm-lg w-[1%] h-[95%] mt-3 
+              className="relative animate-sm-lg w-[3%] h-[100%]
             max-xl:invisible"
             >
-              <div className="w-[30px] h-[30px] ml-[-25px] mt-1 bg-white rounded-full"></div>
               <div
-                className={`border-r2 w-[20%] bg-white ml-[-12px] ${
-                  props.isId2 || props.isId3 ? "h-[85%]" : "h-[85%]"
-                } `}
-              ></div>
+                className="ml-1 mt-10 
+              max-2xl:mt-5"
+              >
+                <div className="absolute w-[30px] h-[30px] mt-1 bg-white rounded-full"></div>
+                <div
+                  className={`absolute w-[5%] bg-white ml-3.5 mt-1 ${
+                    props.isId2 || props.isId3 ? "h-[85%]" : "h-[85%]"
+                  } `}
+                ></div>
+              </div>
             </div>
+            {/* Text container */}
             <div
-              className={`animate-sm-lg h-[100%] w-[60%] pt-10 pl-4 pr-4
-            max-2xl:pt-3
-            ${props.isId2 ? "max-xl:ml-22 max-xl:mt-4" : null} ${
-                props.isId3 ? "max-xl:ml-8 max-xl:mt-5" : null
-              }`}
+              className={`animate-sm-lg h-[100%] w-[67%] p-10
+            max-2xl:pt-6
+            max-lg:pt-1 max-lg:animate-swipe-up
+            ${props.isId2 || props.isId3 ? "max-lg:pt-10" : null}`}
             >
-              <div cont>
+              <div className="">
                 <div
                   title
                   className="text-[1.8rem] font-bold 
-                  max-2xl:text-[1.5rem]"
+                  max-2xl:text-[1.5rem] 
+                  max-lg:text-[1.3rem]"
                 >
                   {" "}
                   {props.company}
@@ -113,7 +199,8 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
                 <div
                   work
                   className="flex space-x-4 text-[1.3rem] mt-[2%] mb-[2%] 
-                  max-2xl:text-[1.1rem]"
+                  max-2xl:text-[1.1rem]
+                  max-lg:text-[0.9rem]"
                 >
                   <div>{props.job}</div>
                   {props.id !== 2 && (
@@ -128,14 +215,15 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
                 <div
                   date
                   className={`text-[1.2rem] mb-[3%]
-                    max-2xl:text-[0.9rem] ${props.isId1 ? "max-xl:mb-6" : ""}`}
+                    max-2xl:text-[0.85rem] ${props.isId1 ? "max-xl:mb-6" : ""}`}
                 >
                   {props.date}
                 </div>
                 <div
                   className="text-[1rem] text-justify mb-10
                   max-xl:mb-6
-                max-2xl:text-[0.9rem]"
+                max-2xl:text-[0.9rem] 
+                max-lg:text-[0.8rem]"
                 >
                   {props.description.split("\n").map((line, index) => (
                     <p key={index} className="mb-4">
@@ -153,13 +241,15 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
                 <div skill cont>
                   <div
                     className="font-bold text-[1.5rem] mb-6 
-                  max-2xl:text-[1.3rem]"
+                  max-2xl:text-[1.3rem]
+                  max-lg:mb-3"
                   >
                     {props.skillTitle}
                   </div>
                   <ul
                     className={`list-disc ml-5 space-y-2 text-[0.9rem] 
-                      max-2xl:text-[0.8rem] ${
+                      max-2xl:text-[0.8rem]
+                      max-lg:text-[0.65rem] ${
                         props.isId2 || props.isId3 ? "space-y-4" : ""
                       }`}
                   >
@@ -172,14 +262,18 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
                 <div software cont>
                   <div
                     className="font-bold text-[1.5rem] mb-6 
-                  max-2xl:text-[1.3rem]"
+                  max-2xl:text-[1.3rem] 
+                  max-lg:mb-3"
                   >
                     {props.softwareTitle}
                   </div>
                   <ul
                     className={`list-disc ml-5 space-y-2 text-[0.9rem] 
-                      max-2xl:text-[0.8rem] ${
-                        props.isId2 || props.isId3 ? "mt-12 space-y-4" : ""
+                      max-2xl:text-[0.8rem] 
+                      max-lg:text-[0.65rem] ${
+                        props.isId2 || props.isId3
+                          ? "mt-12 space-y-4 max-lg:mt-11"
+                          : ""
                       } `}
                   >
                     {props.li5 && <li>{props.li5}</li>}
@@ -189,8 +283,9 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
                 </div>
               </div>
             </div>
+            {/* Right Arrow */}
             {props.id !== 3 && (
-              <div className="h-[100%] w-[9%] animate-fade-in left-10">
+              <div className="h-[100%] w-[9%] animate-fade-in">
                 <img
                   src={RightArrow}
                   alt="Right Arrow"
@@ -198,25 +293,27 @@ const ContainerCard = ({ onArrowRight, onArrowLeft, onClick, ...props }) => {
                     e.stopPropagation();
                     onArrowRight?.();
                   }}
-                  className={`h-[60px] absolute z-5 w-[60px] mt-60 ml-20 cursor-pointer animate-arrow-forward 
-                    max-2xl:h-[40px] max-2xl:w-[40px]`}
+                  className={`h-[60px] absolute z-5 w-[60px] mt-60 mr-[-150px] cursor-pointer animate-arrow-forward 
+                    max-2xl:h-[40px] max-2xl:w-[40px]
+                    max-lg:invisible`}
                 />
               </div>
             )}
           </div>
+          {/* Lines Design */}
           <div
-            className="animate-pic-slide absolute top-8.5 right-29 h-[20%] w-[20%] 
+            className="animate-pic-slide absolute top-[-40px]  right-9.5 h-[20%] w-[20%] 
           max-2xl:invisible"
           >
-            <div className=" h-0.5 w-[100%] mt-10 ml-[30px] bg-white"></div>
-            <div className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[164px]"></div>
+            <div className=" h-0.5 w-90 mt-10 ml-[30px] bg-white"></div>
+            <div className="h-0.5 w-90 bg-white rotate-90 mt-34 ml-[164px]"></div>
           </div>
           <div
-            className="animate-pic-slide absolute bottom-21.5 right-29 h-[20%] w-[20%]
+            className="animate-pic-slide absolute bottom-2.5 right-9.5 h-[20%] w-[20%]
           max-2xl:invisible"
           >
-            <div className="h-0.5 w-[100%] mt-40 ml-[30px] bg-white"></div>
-            <div className="h-0.5 w-[100%] rotate-90 ml-[164px] mt-[-150px] bg-white"></div>
+            <div className="h-0.5 w-90 mt-40 ml-[30px] bg-white"></div>
+            <div className="h-0.5 w-90 rotate-90 ml-[164px] mt-[-150px] bg-white"></div>
           </div>
         </div>
       </div>

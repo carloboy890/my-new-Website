@@ -20,31 +20,36 @@ const Education = (props) => {
           <Navbar />
         </div>
         <HomeDesign>
-          <div className="relative w-[100%] h-[100vh] text-white bg-trans flex justify-center items-center font-Jost">
-            <div className="animate-fade-in mb-10 w-[85%] h-[80vh] bg-black/50 
-            max-2xl:h-[86vh]">
+          <div className="w-[100%] h-[100vh] text-white bg-trans flex justify-center items-center font-Jost">
+            <div
+              className="relative animate-fade-in mb-10 w-[85%] h-[80vh] bg-black/50
+            max-2xl:h-[75vh] max-2xl:max-w-screen-xl
+            max-xl:max-w-screen-lg max-xl:h-[75vh]
+            max-lg:items-stretch"
+            >
+              <div
+                className="animate-pic-slide2 absolute -top-10 left-1 h-[20%] w-[20%] 
+            max-2xl:invisible"
+              >
+                <div className="h-0.5 w-[100%] mt-10 -ml-12 bg-white"></div>
+                <div className="h-0.5 w-[100%] bg-white rotate-90 mt-30 ml-[-164px]"></div>
+              </div>
+              <div
+                className="animate-pic-slide2 absolute bottom-2.5 left-1 h-[20%] w-[20%] 
+            max-2xl:invisible"
+              >
+                <div className="h-0.5 w-[100%] mt-40 -ml-12 bg-white"></div>
+                <div className="h-0.5 w-[100%] rotate-90 ml-[-164px] -mt-30 bg-white"></div>
+              </div>
               <button
                 onClick={() => navigate("/resume")}
-                className="absolute top-24 right-41 z-50 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition 
-                max-2xl:right-38 max-2xl:top-14
-                max-xl:top-24"
+                className="absolute top-7 right-15 z-50 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition 
+                max-2xl:top-6
+                max-xl:top-6
+                max-lg:top-6"
               >
                 ×
               </button>
-              <div
-                className="animate-pic-slide2 absolute top-8.5 left-29 h-[20%] w-[20%] 
-            max-2xl:invisible"
-              >
-                <div className="h-0.5 w-[100%] mt-10 ml-[-30px] bg-white"></div>
-                <div className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[-164px]"></div>
-              </div>
-              <div
-                className="animate-pic-slide2 absolute bottom-21.5 left-29 h-[20%] w-[20%] 
-            max-2xl:invisible"
-              >
-                <div className="h-0.5 w-[100%] mt-40 ml-[-30px] bg-white"></div>
-                <div className="h-0.5 w-[100%] rotate-90 ml-[-164px] mt-[-150px] bg-white"></div>
-              </div>
               <div
                 className="animate-sm-lg w-100% h-[14%] pl-10 pr-10 pt-6 
               max-2xl:pt-5"
@@ -63,7 +68,8 @@ const Education = (props) => {
                   cont
                   className="animate-sm-lg w-[30%] h-[100%] 
                   max-2xl:w-[40%] max-2xl:ml-[-90px]
-                  max-xl:ml-[-100px]"
+                  max-xl:ml-[-100px] 
+                  max-lg:mt-0"
                 >
                   <div cont1 className="flex h-[33.33%]">
                     <div logo className="h-[100%] w-[60%] mt-4 ml-40">
@@ -72,7 +78,7 @@ const Education = (props) => {
                         alt=""
                         className="h-[200px] w-[200px]
                         max-2xl:h-[170px] max-2xl:w-[170px]
-                        max-xl:h-[170px] max-xl:w-[170px]"
+                        max-xl:h-[140px] max-xl:w-[160px]"
                       />
                     </div>
                   </div>
@@ -86,7 +92,7 @@ const Education = (props) => {
                         alt=""
                         className="h-[200px] w-[200px]
                          max-2xl:h-[170px] max-2xl:w-[170px]
-                         max-xl:h-[170px] max-xl:w-[170px]"
+                         max-xl:h-[140px] max-xl:w-[160px]"
                       />
                     </div>
                   </div>
@@ -100,15 +106,16 @@ const Education = (props) => {
                         alt=""
                         className="h-[170px] w-[200px] 
                         max-2xl:h-[150px] max-2xl:w-[170px]
-                        max-xl:h-[170px] max-xl:w-[170px]"
+                        max-xl:h-[140px] max-xl:w-[160px]"
                       />
                     </div>
                   </div>
                 </div>
                 <div
                   className="h-[100%] w-[70%] pt-6
-                max-2xl:pt-8 max-2xl:text-base/4.5 max-2xl: mr-40
-                max-xl:mr-20"
+                max-2xl:mt-3 max-2xl:text-base/4.5 max-2xl:mr-40 
+                max-xl:mr-20 max-xl:space-y-3 max-xl:mt-[-15px]
+                max-lg:mr-10"
                 >
                   {smEduDes.map((value) => (
                     <SmEdu
@@ -123,30 +130,18 @@ const Education = (props) => {
                 </div>
               </div>
               <div
-                className="animate-pic-slide1 absolute top-8.5 right-29 h-[20%] w-[20%] 
+                className="animate-pic-slide1 absolute -top-10 right-0 h-[20%] w-[20%] 
           max-2xl:invisible"
               >
-                <div
-                  className="h-0.5 w-[100%] mt-10 ml-[30px] bg-white 
-            max-2xl:invisible"
-                ></div>
-                <div
-                  className="h-0.5 w-[100%] bg-white rotate-90 mt-34 ml-[164px] 
-            max-2xl:invisible"
-                ></div>
+                <div className="h-0.5 w-[100%] mt-10 ml-12 bg-white"></div>
+                <div className="h-0.5 w-[100%] bg-white rotate-90 mt-30 ml-[164px]"></div>
               </div>
               <div
-                className="animate-pic-slide1 absolute bottom-21.5 right-29 h-[20%] w-[20%] 
+                className="animate-pic-slide1 absolute bottom-2.5 right-0 h-[20%] w-[20%] 
           max-2xl:invisible"
               >
-                <div
-                  className="h-0.5 w-[100%] mt-40 ml-[30px] bg-white 
-            max-2xl:invisible"
-                ></div>
-                <div
-                  className="h-0.5 w-[100%] rotate-90 ml-[164px] mt-[-150px] bg-white 
-            max-2xl:invisible"
-                ></div>
+                <div className="h-0.5 w-[100%] mt-40 ml-12 bg-white"></div>
+                <div className="h-0.5 w-[100%] rotate-90 ml-[164px] -mt-30 bg-white"></div>
               </div>
             </div>
           </div>
