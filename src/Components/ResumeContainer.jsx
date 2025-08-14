@@ -47,7 +47,7 @@ function ResumeContainer() {
             </div>
           </div>
           <div
-            className="grid w-[60%] h-full grid-cols-2 gap-4 p-8 border-white
+            className="grid w-3/5 h-full grid-cols-2 gap-4 p-8 border-white
           max-lg:w-[83%] max-lg:mt-2 max-lg:gap-8"
           >
             {smCardsDes.map((value) => (
