@@ -4,9 +4,12 @@ import arrowDown from "../assets/arrowDown.png";
 import skillLogo from "../assets/skillLogo.png";
 import HomeDesign from "./HomeDesign";
 import SkillCardDesc from "./SkillCardDesc";
-import SkillCard from "./skillCard";
+import SkillCard from "./SkillCard";
 import "./SkillsContainer.css";
 import { useNavigate } from "react-router-dom";
+import SkillMDcardDesc from "./SkillMDcardDesc";
+import SkillMDcard from "./SkillMDcard";
+import SkillToolsDesc from "./SkillToolsDesc";
 
 const SkillsContainer = () => {
   const [showDownArrow, setShowDownArrow] = useState(true);
@@ -50,7 +53,7 @@ const SkillsContainer = () => {
     <HomeDesign>
       <div className="text-white w-[90%] mr-auto ml-auto h-screen border-white font-Jost flex justify-center items-center">
         <div
-          className="relative h-[90vh] w-full bg-black/50 overflow-scroll max-w-screen-2xl
+          className="relative h-[85vh] w-full bg-black/50 overflow-scroll max-w-screen-2xl
           max-2xl:max-w-screen-xl
           max-xl:max-w-screen-lg
           max-lg:max-w-screen-md"
@@ -99,7 +102,7 @@ const SkillsContainer = () => {
                 className="text-[1.3rem] text-justify leading-10 
               max-2xl:text-[1.2rem]
               max-xl:text-[1rem]
-              max-lg:text-[0.8rem]"
+              max-lg:text-[0.9rem]"
               >
                 A Front End Developer crafts the user-facing aspects of websites
                 and applications, ensuring a seamless and engaging experience
@@ -126,7 +129,9 @@ const SkillsContainer = () => {
               )}
             </div>
           </div>
-          <div className="flex flex-wrap justify-center mt-70 gap-5 max-xl:space-y-30">
+          <div className="flex flex-wrap justify-center mt-70 gap-5 
+          max-xl:space-y-30 
+          max-md:hidden">
             {SkillCardDesc.map((value, index) => (
               <div
                 key={value.id}
@@ -147,6 +152,30 @@ const SkillsContainer = () => {
                   description={value.description}
                 />
               </div>
+            ))}
+          </div>
+          <div className="hidden
+          max-md:block mt-10 w-full">
+            {SkillMDcardDesc.map((value, index) => (
+              <React.Fragment key={value.id}>
+            {index === 0 && (
+                <div className="w-2/3 ml-30 mt-5">
+                <p className="font-bold text-center mb-10">Basic Front-End Tools</p>
+                <p className="hidden max-md:block text-center mb-8 text-[0.9rem]">HTML provides the structure of a webpage, CSS adds styling and layout to make it visually appealing, and JavaScript brings interactivity and dynamic functionality, making the three core technologies work together to build modern, responsive websites.</p>
+                </div>
+              )}
+              <SkillMDcard 
+              key={value.id}
+              logo={value.logo}
+              tool={value.tool}
+              percentage={value.percentage}/>
+              {SkillToolsDesc[index] && (
+                <div className="w-2/3 ml-30 mt-5">
+                <p className="font-bold text-center mb-10">{SkillToolsDesc[index].title}</p>
+                <p className="hidden max-md:block text-center mb-8 text-[0.9rem]">{SkillToolsDesc[index].description}</p>
+                </div>
+              )}
+              </React.Fragment>
             ))}
           </div>
         </div>

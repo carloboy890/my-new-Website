@@ -5,6 +5,8 @@ import RightArrow from "../assets/RightArrow.png";
 import LeftArrow from "../assets/LeftArrow.png";
 import "./AboutContainer.css";
 import { useNavigate } from "react-router-dom";
+import ContainerCardDesc from "./ContainerCardDesc";
+import ExperienceCard from "./ExperienceCard";
 
 const ContainerCard = ({
   onArrowRight,
@@ -23,22 +25,32 @@ const ContainerCard = ({
       >
         {/* sm container */}
         <div
-          className="absolute mb-10 w-full h-[80vh] bg-black/50 max-w-screen-2xl
-        max-2xl:h-[75vh] max-2xl:max-w-screen-xl 
+          className="relative max-h-[900px] w-full h-[80vh] bg-black/50 max-w-screen-2xl overflow-y-scroll
+        max-2xl:h-[75vh] max-2xl:max-w-screen-xl
         max-xl:max-w-screen-lg max-xl:h-[70vh]
-        max-lg:max-w-screen-md"
+        max-lg:max-w-screen-md 
+        max-md:max-w-screen-sm max-md:h-[85vh]"
         >
           {/* Line Design */}
-          <div className="animate-pic-slide2 absolute top-[-40px] left-[-13px] h-[20%] w-[20%] max-2xl:invisible">
-            <div className="h-0.5 w-90 mt-10 ml-[-30px] bg-white"></div>
-            <div className="h-0.5 w-90 bg-white rotate-90 mt-34 ml-[-164px]"></div>
+          <div className="hidden 2xl:block animate-pic-slide2 absolute top-0 left-0">
+            <div className="h-0.5 w-32 bg-white"></div>
+            <div className="h-32 w-0.5 bg-white"></div>
           </div>
-          <div className="animate-pic-slide2 absolute bottom-2.5 left-[-13px] h-[20%] w-[20%] max-2xl:invisible">
-            <div className="h-0.5 w-90 mt-40 ml-[-30px] bg-white"></div>
-            <div className="h-0.5 w-90 rotate-90 ml-[-164px] mt-[-150px] bg-white"></div>
+          <div className="hidden 2xl:block animate-pic-slide2 absolute bottom-0 left-0">
+            <div className="h-0.5 w-32 bg-white"></div>
+            <div className="h-32 w-0.5 bg-white absolute bottom-0"></div>
           </div>
-          <div className="w-[100%] h-[14%] pl-10 pr-10 pt-6">
-            <div className="animate-sm-lg flex justify-between">
+          <div className="hidden 2xl:block animate-pic-slide1 absolute top-0 right-0">
+            <div className="h-0.5 w-32 bg-white"></div>
+            <div className="h-32 w-0.5 bg-white absolute right-0"></div>
+          </div>
+          <div className="hidden 2xl:block animate-pic-slide2 absolute bottom-0 right-0 rotate-180">
+            <div className="h-0.5 w-32 bg-white"></div>
+            <div className="h-32 w-0.5 bg-white"></div>
+          </div>
+          <div className="w-full h-[14%] pl-10 pr-10 pt-6">
+            <div className="animate-sm-lg flex justify-between
+            max-md:justify-center">
               <div
                 className="text-[2.5rem] font-bold mb-3 
               max-2xl:text-[1.6rem]
@@ -50,28 +62,55 @@ const ContainerCard = ({
                 onClick={() => navigate("/resume")}
                 className="h-10 w-auto animate-fade-in z-50 text-white text-4xl font-bold px-3 rounded hover:bg-white/10 transition
             max-2xl:text-3xl max-2xl:top-15 max-2xl:right-185
-            max-xl:right-150"
+            max-xl:right-150 
+            max-md:hidden"
               >
                 ×
               </button>
               <div
                 className="text-[2.5rem] font-bold 
               max-2xl:text-[1.6rem]
-              max-xl:text-[1.6rem]"
+              max-xl:text-[1.6rem]
+              max-md:hidden"
               >
                 {props.number}
               </div>
             </div>
-            <div className="animate-sm-lg w-[100%] border-1 mr-auto ml-auto"></div>
+            <div className="animate-sm-lg w-full border-1 mr-auto ml-auto"></div>
           </div>
           {/* Content Container */}
-          <div className="w-full h-[86%] flex">
+          <div className="w-full flex
+          max-md:flex-col
+          ">
+          {/* Left Arrow */}
+            {props.id !== 1 && (
+                  <div left arrow className="h-[100%] w-[9%] animate-fade-in
+                  max-lg:hidden">
+                    <img
+                      src={LeftArrow}
+                      alt="Left Arrow"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onArrowLeft?.();
+                      }}
+                      className={`h-[60px] w-[60px] absolute ml-[-150px] z-5 cursor-pointer animate-arrow-backward
+                      max-2xl:h-[40px] max-2xl:w-[40px] 
+                      max-lg:invisible ${
+                        props.isId2
+                          ? "mt-65"
+                          : null
+                      }
+                       ${props.isId3 ? "mt-65" : null}`}
+                    />
+                  </div>
+                )}
             {/* Left Container */}
             <div
               logo
-              className={`animate-sm-lg max-w-[30%] h-[100%] flex justify-center items-center
+              className={`animate-sm-lg max-w-[20%]  max-h-full flex justify-center items-center
               max-2xl:w-[25%] 
               max-lg:items-center max-lg:flex max-lg:flex-col max-lg:justify-around
+              max-md:hidden
               ${props.isId2 ? "w-[30%]" : null}`}
             >
               {/* Up Arrow */}
@@ -100,30 +139,10 @@ const ContainerCard = ({
                 className={`flex ${props.isId1 ? "justify-center" : null}
                 `}
               >
-                {/* Left Arrow */}
-                {props.id !== 1 && (
-                  <div left arrow className="z-5 animate-fade-in">
-                    <img
-                      src={LeftArrow}
-                      alt="Left Arrow"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        onArrowLeft?.();
-                      }}
-                      className={`h-[60px] w-[60px] absolute -ml-38 -mt-5 cursor-pointer animate-arrow-backward
-                      max-2xl:h-[40px] max-2xl:w-[40px] 
-                      max-lg:invisible ${
-                        props.isId2
-                          ? "-mt-21 max-2xl:-mt-17 max-xl:-mt-12"
-                          : null
-                      }
-                       ${props.isId3 ? "max-xl:-mt-0" : null}`}
-                    />
-                  </div>
-                )}
                 {/* Logo */}
                 <div
-                  className={`w-[50%] ${
+                  className={`w-1/2
+                  max-md:hidden ${
                     props.isId3 ? "w-[70%] max-xl:ml-5 max-lg:-mt-50" : null
                   }`}
                 >
@@ -133,7 +152,7 @@ const ContainerCard = ({
                       alt={props.company + " logo"}
                       className={`w-full ${props.isId2 ? "max-2xl:w-[10%]" : ""}
                       ${props.isId1 ? "max-lg:mt-25" : null}
-                      ${props.isId3 ? "max-lg:ml-5" : null}
+                      ${props.isId3 ? "max-lg:mt-10 max-lg:ml-5" : null}
                       `}
                     />
                   )}
@@ -142,8 +161,8 @@ const ContainerCard = ({
               {/* Down Arrow */}
               {props.id !== 3 && (
                 <div
-                  className="animate-fade-in invisible
-              max-xl:visible
+                  className="animate-fade-in hidden
+              max-xl:block
               max-lg:flex max-lg:justify-center"
                 >
                   <img
@@ -156,7 +175,7 @@ const ContainerCard = ({
                     className={`h-[60px] z-5 absolute cursor-pointer animate-arrow-downward 
                     max-2xl:h-[40px] max-2xl:w-[40px]
                     max-xl:invisible
-                    max-lg:rotate-90 max-lg:visible max-lg:-mb-15`}
+                    max-lg:rotate-90 max-lg:visible max-lg:-mb-10 ${props.isId2 ? "max-lg:-mb-24" : null}`}
                   />
                 </div>
               )}
@@ -164,26 +183,27 @@ const ContainerCard = ({
             {/* Line container */}
             <div
               line
-              className="relative animate-sm-lg w-[3%] h-[100%]
-            max-xl:invisible"
+              className=" animate-sm-lg w-[3%] max-h-[90%]
+            max-xl:hidden"
             >
               <div
-                className="ml-1 mt-10 
+                className="ml-1 mt-10 h-full
               max-2xl:mt-5"
               >
-                <div className="absolute w-[30px] h-[30px] mt-1 bg-white rounded-full"></div>
+                <div className="w-[30px] h-[30px] mt-2 bg-white rounded-full"></div>
                 <div
-                  className={`absolute w-[5%] bg-white ml-3.5 mt-1 ${
-                    props.isId2 || props.isId3 ? "h-[85%]" : "h-[85%]"
-                  } `}
+                  className={`rotate-180 h-[85%] w-[5%] bg-white ml-3.5
+                  max-2xl:h-[85%]`}
                 ></div>
               </div>
             </div>
             {/* Text container */}
             <div
-              className={`animate-sm-lg h-[100%] w-[67%] p-10
+            className={`animate-sm-lg w-[67%] p-10
             max-2xl:pt-6
+            max-xl:mt-1
             max-lg:pt-1 max-lg:animate-swipe-up
+            max-md:mt-10 max-md:w-[90%] max-md:px-6 max-md:ml-10 max-md:border-1
             ${props.isId2 || props.isId3 ? "max-lg:pt-10" : null}`}
             >
               <div className="">
@@ -191,31 +211,35 @@ const ContainerCard = ({
                   title
                   className="text-[1.8rem] font-bold 
                   max-2xl:text-[1.5rem] 
-                  max-lg:text-[1.3rem]"
+                  max-lg:text-[1.3rem]
+                  max-md:text-center max-md:mt-10"
                 >
                   {" "}
                   {props.company}
                 </div>
                 <div
                   work
-                  className="flex space-x-4 text-[1.3rem] mt-[2%] mb-[2%] 
+                  className="flex space-x-2 text-[1.3rem] mt-[2%] mb-[2%] 
                   max-2xl:text-[1.1rem]
-                  max-lg:text-[0.9rem]"
+                  max-lg:text-[0.9rem] 
+                  max-md:text-center"
                 >
-                  <div>{props.job}</div>
+                  <div className="flex space-x-5 max-md:ml-10">{props.job}
                   {props.id !== 2 && (
                     <>
-                      <div>/</div>
+                      <span className="ml-5">/</span>
                       <div fulltime>{props.employmentType}</div>
-                      <div>/</div>
+                      <span className={`${props.isId3 && "hidden"}`}>/</span>
                       <div freelance>{props.locationType}</div>
                     </>
                   )}
+                  </div>
                 </div>
                 <div
                   date
                   className={`text-[1.2rem] mb-[3%]
-                    max-2xl:text-[0.85rem] ${props.isId1 ? "max-xl:mb-6" : ""}`}
+                    max-2xl:text-[0.85rem]
+                    max-md:text-center ${props.isId1 ? "max-xl:mb-6" : ""}`}
                 >
                   {props.date}
                 </div>
@@ -283,6 +307,31 @@ const ContainerCard = ({
                 </div>
               </div>
             </div>
+            <div className="hidden -z-1 max-md:block max-md:z-1">
+              {ContainerCardDesc.map((value) => (
+                value.id !== 1 && (
+                <ExperienceCard 
+                key={value.id}
+                company={value.company}
+                job={value.job}
+                employmentType={value.employmentType}
+                locationType={value.locationType}
+                date={value.date}
+                description={value.description}
+                skillTitle={value.skillTitle}
+                li1={value.li1}
+                li2={value.li2}
+                li3={value.li3}
+                li4={value.li4}
+                softwareTitle={value.softwareTitle}
+                li5={value.li5}
+                li6={value.li6}
+                li7={value.li7}
+                isId2={value.id === 2}
+                isId3={value.id === 3}
+                 />
+              )))}
+            </div>
             {/* Right Arrow */}
             {props.id !== 3 && (
               <div className="h-[100%] w-[9%] animate-fade-in">
@@ -293,27 +342,12 @@ const ContainerCard = ({
                     e.stopPropagation();
                     onArrowRight?.();
                   }}
-                  className={`h-[60px] absolute z-5 w-[60px] mt-60 mr-[-150px] cursor-pointer animate-arrow-forward 
+                  className={`h-[60px] absolute z-5 w-[60px] mt-65 mr-[-150px] cursor-pointer animate-arrow-forward 
                     max-2xl:h-[40px] max-2xl:w-[40px]
                     max-lg:invisible`}
                 />
               </div>
             )}
-          </div>
-          {/* Lines Design */}
-          <div
-            className="animate-pic-slide absolute top-[-40px]  right-9.5 h-[20%] w-[20%] 
-          max-2xl:invisible"
-          >
-            <div className=" h-0.5 w-90 mt-10 ml-[30px] bg-white"></div>
-            <div className="h-0.5 w-90 bg-white rotate-90 mt-34 ml-[164px]"></div>
-          </div>
-          <div
-            className="animate-pic-slide absolute bottom-2.5 right-9.5 h-[20%] w-[20%]
-          max-2xl:invisible"
-          >
-            <div className="h-0.5 w-90 mt-40 ml-[30px] bg-white"></div>
-            <div className="h-0.5 w-90 rotate-90 ml-[164px] mt-[-150px] bg-white"></div>
           </div>
         </div>
       </div>

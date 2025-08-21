@@ -12,21 +12,24 @@ const AboutContainer = () => {
   return (
     <HomeDesign>
       <div className="relative w-full h-screen bg-transparent flex justify-center items-center font-Jost">
+
+        {/* main container */}
         <div
           className="relative w-full px-4 py-25 bg-black/50 flex flex-row items-center
         max-w-screen-2xl h-[80vh] max-h-[900px]
-        max-2xl:max-w-screen-xl max-2xl:h-[75vh]
+        max-2xl:max-w-screen-xl max-2xl:h-[80vh] max-2xl:overflow-y-scroll
         max-xl:max-w-screen-lg max-xl:h-[75vh] max-xl:py-5 max-xl:px-10
         max-lg:max-w-screen-md max-lg:px-8 max-lg:py-10 max-lg:flex-col lg:items-stretch max-lg:overflow-y-scroll
-        max-md:px-6"
+        max-md:px-6 max-md:max-w-screen-sm"
         >
           <button
             onClick={() => navigate("/")}
-            className="animate-fade-in absolute top-6 right-6 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition z-50"
+            className="animate-fade-in absolute top-6 right-6 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition z-50 
+            max-md:invisible"
           >
             ×
           </button>
-
+          {/* line container */}
           <div className="hidden 2xl:block animate-pic-slide2 absolute top-0 left-0">
             <div className="h-0.5 w-32 bg-white"></div>
             <div className="h-32 w-0.5 bg-white"></div>
@@ -43,28 +46,32 @@ const AboutContainer = () => {
             <div className="h-0.5 w-32 bg-white"></div>
             <div className="h-32 w-0.5 bg-white"></div>
           </div>
-
+          {/* Left Container Pic */}
           <div
             className="animate-sm-lg max-w-[800px] flex justify-center items-center 
-          max-lg:w-2/4"
+          max-lg:w-2/4 
+          max-md:invisible"
           >
             <img
               src={pic3}
               alt="About"
               className="w-[75%] max-w-[400px] h-auto object-cover 
-              max-lg:h-[300px] max-lg:w-[60%]"
+              max-lg:h-[250px] max-lg:w-[60%]"
             />
           </div>
-
+          {/* Content container */}
           <div
             className="w-[70%] text-white mt-12 space-y-8 p-4 sm:p-6 
-          max-2xl:mt-2
+          max-2xl:mt-5
           max-xl:mt-0 
-          max-lg:p-8 max-lg:w-3/3 max-lg:mt-15"
+          max-lg:p-8 max-lg:w-3/3 max-lg:mt-15
+          max-md:-mt-60"
           >
             <div className="animate-sm-lg">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-2">ABOUT ME</h2>
-              <div className="flex flex-wrap gap-3 text-sm sm:text-base font-semibold mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-2
+              max-md:text-center max-md:mb-5">ABOUT ME</h2>
+              <div className="flex flex-wrap gap-3 text-sm sm:text-base font-semibold mb-4 
+              max-md:flex max-md:justify-center">
                 <span>28 years</span>
                 <span>/</span>
                 <span>Full-Time</span>
@@ -72,9 +79,10 @@ const AboutContainer = () => {
                 <span>Freelance</span>
               </div>
               <p
-                className="leading-relaxed text-justify text-[1rem]
+                className="leading-relaxed text-center text-[1rem]
               max-2xl:text-[1rem] max-2xl:text-base/7
-              max-xl:text-[0.85rem] max-xl:text-base/8 max-xl:-mb-2"
+              max-xl:text-[0.85rem] max-xl:text-base/8 max-xl:-mb-2 
+              max-md:mt-10"
               >
                 Hi! I’m Carlo Damalerio, a junior front-end developer with love
                 for creating responsive and user-friendly web applications. I
@@ -99,7 +107,8 @@ const AboutContainer = () => {
             <div className="animate-sm-lg">
               <h3
                 className="text-2xl font-bold mb-4
-              max-xl:text-[1.4rem]"
+              max-xl:text-[1.4rem] 
+              max-md:text-center"
               >
                 MY SERVICE
               </h3>

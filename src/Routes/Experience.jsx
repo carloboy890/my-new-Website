@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ContainerCard from "../Components/ContainerCard";
 import ContainerCardDesc from "../Components/ContainerCardDesc";
 import Navbar from "../Components/Navbar";
+import ExperienceCard from "../Components/ExperienceCard";
 
 const Experience = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -61,7 +62,7 @@ const Experience = (props) => {
           <Navbar />
         </div>
         <ContainerCard
-          key={currentCard.id}
+          key={`container-${currentCard.id}`}
           {...currentCard}
           onArrowRight={handleRightArrowClick}
           onArrowLeft={handleLeftArrowClick}
@@ -70,6 +71,14 @@ const Experience = (props) => {
           isId1={currentCard.id === 1}
           isId2={currentCard.id === 2}
           isId3={currentCard.id === 3}
+        />
+        <ExperienceCard 
+        key={`experience-${currentCard.id}`}
+        {...currentCard}
+        currentIndex={currentIndex}
+        isId1={currentCard.id === 1}
+        isId2={currentCard.id === 2}
+        isId3={currentCard.id === 3}
         />
       </div>
     </div>

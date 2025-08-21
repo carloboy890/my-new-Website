@@ -9,7 +9,7 @@ const ContainerCardDesc = [
     logo: PetronLogo,
     title: "EXPERIENCE",
     number: "1",
-    company: "PETRON GASOLINE STATION SOGOD SO. LEYTE",
+    company: "PETRON GASOLINE STATION SOGOD BRANCH",
     job: "ADMINISTRATIVE MANAGER",
     employmentType: "FULL-TIME",
     locationType: "HYBRID",

@@ -2,12 +2,14 @@ import React from "react";
 
 const HobbiesCard = (props) => {
   return (
-    <div className="w-[400px] h-[100px] flex justify-center items-center 
-    max-2xl:z-2 max-2xl:w-[180px] max-2xl:h-[50px]">
+    <div className="w-[400px] h-[100px] flex justify-center items-center
+    max-2xl:z-2 max-2xl:w-[180px] max-2xl:h-[50px]
+    ">
       <div
         cont
-        className="animate-sm-lg text-white flex space-x-6 border-1 h-[60px] w-[380px] p-2 hoverEffect hover:shadow-buttonShadow cursor-pointer 
-        max-2xl:flex max-2xl:justify-center max-2xl:items-center max-2xl:space-x-3"
+        className="animate-sm-lg text-white flex space-x-6 border-1 h-[60px] w-[400px] p-2 hoverEffect hover:shadow-buttonShadow cursor-pointer 
+        max-2xl:flex max-2xl:justify-center max-2xl:items-center max-2xl:space-x-3 
+        max-md:w-[150px]"
       >
         <div>
           <img
@@ -18,7 +20,8 @@ const HobbiesCard = (props) => {
           />
         </div>
         <div className="text-[1.8rem]
-        max-2xl:text-[0.9rem]">{props.title}</div>
+        max-2xl:text-[0.9rem]
+        max-md:text-[0.8rem]">{props.title}</div>
       </div>
     </div>
   );

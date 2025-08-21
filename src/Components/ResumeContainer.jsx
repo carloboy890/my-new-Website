@@ -18,6 +18,7 @@ function ResumeContainer() {
             max-2xl:h-[75vh] max-2xl:max-w-screen-xl
             max-xl:h-[75vh] max-xl:max-w-screen-lg
             max-lg:max-w-screen-md max-lg:flex-col overflow-scroll
+            max-md:max-w-screen-sm
           "
         >
           <div className="w-[40%] h-full space-y-10 border-white animate-pic-slide">
@@ -25,8 +26,9 @@ function ResumeContainer() {
               className="
                 mt-10 text-4xl font-bold text-center text-white text-[4rem]
                 max-2xl:mt-15 max-2xl:text-[3.5rem] max-2xl:ml-10
-                max-xl:text-[3rem]
+                max-xl:text-[3rem] max-xl:ml-0
                 max-lg:ml-6 max-lg:mt-10
+                max-md:text-[2.5rem]
               "
             >
               RESUME
@@ -34,9 +36,10 @@ function ResumeContainer() {
             <div
               className="
                 aspect-square w-[70%] h-[60%] ml-[15%] border-3 border-white rounded-full cursor-pointer hover:shadow-buttonShadow
-                max-2xl:w-[75%] max-2xl:h-[55%] max-2xl:ml-20 max-2xl:mt-20
-                max-xl:w-[75%] max-xl:h-[45%] max-xl:ml-18
+                max-2xl:w-75 max-2xl:h-[45%] max-2xl:ml-30 max-2xl:mt-20
+                max-xl:w-60 max-xl:h-[35%] max-xl:ml-18 max-xl:mt-25
                 max-lg:w-[80%] max-lg:h-[60%] max-lg:ml-10 max-lg:mt-12
+                max-md:hidden
               "
             >
               <img
@@ -48,7 +51,8 @@ function ResumeContainer() {
           </div>
           <div
             className="grid w-3/5 h-full grid-cols-2 gap-4 p-8 border-white
-          max-lg:w-[83%] max-lg:mt-2 max-lg:gap-8"
+          max-lg:w-[83%] max-lg:mt-2 max-lg:gap-8 
+          max-md:w-3/3"
           >
             {smCardsDes.map((value) => (
               <SmCard

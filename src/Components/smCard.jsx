@@ -27,7 +27,7 @@ const SmCard = ({ title, description, text, bg, path, onClick }) => {
         <div
           onClick={onClick}
           className={`text-center inline-block border w-37 border-white px-4 py-2 cursor-pointer group mb-10
-             max-2xl:mt-18 max-xl:mt-27
+             max-2xl:mt-26 max-xl:mt-27
              max-xl:mb-6`}
         >
           <div className="relative inline-block">

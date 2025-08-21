@@ -16,6 +16,7 @@ const HobbiesContainer = ({ onClose }) => {
         max-2xl:h-[75vh] max-2xl:max-w-screen-xl 
         max-xl:max-w-screen-lg
         max-lg:max-w-screen-md
+        max-md:max-w-screen-sm
         "
         >
           <div
@@ -36,7 +37,8 @@ const HobbiesContainer = ({ onClose }) => {
             onClick={() => navigate("/resume")}
             className="absolute top-10 right-15 z-50 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition 
             max-2xl:top-10
-            max-xl:top-10"
+            max-xl:top-10 
+            max-md:invisible"
           >
             ×
           </button>
@@ -53,7 +55,10 @@ const HobbiesContainer = ({ onClose }) => {
           <div
             sm
             cont2
-            className="p-14 h-[60%] flex flex-wrap justify-center items-center max-2xl:space-x-10"
+            className="p-14 h-[60%] grid gap-6 grid-cols-3
+             max-2xl:space-x-10 max-2xl:ml-25
+             max-lg:space-x-1 max-lg:ml-0
+             max-md:-space-x-4 max-md:w-full"
           >
             {HobbiesCardDesc.map((value) => (
               <HobbiesCard
