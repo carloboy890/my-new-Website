@@ -43,12 +43,13 @@ const HobbiesContainer = ({ onClose }) => {
             ×
           </button>
           <div sm cont className="h-[30%] w-[100%]">
-            <div cont>
+            <div>
               <img
                 src={hobbiesTitle}
                 alt="hobbiesTitle"
                 className="mx-auto mt-10 w-[450px] h-[150px] animate-sm-lg
-                 max-2xl:w-[350px] max-2xl:h-[120px]"
+                 max-2xl:w-[350px] max-2xl:h-[120px] 
+                 max-sm:w-[250px] max-sm:h-[100px] max-sm:mb-10"
               />
             </div>
           </div>
@@ -58,7 +59,9 @@ const HobbiesContainer = ({ onClose }) => {
             className="p-14 h-[60%] grid gap-6 grid-cols-3
              max-2xl:space-x-10 max-2xl:ml-25
              max-lg:space-x-1 max-lg:ml-0
-             max-md:-space-x-4 max-md:w-full"
+             max-md:-space-x-4 max-md:w-full 
+             max-sm:grid-cols-2
+             max-sm:-mt-20 max-sm:p-7"
           >
             {HobbiesCardDesc.map((value) => (
               <HobbiesCard

@@ -65,16 +65,19 @@ const Education = (props) => {
                 </div>
                 <div className="w-full mr-auto ml-auto border-1 border-white"></div>
               </div>
-              <div className="w-full h-[86%] flex justify-center space-x-5 
+              <div
+                className="w-full h-[86%] flex justify-center space-x-5 
               max-xl:-mt-20
-              ">
+              "
+              >
                 <div
                   cont
                   className="animate-sm-lg w-[20%] h-[100%] flex flex-col items-center
                   max-2xl:justify-center
                   max-xl:space-y-10
                   max-lg:space-y-20 max-xl:mt-30 
-                  max-md:absolute max-md:space-y-90 top-75"
+                  max-md:absolute max-md:space-y-90 max-md:top-75
+                  max-sm:w-[30%] max-sm:space-y-110 max-sm:mt-58"
                 >
                   <div cont1 className="flex h-[33.33%]">
                     <div logo className="h-[100%] w-full mt-4 ">
@@ -83,35 +86,32 @@ const Education = (props) => {
                         alt=""
                         className="h-[200px] w-[200px]
                         max-2xl:h-[170px] max-2xl:w-[170px]
-                        max-xl:h-[140px] max-xl:w-[160px]"
+                        max-xl:h-[140px] max-xl:w-[160px]
+                        max-sm:h-[120px] max-sm:w-[140px]"
                       />
                     </div>
                   </div>
                   <div cont2 className="flex h-[33.33%]">
-                    <div
-                      logo
-                      className="border-white h-[100%] w-full mt-4"
-                    >
+                    <div logo className="border-white h-[100%] w-full mt-4">
                       <img
                         src={FEULogo}
                         alt=""
                         className="h-[200px] w-[200px]
                          max-2xl:h-[170px] max-2xl:w-[170px]
-                         max-xl:h-[140px] max-xl:w-[160px]"
+                         max-xl:h-[140px] max-xl:w-[160px]
+                         max-sm:h-[120px] max-sm:w-[140px]"
                       />
                     </div>
                   </div>
                   <div cont3 className="flex h-[33.33%] border-white">
-                    <div
-                      logo
-                      className="border-white h-[100%] w-full mt-4"
-                    >
+                    <div logo className="border-white h-[100%] w-full mt-4">
                       <img
                         src={MyUdemyCert}
                         alt=""
                         className="h-[170px] w-[200px] 
                         max-2xl:h-[150px] max-2xl:w-[170px]
-                        max-xl:h-[140px] max-xl:w-[160px]"
+                        max-xl:h-[140px] max-xl:w-[160px]
+                        max-sm:h-[120px] max-sm:w-[140px]"
                       />
                     </div>
                   </div>
@@ -121,7 +121,8 @@ const Education = (props) => {
                 max-2xl:text-base/4.5 max-2xl:space-y-4
                 max-xl:mt-25 max-xl:space-y-8
                 max-lg:w-[70%] max-lg:space-y-11 max-lg:mt-22
-                max-md:absolute max-md:space-y-80 max-md:top-70 max-md:w-2/2"
+                max-md:absolute max-md:space-y-80 max-md:top-70 max-md:w-2/2
+                max-sm:space-y-95 max-sm:top-65"
                 >
                   {smEduDes.map((value) => (
                     <SmEdu

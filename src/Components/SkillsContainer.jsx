@@ -51,18 +51,21 @@ const SkillsContainer = () => {
 
   return (
     <HomeDesign>
-      <div className="text-white w-[90%] mr-auto ml-auto h-screen border-white font-Jost flex justify-center items-center">
+      <div className="text-white w-full mr-auto ml-auto h-screen border-white font-Jost flex justify-center items-center">
         <div
           className="relative h-[85vh] w-full bg-black/50 overflow-scroll max-w-screen-2xl
           max-2xl:max-w-screen-xl
           max-xl:max-w-screen-lg
-          max-lg:max-w-screen-md"
+          max-lg:max-w-screen-md
+          max-sm:w-full"
           ref={scrollRef}
         >
           <button
             onClick={() => navigate("/resume")}
             className="animate-fade-in absolute top-5 right-10 z-50 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition
-            max-2xl:text-2xl"
+            max-2xl:text-2xl
+            max-sm:hidden
+            "
           >
             ×
           </button>
@@ -70,7 +73,8 @@ const SkillsContainer = () => {
             <div
               className="font-bold text-center text-[5rem] mb-2
             max-2xl:text-[3.5rem]
-            max-xl:text-[3rem]"
+            max-xl:text-[3rem]
+            max-sm:text-[2rem] max-sm:mt-10"
             >
               SKILLS
             </div>
@@ -78,31 +82,36 @@ const SkillsContainer = () => {
           </div>
 
           <div className="flex w-full">
-            <div className="w-[30%] flex justify-center items-center animate-pic-slide">
+            <div className="max-sm:hidden w-[30%] flex justify-center items-center animate-pic-slide">
               <img
                 src={facingComp}
                 alt="facingComp"
                 className="h-[430px] w-[430px] ml-10
                 max-2xl:h-[300px]
-                max-lg:h-[200]"
+                max-lg:h-[200] "
               />
             </div>
 
-            <div className="space-y-10 p-15 w-[70%] animate-pic-slide2">
+            <div
+              className="space-y-10 p-15 w-[70%] animate-pic-slide2 
+            max-sm:w-full max-sm:p-5"
+            >
               <div className="flex justify-end">
                 <img
                   src={skillLogo}
                   alt="skillLogo"
                   className="w-[110px] h-[110px]
-                  max-2xl:w-[70px] max-2xl:h-[70px]"
+                  max-2xl:w-[70px] max-2xl:h-[70px]
+                  max-sm:hidden"
                 />
               </div>
 
               <div
-                className="text-[1.3rem] text-justify leading-10 
+                className="text-[1.3rem] text-justify leading-10
               max-2xl:text-[1.2rem]
               max-xl:text-[1rem]
-              max-lg:text-[0.9rem]"
+              max-lg:text-[0.9rem]
+              max-sm:text-center max-sm:text-xs/8"
               >
                 A Front End Developer crafts the user-facing aspects of websites
                 and applications, ensuring a seamless and engaging experience
@@ -116,7 +125,8 @@ const SkillsContainer = () => {
               {showDownArrow && (
                 <div
                   className="min-h-[100px] mt-8 flex justify-center
-                max-2xl:mt-15"
+                max-2xl:mt-15 
+                max-sm:hidden"
                 >
                   <img
                     src={arrowDown}
@@ -129,9 +139,11 @@ const SkillsContainer = () => {
               )}
             </div>
           </div>
-          <div className="flex flex-wrap justify-center mt-70 gap-5 
+          <div
+            className="flex flex-wrap justify-center mt-70 gap-5
           max-xl:space-y-30 
-          max-md:hidden">
+          max-md:hidden"
+          >
             {SkillCardDesc.map((value, index) => (
               <div
                 key={value.id}
@@ -154,27 +166,55 @@ const SkillsContainer = () => {
               </div>
             ))}
           </div>
-          <div className="hidden
-          max-md:block mt-10 w-full">
+          <div
+            className="hidden
+          max-md:block mt-10 w-full 
+          max-sm:flex max-sm:flex-col max-sm:items-center"
+          >
             {SkillMDcardDesc.map((value, index) => (
               <React.Fragment key={value.id}>
-            {index === 0 && (
-                <div className="w-2/3 ml-30 mt-5">
-                <p className="font-bold text-center mb-10">Basic Front-End Tools</p>
-                <p className="hidden max-md:block text-center mb-8 text-[0.9rem]">HTML provides the structure of a webpage, CSS adds styling and layout to make it visually appealing, and JavaScript brings interactivity and dynamic functionality, making the three core technologies work together to build modern, responsive websites.</p>
-                </div>
-              )}
-              <SkillMDcard 
-              key={value.id}
-              logo={value.logo}
-              tool={value.tool}
-              percentage={value.percentage}/>
-              {SkillToolsDesc[index] && (
-                <div className="w-2/3 ml-30 mt-5">
-                <p className="font-bold text-center mb-10">{SkillToolsDesc[index].title}</p>
-                <p className="hidden max-md:block text-center mb-8 text-[0.9rem]">{SkillToolsDesc[index].description}</p>
-                </div>
-              )}
+                {index === 0 && (
+                  <div
+                    className="w-2/3 ml-30 mt-5 
+                  max-sm:ml-0"
+                  >
+                    <p className="font-bold text-center mb-10">
+                      Basic Front-End Tools
+                    </p>
+                    <p
+                      className="hidden max-md:block text-center mb-8 text-[0.9rem] 
+                    max-sm:text-xs/7"
+                    >
+                      HTML provides the structure of a webpage, CSS adds styling
+                      and layout to make it visually appealing, and JavaScript
+                      brings interactivity and dynamic functionality, making the
+                      three core technologies work together to build modern,
+                      responsive websites.
+                    </p>
+                  </div>
+                )}
+                <SkillMDcard
+                  key={value.id}
+                  logo={value.logo}
+                  tool={value.tool}
+                  percentage={value.percentage}
+                />
+                {SkillToolsDesc[index] && (
+                  <div
+                    className="w-2/3 ml-30 mt-5
+                  max-sm:ml-0"
+                  >
+                    <p className="font-bold text-center mb-10">
+                      {SkillToolsDesc[index].title}
+                    </p>
+                    <p
+                      className="hidden max-md:block text-center mb-8 text-[0.9rem] 
+                    max-sm:text-xs/7"
+                    >
+                      {SkillToolsDesc[index].description}
+                    </p>
+                  </div>
+                )}
               </React.Fragment>
             ))}
           </div>

@@ -30,62 +30,79 @@ const HomeContainer = () => {
     max-xl:max-w-screen-lg
     max-lg:max-w-screen-md"
     >
-      <div className="w-[10%]"></div>
+      <div
+        className="w-[10%]
+      max-sm:hidden"
+      ></div>
       <div
         className="pt-30 w-2/5 font-Jost 
-      max-lg:left-40 max-lg:w-full max-lg:absolute max-lg:pt-30 
-      max-md:left-10 max-md:-top-10"
+      max-lg:left-38 max-lg:w-auto max-lg:top-10 max-lg:absolute 
+      max-md:left-22
+      max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:left-0 max-sm:-top-20 max-sm:w-90 max-sm:ml-10"
       >
-        <div className="fade-cont line-container animate-pic-slide w-[70%] 
-        max-md:text-center max-md:animate-none max-md:ml-15">
+        <div
+          className="fade-cont line-container animate-pic-slide w-full 
+        max-md:text-center max-md:animate-none"
+        >
           <p
             className="fade text-[1.5rem] text-white 
-          max-2xl:text-[1.5rem] max-lg:z-10"
+          max-2xl:text-[1.5rem]
+          max-lg:z-10
+          max-sm:text-[0.8rem]"
           >
             Currently Available For Freelance Worldwide{" "}
             <span className="ml-5">
               <FontAwesomeIcon icon={faSquareArrowUpRight} />
             </span>{" "}
           </p>
-          <div className="line bg-white w-[22rem] h-1 mt-4 
-          max-md:hidden"></div>
+          <div
+            className="line bg-white w-[22rem] h-1 mt-4 
+          max-md:hidden"
+          ></div>
         </div>
         <div
           id="homeText"
           className="motion-safe:motion-fade-in w-[110%] scale-x-110 font-Jost ml-10 text-base/18 mt-10 text-[3.5rem] text-white
             max-2xl:w-[80%] max-2xl max-2xl:text-[2rem] max-2xl:text-base/13
             max-lg:text-base/16 max-lg:w-full
-            max-md:text-center"
+            max-md:text-center max-md:flex max-md:flex-col max-md:justify-center max-md:ml-0
+            max-sm:text-base/12"
         >
           <p
             className="text-[1.8rem] 
           max-2xl:text-[1.6rem]
-          max-lg:text-[2rem] 
-          max-md:mr-35"
+          max-lg:text-[2rem]
+          max-sm:text-[1rem] "
           >
             Hi! I'm
           </p>
           <p
             className="animate-bounce 
           max-lg:text-[2.5rem]
-          max-md:mr-35"
+          max-sm:text-[1.5rem] "
           >
             CARLO DAMALERIO,
           </p>
-          <p className="max-lg:text-[2.5rem] max-lg:w-2/3
-          max-md:ml-15">
+          <p
+            className="max-lg:text-[2.5rem] 
+          max-md:w-full max-md:text-[2.2rem]
+          max-sm:text-[1.6rem]"
+          >
             A JUNIOR FRONT-END DEVELOPER
           </p>
         </div>
-        <div className="animate-pic-slide mt-10 flex 
-        max-md:flex-col max-md:space-y-10">
+        <div
+          className="animate-pic-slide mt-10 flex 
+        max-md:flex-col max-md:space-y-10"
+        >
           <div>
             <img
               src={arrowView}
               alt="arrowView"
-              className="max-2xl:w-[100%] max-2xl:h-[80px]
+              className="max-2xl:w-full max-2xl:h-[80px]
               max-lg:w-120 max-lg:h-[100px]
-              max-md:ml-15"
+              max-md:ml-15 
+              max-sm:ml-0 max-sm:h-[50px] max-sm:w-85"
             />
           </div>
           <div className="">
@@ -95,7 +112,8 @@ const HomeContainer = () => {
                 alt="playButton"
                 className="h-[110px] w-[110px] 
                 max-2xl:w-[100px] max-2xl:h-[90px]
-                max-md:ml-60 max-md:h-[130px] max-md:w-[130px]"
+                max-md:ml-60 max-md:h-[130px] max-md:w-[130px] 
+                max-sm:ml-33 max-sm:h-[100px] max-sm:w-[100px]"
               />
             </div>
           </div>

@@ -19,6 +19,7 @@ function ResumeContainer() {
             max-xl:h-[75vh] max-xl:max-w-screen-lg
             max-lg:max-w-screen-md max-lg:flex-col overflow-scroll
             max-md:max-w-screen-sm
+            max-sm:w-full
           "
         >
           <div className="w-[40%] h-full space-y-10 border-white animate-pic-slide">
@@ -29,6 +30,7 @@ function ResumeContainer() {
                 max-xl:text-[3rem] max-xl:ml-0
                 max-lg:ml-6 max-lg:mt-10
                 max-md:text-[2.5rem]
+                max-sm:ml-0
               "
             >
               RESUME
@@ -52,7 +54,8 @@ function ResumeContainer() {
           <div
             className="grid w-3/5 h-full grid-cols-2 gap-4 p-8 border-white
           max-lg:w-[83%] max-lg:mt-2 max-lg:gap-8 
-          max-md:w-3/3"
+          max-md:w-3/3
+          max-sm:flex max-sm:flex-col"
           >
             {smCardsDes.map((value) => (
               <SmCard
@@ -64,6 +67,9 @@ function ResumeContainer() {
                   value.id === 2 || value.id === 3
                     ? "bg-black/70"
                     : "bg-transparent"
+                }
+                sm={
+                  value.id === 1 || value.id === 4 ? "max-sm:bg-black/70" : null
                 }
                 path={value.path}
                 onClick={() => {

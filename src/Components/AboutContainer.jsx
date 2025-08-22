@@ -12,7 +12,6 @@ const AboutContainer = () => {
   return (
     <HomeDesign>
       <div className="relative w-full h-screen bg-transparent flex justify-center items-center font-Jost">
-
         {/* main container */}
         <div
           className="relative w-full px-4 py-25 bg-black/50 flex flex-row items-center
@@ -20,7 +19,8 @@ const AboutContainer = () => {
         max-2xl:max-w-screen-xl max-2xl:h-[80vh] max-2xl:overflow-y-scroll
         max-xl:max-w-screen-lg max-xl:h-[75vh] max-xl:py-5 max-xl:px-10
         max-lg:max-w-screen-md max-lg:px-8 max-lg:py-10 max-lg:flex-col lg:items-stretch max-lg:overflow-y-scroll
-        max-md:px-6 max-md:max-w-screen-sm"
+        max-md:px-6 max-md:max-w-screen-sm
+        max-sm:max-w-full"
         >
           <button
             onClick={() => navigate("/")}
@@ -68,10 +68,16 @@ const AboutContainer = () => {
           max-md:-mt-60"
           >
             <div className="animate-sm-lg">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-2
-              max-md:text-center max-md:mb-5">ABOUT ME</h2>
-              <div className="flex flex-wrap gap-3 text-sm sm:text-base font-semibold mb-4 
-              max-md:flex max-md:justify-center">
+              <h2
+                className="text-3xl sm:text-4xl font-bold mb-2
+              max-md:text-center max-md:mb-5"
+              >
+                ABOUT ME
+              </h2>
+              <div
+                className="flex flex-wrap gap-3 text-sm sm:text-base font-semibold mb-4 
+              max-md:flex max-md:justify-center"
+              >
                 <span>28 years</span>
                 <span>/</span>
                 <span>Full-Time</span>
@@ -79,10 +85,11 @@ const AboutContainer = () => {
                 <span>Freelance</span>
               </div>
               <p
-                className="leading-relaxed text-center text-[1rem]
+                className="leading-relaxed text-justify text-[1rem]
               max-2xl:text-[1rem] max-2xl:text-base/7
               max-xl:text-[0.85rem] max-xl:text-base/8 max-xl:-mb-2 
-              max-md:mt-10"
+              max-md:mt-10 max-md:text-center 
+              max-sm:text-xs/7"
               >
                 Hi! I’m Carlo Damalerio, a junior front-end developer with love
                 for creating responsive and user-friendly web applications. I
@@ -108,12 +115,16 @@ const AboutContainer = () => {
               <h3
                 className="text-2xl font-bold mb-4
               max-xl:text-[1.4rem] 
-              max-md:text-center"
+              max-md:text-center 
+              max-sm:mb-7"
               >
                 MY SERVICE
               </h3>
               <div className="flex flex-wrap gap-6">
-                <div className="w-full sm:w-[47%] space-y-2">
+                <div
+                  className="w-full sm:w-[47%] space-y-2 
+                max-sm:text-center max-sm:flex max-sm:flex-col max-sm:items-center"
+                >
                   <div
                     className="w-12 h-12
                   max-xl:w-10 max-xl:h-10"
@@ -138,7 +149,10 @@ const AboutContainer = () => {
                     various screen sizes and devices.
                   </p>
                 </div>
-                <div className="w-full sm:w-[47%] space-y-2">
+                <div
+                  className="w-full sm:w-[47%] space-y-2 
+                max-sm:text-center max-sm:flex max-sm:flex-col max-sm:items-center"
+                >
                   <div
                     className="w-12 h-12
                   max-xl:w-10 max-xl:h-10"
