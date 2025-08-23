@@ -72,13 +72,7 @@ function ResumeContainer() {
                   value.id === 1 || value.id === 4 ? "max-sm:bg-black/70" : null
                 }
                 path={value.path}
-                onClick={() => {
-                  if ([1, 2, 3].includes(value.id)) {
-                    navigate(value.path);
-                  } else {
-                    window.location.href = value.path;
-                  }
-                }}
+                onClick={() => navigate(value.path)}
               />
             ))}
           </div>
