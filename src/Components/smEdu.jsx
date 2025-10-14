@@ -7,7 +7,7 @@ const SmEdu = (props) => {
         className={`animate-upper-slide text-justify h-[33.33%] p-7 
       max-lg:flex-col max-lg:space-y-10 max-lg:border-1 max-lg:h-120
       max-md:text-center max-md:h-120 max-md:pl-12 max-md:pr-12 flex space-x-10
-      max-sm:h-130
+      max-sm:h-auto
       ${props.isId1 || props.isId2 ? "space-x-14.5" : ""}`}
       >
         <div className=" max-lg:w-full flex justify-center">

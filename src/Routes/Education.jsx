@@ -62,7 +62,7 @@ const Education = (props) => {
                 max-xl:mt-15 max-xl:space-y-8
                 max-lg:w-[95%] max-lg:space-y-20 max-lg:mt-22
                 max-md:absolute max-md:space-y-20 max-md:w-2/2
-                max-sm:space-y-10"
+                max-sm:space-y-30"
                 >
                   {smEduDes.map((value) => (
                     <SmEdu
