@@ -5,7 +5,8 @@ const ExperienceCard = (props) => {
     <div
       cont
       className="h-auto border-1 hidden flex-col p-10
-    max-md:block max-md:mt-20 max-md:w-[90%] max-md:px-6 max-md:ml-5"
+    max-md:block max-md:mt-20 max-md:w-[90%] max-md:px-6 max-md:ml-5
+    max-sm:mt-10"
     >
       <div
         className="max-md:text-center
@@ -16,12 +17,16 @@ const ExperienceCard = (props) => {
       <div
         className={`flex justify-center max-md:mt-[2%] max-md:mb-[2%] max-md:text-[0.9rem]
             max-sm:text-[0.65rem]
-    ${props.isId3 ? "mmax-md:space-x-3" : null}`}
+    ${props.isId3 || props.isId1 ? "max-md:space-x-3" : null}`}
       >
         <div>{props.job}</div>
         <span className={`${props.isId2 ? "max-md:hidden" : null}`}>/</span>
         <div>{props.employmentType}</div>
-        <span className={`${props.isId2 ? "max-md:hidden" : null}`}>/</span>
+        <span
+          className={`${props.isId2 || props.isId3 ? "max-md:hidden" : null}`}
+        >
+          /
+        </span>
         <div>{props.locationType}</div>
       </div>
       <div

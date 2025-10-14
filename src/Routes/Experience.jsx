@@ -3,6 +3,7 @@ import ContainerCard from "../Components/ContainerCard";
 import ContainerCardDesc from "../Components/ContainerCardDesc";
 import Navbar from "../Components/Navbar";
 import ExperienceCard from "../Components/ExperienceCard";
+import ExperienceDesc from "../Components/ExperienceDesc";
 
 const Experience = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -72,13 +73,13 @@ const Experience = (props) => {
           isId2={currentCard.id === 2}
           isId3={currentCard.id === 3}
         />
-        <ExperienceCard 
-        key={`experience-${currentCard.id}`}
-        {...currentCard}
-        currentIndex={currentIndex}
-        isId1={currentCard.id === 1}
-        isId2={currentCard.id === 2}
-        isId3={currentCard.id === 3}
+        <ExperienceCard
+          key={`experience-${currentCard.id}`}
+          {...currentCard}
+          currentIndex={currentIndex}
+          isId1={currentCard.id === 1}
+          isId2={currentCard.id === 2}
+          isId3={currentCard.id === 3}
         />
       </div>
     </div>

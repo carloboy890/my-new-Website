@@ -1,6 +1,11 @@
+import STACLogo from "../assets/STACLogo.png";
+import FEULogo from "../assets/FEULogo.png";
+import MyUdemyCert from "../assets/MyUdemyCert.jpg";
+
 const smEduDes = [
   {
     id: 1,
+    logo: STACLogo,
     title: "SAINT THOMAS AQUINAS COLLEGE",
     level: "High School Level",
     course: "",
@@ -9,6 +14,7 @@ const smEduDes = [
   },
   {
     id: 2,
+    logo: FEULogo,
     title: "FAR EASTERN UNIVERSITY",
     level: "College Level",
     course: "BACHELOR OF SCIENCE IN BIOLOGY",
@@ -17,6 +23,7 @@ const smEduDes = [
   },
   {
     id: 3,
+    logo: MyUdemyCert,
     title: "UDEMY ONLINE COURSE",
     level: "Front-End Development",
     course: "WEB DEVELOPMENT BOOTCAMP",

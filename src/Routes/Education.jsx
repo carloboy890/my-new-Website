@@ -1,13 +1,11 @@
 import React from "react";
 import SmEdu from "../Components/smEdu";
 import smEduDes from "../Components/smEduDes";
-import STACLogo from "../assets/STACLogo.png";
-import FEULogo from "../assets/FEULogo.png";
-import MyUdemyCert from "../assets/MyUdemyCert.jpg";
 import HomeDesign from "../Components/HomeDesign";
 import Navbar from "../Components/Navbar";
 import "../Components/AboutContainer.css";
 import { useNavigate } from "react-router-dom";
+import LineStyle from "../Components/LineStyle";
 
 const Education = (props) => {
   const navigate = useNavigate();
@@ -28,20 +26,8 @@ const Education = (props) => {
             max-lg:max-w-screen-md 
             max-md:max-w-screen-sm"
             >
-              <div
-                className="animate-pic-slide2 absolute -top-10 left-1 h-[20%] w-[20%] 
-            max-2xl:invisible"
-              >
-                <div className="h-0.5 w-[100%] mt-10 -ml-12 bg-white"></div>
-                <div className="h-0.5 w-[100%] bg-white rotate-90 mt-30 ml-[-164px]"></div>
-              </div>
-              <div
-                className="animate-pic-slide2 absolute bottom-2.5 left-1 h-[20%] w-[20%] 
-            max-2xl:invisible"
-              >
-                <div className="h-0.5 w-[100%] mt-40 -ml-12 bg-white"></div>
-                <div className="h-0.5 w-[100%] rotate-90 ml-[-164px] -mt-30 bg-white"></div>
-              </div>
+              {/*Line Style */}
+              <LineStyle />
               <button
                 onClick={() => navigate("/resume")}
                 className="absolute top-7 right-15 z-50 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition 
@@ -71,58 +57,12 @@ const Education = (props) => {
               "
               >
                 <div
-                  cont
-                  className="animate-sm-lg w-[20%] h-[100%] flex flex-col items-center
-                  max-2xl:justify-center
-                  max-xl:space-y-10
-                  max-lg:space-y-20 max-xl:mt-30 
-                  max-md:absolute max-md:space-y-90 max-md:top-75
-                  max-sm:w-[30%] max-sm:space-y-110 max-sm:mt-58"
-                >
-                  <div cont1 className="flex h-[33.33%]">
-                    <div logo className="h-[100%] w-full mt-4 ">
-                      <img
-                        src={STACLogo}
-                        alt=""
-                        className="h-[200px] w-[200px]
-                        max-2xl:h-[170px] max-2xl:w-[170px]
-                        max-xl:h-[140px] max-xl:w-[160px]
-                        max-sm:h-[120px] max-sm:w-[140px]"
-                      />
-                    </div>
-                  </div>
-                  <div cont2 className="flex h-[33.33%]">
-                    <div logo className="border-white h-[100%] w-full mt-4">
-                      <img
-                        src={FEULogo}
-                        alt=""
-                        className="h-[200px] w-[200px]
-                         max-2xl:h-[170px] max-2xl:w-[170px]
-                         max-xl:h-[140px] max-xl:w-[160px]
-                         max-sm:h-[120px] max-sm:w-[140px]"
-                      />
-                    </div>
-                  </div>
-                  <div cont3 className="flex h-[33.33%] border-white">
-                    <div logo className="border-white h-[100%] w-full mt-4">
-                      <img
-                        src={MyUdemyCert}
-                        alt=""
-                        className="h-[170px] w-[200px] 
-                        max-2xl:h-[150px] max-2xl:w-[170px]
-                        max-xl:h-[140px] max-xl:w-[160px]
-                        max-sm:h-[120px] max-sm:w-[140px]"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="h-[100%] w-[70%] pt-6
+                  className="h-[100%] w-[95%] p-6
                 max-2xl:text-base/4.5 max-2xl:space-y-4
-                max-xl:mt-25 max-xl:space-y-8
-                max-lg:w-[70%] max-lg:space-y-11 max-lg:mt-22
-                max-md:absolute max-md:space-y-80 max-md:top-70 max-md:w-2/2
-                max-sm:space-y-95 max-sm:top-65"
+                max-xl:mt-15 max-xl:space-y-8
+                max-lg:w-[95%] max-lg:space-y-20 max-lg:mt-22
+                max-md:absolute max-md:space-y-20 max-md:w-2/2
+                max-sm:space-y-10"
                 >
                   {smEduDes.map((value) => (
                     <SmEdu
@@ -132,23 +72,12 @@ const Education = (props) => {
                       course={value.course}
                       description={value.description}
                       logo={value.logo}
+                      isId1={value.id === 1}
+                      isId2={value.id === 2}
+                      isId3={value.id === 3}
                     />
                   ))}
                 </div>
-              </div>
-              <div
-                className="animate-pic-slide1 absolute -top-10 right-0 h-[20%] w-[20%] 
-          max-2xl:invisible"
-              >
-                <div className="h-0.5 w-[100%] mt-10 ml-12 bg-white"></div>
-                <div className="h-0.5 w-[100%] bg-white rotate-90 mt-30 ml-[164px]"></div>
-              </div>
-              <div
-                className="animate-pic-slide1 absolute bottom-2.5 right-0 h-[20%] w-[20%] 
-          max-2xl:invisible"
-              >
-                <div className="h-0.5 w-[100%] mt-40 ml-12 bg-white"></div>
-                <div className="h-0.5 w-[100%] rotate-90 ml-[164px] -mt-30 bg-white"></div>
               </div>
             </div>
           </div>
