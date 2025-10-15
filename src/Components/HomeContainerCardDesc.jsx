@@ -38,6 +38,7 @@ function HomeContainerCardDesc(props) {
             id="homeText"
             className="animate-pic-slide w-[110%] scale-x-110 font-Jost ml-10 text-base/18 mt-10 text-[3.5rem] text-white
                 max-2xl:w-[80%] max-2xl:text-[2rem]
+                max-xl:text-[1.7rem] max-xl:text-base/15.5
                 max-lg:text-base/16 max-lg:w-full
                 max-md:text-center max-md:flex max-md:flex-col max-md:justify-center max-md:ml-0
                 max-sm:text-base/12"

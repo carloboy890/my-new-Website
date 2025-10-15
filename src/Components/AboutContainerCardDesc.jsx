@@ -6,14 +6,14 @@ function AboutContainerCardDesc(props) {
   return (
     <>
       <div
-        className="w-[70%] max-h-screen  text-white mt-12 space-y-8 p-4 sm:p-6 
+        className="w-[70%] max-h-screen h-[75vh] text-white space-y-8 p-4 sm:p-6 
               max-2xl:mt-5
               max-xl:mt-0 max-xl:min-h-[82vh]
               max-lg:p-8 max-lg:w-3/3 max-lg:mt-15 max-lg:min-h-[75vh]
               max-md:-mt-60 max-md:min-h-[90vh]
               max-sm:min-h-[100vh] max-sm:-mt-70"
       >
-        <div className="animate-sm-lg">
+        <div className="animate-sm-lg mt-13">
           <h2
             className="text-3xl sm:text-4xl font-bold mb-2
                 max-lg:text-center
@@ -35,7 +35,7 @@ function AboutContainerCardDesc(props) {
           <p
             className="leading-relaxed text-justify text-[1rem]
                   max-2xl:text-[1rem] max-2xl:text-base/7
-                  max-xl:text-[0.85rem] max-xl:text-base/8 max-xl:-mb-2 
+                  max-xl:text-[0.85rem] max-xl:text-base/7 max-xl:-mb-2 
                   max-lg:text-center
                   max-md:mt-10 max-md:text-center 
                   max-sm:text-xs/7"
@@ -49,7 +49,7 @@ function AboutContainerCardDesc(props) {
                 max-xl:mb-7"
         />
 
-        <div className="animate-sm-lg">
+        <div className="animate-sm-lg ">
           <h3
             className="text-2xl font-bold mb-4
                   max-xl:text-[1.4rem] 

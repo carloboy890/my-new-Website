@@ -16,7 +16,7 @@ const AboutContainer = () => {
         {/* main container */}
         <div
           className="relative w-full px-4 bg-black/50 flex flex-row items-center
-        max-w-screen-2xl min-h-[80vh] max-h-[90vh]
+        max-w-screen-2xl min-h-[70vh] max-h-[90vh]
         max-2xl:max-w-screen-xl max-2xl:h-[80vh] max-2xl:overflow-y-scroll
         max-xl:max-w-screen-lg max-xl:h-[80vh] max-xl:py-5 max-xl:px-10
         max-lg:max-w-screen-md max-lg:px-8 max-lg:py-10 max-lg:flex-col lg:items-stretch max-lg:overflow-y-scroll
