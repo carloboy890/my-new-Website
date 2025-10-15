@@ -618,7 +618,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
  * Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2024 Fonticons, Inc.
- */const c2={prefix:"fas",iconName:"square-arrow-up-right",icon:[448,512,["external-link-square"],"f14c","M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z"]},o2="/my-new-Website/assets/playButton-r8KOCOCA.gif",f2="/my-new-Website/assets/arrowView-kqKClqhL.gif",m2="/my-new-Website/assets/myWorkplace1-BgvNhile.mp4";function d2(l){return m.jsxs("div",{className:`pt-25 -ml-15 w-2/5 font-Jost\r
+ */const c2={prefix:"fas",iconName:"square-arrow-up-right",icon:[448,512,["external-link-square"],"f14c","M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z"]},o2="/my-new-Website/assets/playButton-r8KOCOCA.gif",f2="/my-new-Website/assets/arrowView-kqKClqhL.gif",m2="/my-new-Website/assets/myWorkplace1-BgvNhile.mp4";function d2(l){return m.jsxs("div",{className:`pt-25 -ml-15 w-2/5 font-Jost min-h-[70vh]\r
       max-lg:left-25 max-lg:w-auto max-lg:top-10 max-lg:absolute\r
       max-md:left-30\r
       max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:left-0 max-sm:-top-20 max-sm:w-full max-sm:ml-0`,children:[!l.showVideo&&m.jsxs(m.Fragment,{children:[m.jsxs("div",{className:`fade-cont line-container animate-pic-slide w-full \r
@@ -629,35 +629,36 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 max-2xl:w-[80%] max-2xl:text-[2rem]\r
                 max-lg:text-base/16 max-lg:w-full\r
                 max-md:text-center max-md:flex max-md:flex-col max-md:justify-center max-md:ml-0\r
-                max-sm:text-base/12`,children:[m.jsx("p",{className:"text-[1.8rem] max-2xl:text-[1.6rem] max-lg:text-[2rem] max-sm:text-[1rem]",children:l.intro1}),m.jsx("p",{className:"animate-bounce max-lg:text-[2.5rem] max-sm:text-[1.2rem]",children:l.intro2}),m.jsx("p",{className:"max-lg:text-[2.5rem] max-md:w-full max-md:text-[2.2rem] max-sm:text-[1.2rem]",children:l.intro3})]}),m.jsxs("div",{className:"animate-pic-slide mt-10 flex max-md:flex-col max-md:space-y-10",children:[m.jsx("div",{children:m.jsx("img",{src:f2,alt:"arrowView",className:`max-2xl:w-full max-2xl:h-[80px]\r
+                max-sm:text-base/12`,children:[m.jsx("p",{className:"text-[1.8rem] max-2xl:text-[1.6rem] max-lg:text-[2rem] max-sm:text-[1rem]",children:l.intro1}),m.jsx("p",{className:"animate-bounce max-lg:text-[2.5rem] max-sm:text-[1.2rem]",children:l.intro2}),m.jsx("p",{className:"max-lg:text-[2.5rem] max-md:w-full max-md:text-[2.2rem] max-sm:text-[1.2rem]",children:l.intro3})]}),m.jsxs("div",{className:"animate-pic-slide mt-5 flex max-md:flex-col max-md:space-y-10",children:[m.jsx("div",{children:m.jsx("img",{src:f2,alt:"arrowView",className:`max-2xl:w-full max-2xl:h-[80px]\r
                   max-lg:w-120 max-lg:h-[100px]\r
                   max-md:w-full max-md:p-3\r
                   max-sm:h-[80px] max-sm:p-1 max-sm:w-full`})}),m.jsx("div",{className:"flex justify-center",children:m.jsx("img",{src:o2,alt:"playButton",onClick:l.onShowVideo,className:`h-[110px] w-[110px] \r
                     max-2xl:w-[100px] max-2xl:h-[90px]\r
                     max-md:h-[130px] max-md:w-[130px] \r
-                    max-sm:h-[100px] max-sm:w-[100px] cursor-pointer`})})]})]}),l.showVideo&&m.jsxs("div",{className:`max-2xl:max-w-screen-xl max-2xl:-ml-15 max-2xl:-mt-20 max-2xl:w-310\r
-        max-xl:max-w-screen-lg max-xl:-ml-0 max-xl:w-240 max-xl:h-200 max-xl:-mt-35\r
-        max-lg:max-w-screen-md max-lg:h-190 max-lg:ml-0 max-lg:-mt-40 max-lg:w-170\r
-        max-md:max-w-screen-sm max-md:w-140 max-md:h-180 max-md:left-5 max-md:-bottom-140\r
+                    max-sm:h-[100px] max-sm:w-[100px] cursor-pointer`})})]})]}),l.showVideo&&m.jsxs("div",{className:`max-2xl:max-w-screen-xl max-2xl:ml-5 max-2xl:-mt-25 max-2xl:w-280\r
+        max-xl:max-w-screen-lg max-xl:-ml-0 max-xl:w-240 max-xl:h-170 max-xl:-mt-35\r
+        max-lg:max-w-screen-md max-lg:h-170 max-lg:ml-0 max-lg:-mt-40 max-lg:w-170\r
+        max-md:max-w-screen-sm max-md:w-140 max-md:h-160 max-md:left-5 max-md:-bottom-140\r
         max-sm:-mt-10 max-sm:w-full max-sm:h-130 max-sm:left-2.5 max-sm:rounded-none\r
         bg-black/90 w-350 z-50 rounded-lg shadow-lg mr-auto ml-auto -mt-35`,children:[m.jsx("video",{src:m2,autoPlay:!0,controls:!0,className:"w-full h-[90%] object-contain rounded-lg shadow-lg"}),m.jsx("button",{onClick:l.onCloseVideo,className:`absolute z-10 cursor-pointer top-0 right-25 text-white text-3xl font-bold hover:text-gray-400\r
-            max-2xl:top-15 max-2xl:right-22\r
-            max-xl:right-18 max-xl:-top-3\r
+            max-2xl:top-10 max-2xl:right-25\r
+            max-xl:right-18 max-xl:-top-0\r
             max-lg:right-10 max-lg:-top-6\r
-            max-sm:top-17 max-sm:right-6 max-sm:text-2xl`,children:"×"})]})]})}const h2=[{id:1,availability:"Currently Available For Freelance Worldwide",intro1:"Hi! I'm",intro2:"CARLO DAMALERIO,",intro3:"A JUNIOR FRONT-END DEVELOPER"}],x2=l=>{const u=xt(),[s,c]=C.useState(!1),[o,d]=C.useState(!1),g=()=>{d(!0)},v=()=>{d(!1)};return C.useEffect(()=>{const y=setTimeout(()=>{c(!0)},500);return()=>clearTimeout(y)},[]),C.useEffect(()=>{document.getElementById("homeText").classList.add("animate-pic-slide")},[u]),m.jsx("div",{className:"relative w-full h-screen bg-transparent flex justify-center items-center font-Jost",children:m.jsxs("div",{className:`animate-fade-in relative h-[76.5vh] flex w-full text-white max-w-screen-2xl\r
-    max-2xl:max-w-screen-xl\r
-    max-xl:max-w-screen-lg\r
+            max-sm:top-28 max-sm:right-6 max-sm:text-2xl`,children:"×"})]})]})}const h2=[{id:1,availability:"Currently Available For Freelance Worldwide",intro1:"Hi! I'm",intro2:"CARLO DAMALERIO,",intro3:"A JUNIOR FRONT-END DEVELOPER"}],x2=l=>{const u=xt(),[s,c]=C.useState(!1),[o,d]=C.useState(!1),g=()=>{d(!0)},v=()=>{d(!1)};return C.useEffect(()=>{const y=setTimeout(()=>{c(!0)},500);return()=>clearTimeout(y)},[]),C.useEffect(()=>{document.getElementById("homeText").classList.add("animate-pic-slide")},[u]),m.jsx("div",{className:"relative w-full h-screen bg-transparent flex justify-center items-center font-Jost",children:m.jsxs("div",{className:`animate-fade-in relative flex w-full min-h-[80vh] max-h-screen text-white max-w-screen-2xl\r
+    max-2xl:max-w-screen-xl max-2xl:max-h-screen-xl\r
+    max-xl:max-w-screen-lg max-xl:max-h-screen-lg\r
     max-lg:max-w-screen-md`,children:[m.jsx("div",{className:`w-[10%]\r
       max-sm:hidden`}),h2.map(y=>m.jsx(d2,{availability:y.availability,intro1:y.intro1,intro2:y.intro2,intro3:y.intro3,showVideo:o,onShowVideo:g,onCloseVideo:v},y.id)),m.jsx("div",{className:"animate-pic-slide2 relative w-[40%]",children:m.jsx("div",{className:`absolute bottom-15 w-[48rem] h-full \r
         max-2xl:w-[42rem] max-2xl:h-[45rem]\r
         max-xl:w-[38rem] max-xl:h-[45rem]\r
-        max-lg:hidden`,children:!o&&m.jsx("img",{className:"opacity-90 absolute left-[1px] w-[100rem] h-[55rem]",src:Lx,alt:"MyPic"})})})]})})},g2=()=>{const l=xt();return m.jsxs("div",{className:"relative w-full min-h-screen overflow-hidden font-Jost text-white",children:[m.jsx("div",{className:"absolute inset-0 bg-[url('../assets/rockBackground.png')] bg-cover bg-center opacity-15"}),m.jsxs("div",{className:"relative z-10 flex flex-col h-screen overflow-hidden",children:[m.jsx("div",{className:"h-16 shrink-0",children:m.jsx(Ga,{})}),m.jsx("div",{className:"flex-grow overflow-hidden",children:m.jsx(x2,{},l.key)})]})]})},y2="/my-new-Website/assets/pic3-Ca74l2WK.jpg",dn=({children:l})=>m.jsxs("div",{className:`relative h-[76.5vh] flex w-[100%] \r
+        max-lg:hidden`,children:!o&&m.jsx("img",{className:"opacity-90 absolute left-[1px] w-[100rem] h-[55rem]",src:Lx,alt:"MyPic"})})})]})})},g2=()=>{const l=xt();return m.jsxs("div",{className:"relative w-full border-1 min-h-screen overflow-hidden font-Jost text-white",children:[m.jsx("div",{className:"absolute inset-0 bg-[url('../assets/rockBackground.png')] bg-cover bg-center opacity-15"}),m.jsxs("div",{className:"relative z-10 flex flex-col h-screen overflow-hidden",children:[m.jsx("div",{className:"h-16 shrink-0",children:m.jsx(Ga,{})}),m.jsx("div",{className:"flex-grow overflow-hidden",children:m.jsx(x2,{},l.key)})]})]})},y2="/my-new-Website/assets/pic3-Ca74l2WK.jpg",dn=({children:l})=>m.jsxs("div",{className:`relative h-[76.5vh] flex w-[100%] \r
     max-2xl:h-[90vh]`,children:[m.jsx("div",{className:"absolute bottom-5 right-0 w-[48rem] h-[45rem]",children:m.jsx("img",{className:`opacity-80 absolute w-[100rem] h-[60rem] \r
-          max-2xl:h-[50rem]`,src:Lx,alt:"MyPic"})}),m.jsx("div",{className:"relative w-full h-full z-10",children:l})]});function vi(l){return m.jsxs(m.Fragment,{children:[m.jsxs("div",{className:"hidden 2xl:block animate-pic-slide2 absolute top-0 left-0",children:[m.jsx("div",{className:"h-0.5 w-32 bg-white",children:l.upperL}),m.jsx("div",{className:"h-32 w-0.5 bg-white",children:l.lowerL})]}),m.jsxs("div",{className:"hidden 2xl:block animate-pic-slide2 absolute bottom-0 left-0",children:[m.jsx("div",{className:"h-0.5 w-32 bg-white",children:l.baseL}),m.jsx("div",{className:"h-32 w-0.5 bg-white absolute bottom-0",children:l.leftL})]}),m.jsxs("div",{className:"hidden 2xl:block animate-pic-slide1 absolute top-0 right-0",children:[m.jsx("div",{className:"h-0.5 w-32 bg-white",children:l.upperR}),m.jsx("div",{className:"h-32 w-0.5 bg-white absolute right-0",children:l.lowerR})]}),m.jsxs("div",{className:"hidden 2xl:block animate-pic-slide2 absolute bottom-0 right-0 rotate-180",children:[m.jsx("div",{className:"h-0.5 w-32 bg-white",children:l.baseR}),m.jsx("div",{className:"h-32 w-0.5 bg-white",children:l.rightR})]})]})}const v2="/my-new-Website/assets/UIUX-BwO2eLOn.png",p2="/my-new-Website/assets/ResponsiveDes-hQU8chJJ.png";function b2(l){return m.jsx(m.Fragment,{children:m.jsxs("div",{className:`w-[70%] text-white mt-12 space-y-8 p-4 sm:p-6 \r
+          max-2xl:h-[50rem]`,src:Lx,alt:"MyPic"})}),m.jsx("div",{className:"relative w-full h-full z-10",children:l})]});function vi(l){return m.jsxs(m.Fragment,{children:[m.jsxs("div",{className:"hidden 2xl:block animate-pic-slide2 absolute top-0 left-0",children:[m.jsx("div",{className:"h-0.5 w-32 bg-white",children:l.upperL}),m.jsx("div",{className:"h-32 w-0.5 bg-white",children:l.lowerL})]}),m.jsxs("div",{className:"hidden 2xl:block animate-pic-slide2 absolute bottom-0 left-0",children:[m.jsx("div",{className:"h-0.5 w-32 bg-white",children:l.baseL}),m.jsx("div",{className:"h-32 w-0.5 bg-white absolute bottom-0",children:l.leftL})]}),m.jsxs("div",{className:"hidden 2xl:block animate-pic-slide1 absolute top-0 right-0",children:[m.jsx("div",{className:"h-0.5 w-32 bg-white",children:l.upperR}),m.jsx("div",{className:"h-32 w-0.5 bg-white absolute right-0",children:l.lowerR})]}),m.jsxs("div",{className:"hidden 2xl:block animate-pic-slide2 absolute bottom-0 right-0 rotate-180",children:[m.jsx("div",{className:"h-0.5 w-32 bg-white",children:l.baseR}),m.jsx("div",{className:"h-32 w-0.5 bg-white",children:l.rightR})]})]})}const v2="/my-new-Website/assets/UIUX-BwO2eLOn.png",p2="/my-new-Website/assets/ResponsiveDes-hQU8chJJ.png";function b2(l){return m.jsx(m.Fragment,{children:m.jsxs("div",{className:`w-[70%] max-h-screen  text-white mt-12 space-y-8 p-4 sm:p-6 \r
               max-2xl:mt-5\r
-              max-xl:mt-0 \r
-              max-lg:p-8 max-lg:w-3/3 max-lg:mt-15\r
-              max-md:-mt-60`,children:[m.jsxs("div",{className:"animate-sm-lg",children:[m.jsx("h2",{className:`text-3xl sm:text-4xl font-bold mb-2\r
+              max-xl:mt-0 max-xl:min-h-[82vh]\r
+              max-lg:p-8 max-lg:w-3/3 max-lg:mt-15 max-lg:min-h-[75vh]\r
+              max-md:-mt-60 max-md:min-h-[90vh]\r
+              max-sm:min-h-[100vh] max-sm:-mt-70`,children:[m.jsxs("div",{className:"animate-sm-lg",children:[m.jsx("h2",{className:`text-3xl sm:text-4xl font-bold mb-2\r
                 max-lg:text-center\r
                 max-md:text-center max-md:mb-5`,children:l.title}),m.jsxs("div",{className:`flex flex-wrap gap-3 text-sm sm:text-base font-semibold mb-4 \r
                   max-lg:justify-center\r
@@ -685,13 +686,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     max-lg:text-center \r
                     max-xl:text-[1rem]`,children:l.service2}),m.jsx("p",{className:`text-sm text-white/90 \r
                     max-lg:text-center \r
-                    max-xl:text-[0.8rem]`,children:l.service2Desc})]})]})]})]})})}const S2=[{id:1,title:"ABOUT ME",age:28,employmentType1:"Full-Time",employmentType2:"Freelance",description:"Hi! I’m Carlo Damalerio, a junior front-end developer with love for creating responsive and user-friendly web applications. I enjoy turning complex problems into simple, intuitive designs. Though I did not take a computer science course, since 2024 I've been deeply committed to learning programming. I’ve taken online courses to strengthen my skills about coding and design. I specialize in HTML, CSS, JavaScript, and modern frameworks like Bootstrap, Tailwind, React. I'm always learning new technologies like AI and pushing myself to grow. Outside of coding, I love playing badminton, boxing, working out at the gym, travelling, watching movies, going to restaurants, and most of the time playing video games in my game room.",service:"MY SERVICE",service1:"UI/UX DESIGN",service1Desc:"Ensuring the website or application adapts seamlessly to various screen sizes and devices.",service2:"RESPONSIVENESS WEB DESIGN",service2Desc:"Collaborating with designers and UX researchers to create intuitive and engaging user experiences."}],w2=()=>{const l=Ya();return m.jsx(dn,{children:m.jsx("div",{className:"relative w-full h-screen bg-transparent flex justify-center items-center font-Jost",children:m.jsxs("div",{className:`relative w-full px-4 py-25 bg-black/50 flex flex-row items-center\r
-        max-w-screen-2xl h-[80vh] max-h-[900px]\r
+                    max-xl:text-[0.8rem]`,children:l.service2Desc})]})]})]})]})})}const S2=[{id:1,title:"ABOUT ME",age:28,employmentType1:"Full-Time",employmentType2:"Freelance",description:"Hi! I’m Carlo Damalerio, a junior front-end developer with love for creating responsive and user-friendly web applications. I enjoy turning complex problems into simple, intuitive designs. Though I did not take a computer science course, since 2024 I've been deeply committed to learning programming. I’ve taken online courses to strengthen my skills about coding and design. I specialize in HTML, CSS, JavaScript, and modern frameworks like Bootstrap, Tailwind, React. I'm always learning new technologies like AI and pushing myself to grow. Outside of coding, I love playing badminton, boxing, working out at the gym, travelling, watching movies, going to restaurants, and most of the time playing video games in my game room.",service:"MY SERVICE",service1:"UI/UX DESIGN",service1Desc:"Ensuring the website or application adapts seamlessly to various screen sizes and devices.",service2:"RESPONSIVENESS WEB DESIGN",service2Desc:"Collaborating with designers and UX researchers to create intuitive and engaging user experiences."}],w2=()=>{const l=Ya();return m.jsx(dn,{children:m.jsx("div",{className:"relative w-full h-screen bg-transparent flex justify-center items-center font-Jost",children:m.jsxs("div",{className:`relative w-full px-4 bg-black/50 flex flex-row items-center\r
+        max-w-screen-2xl min-h-[80vh] max-h-[90vh]\r
         max-2xl:max-w-screen-xl max-2xl:h-[80vh] max-2xl:overflow-y-scroll\r
-        max-xl:max-w-screen-lg max-xl:h-[75vh] max-xl:py-5 max-xl:px-10\r
+        max-xl:max-w-screen-lg max-xl:h-[80vh] max-xl:py-5 max-xl:px-10\r
         max-lg:max-w-screen-md max-lg:px-8 max-lg:py-10 max-lg:flex-col lg:items-stretch max-lg:overflow-y-scroll\r
         max-md:px-6 max-md:max-w-screen-sm\r
-        max-sm:max-w-full`,children:[m.jsx("button",{onClick:()=>l("/"),className:`animate-fade-in absolute top-6 right-6 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition z-50 \r
+        max-sm:max-w-full max-sm:`,children:[m.jsx("button",{onClick:()=>l("/"),className:`animate-fade-in absolute top-6 right-6 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition z-50 \r
             max-md:invisible`,children:"×"}),m.jsx(vi,{}),m.jsx("div",{className:`animate-sm-lg max-w-[800px] flex justify-center items-center \r
           max-lg:w-2/4 \r
           max-md:invisible`,children:m.jsx("img",{src:y2,alt:"About",className:`w-[75%] max-w-[400px] h-auto object-cover \r
@@ -720,15 +721,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 max-md:text-[2.5rem]\r
                 max-sm:ml-0\r
               `,children:"RESUME"}),m.jsx("div",{className:`\r
-                aspect-square w-[70%] h-[60%] ml-[15%] border-3 border-white rounded-full cursor-pointer hover:shadow-buttonShadow\r
-                max-2xl:w-75 max-2xl:h-[45%] max-2xl:ml-30 max-2xl:mt-20\r
-                max-xl:w-60 max-xl:h-[35%] max-xl:ml-18 max-xl:mt-25\r
+                aspect-square w-[70%] max-h-120 ml-[15%] border-3 border-white rounded-full cursor-pointer hover:shadow-buttonShadow\r
+                max-2xl:w-75 max-2xl:max-h-75 max-2xl:ml-30 max-2xl:mt-20\r
+                max-xl:w-75 max-xl:h-80 max-xl:ml-18 max-xl:mt-25\r
                 max-lg:w-[80%] max-lg:h-[60%] max-lg:ml-10 max-lg:mt-12\r
                 max-md:hidden\r
               `,children:m.jsx("img",{src:E2,alt:"Profile",className:"w-full h-full rounded-full"})})]}),m.jsx("div",{className:`grid w-3/5 h-full grid-cols-2 gap-4 p-8 border-white\r
           max-lg:w-[83%] max-lg:mt-2 max-lg:gap-8 \r
           max-md:w-3/3\r
-          max-sm:flex max-sm:flex-col`,children:T2.map(u=>m.jsx(N2,{title:u.title,description:u.description,text:u.text,bg:u.id===2||u.id===3?"bg-black/70":"bg-transparent",sm:u.id===1||u.id===4?"max-sm:bg-black/70":null,path:u.path,onClick:()=>l(u.path)},u.id))})]})})})}const O2=()=>{const l=xt();return m.jsxs("div",{className:"relative w-full min-h-screen overflow-hidden text-white font-Jost",children:[m.jsx("div",{className:"absolute inset-0 bg-[url('../assets/rockBackground.png')] bg-cover bg-center opacity-20 z-0"}),m.jsxs("div",{className:"relative z-10 flex flex-col h-screen overflow-hidden",children:[m.jsx("div",{className:"h-16 shrink-0",children:m.jsx(Ga,{})}),m.jsx("div",{className:"flex-grow overflow-hidden",children:m.jsx(j2,{},l.key)})]})]})},R2="/my-new-Website/assets/followLogo-pNDKHS2r.png";function C2(l){return m.jsxs(m.Fragment,{children:[m.jsxs("div",{cont:!0,className:`space-y-10\r
+          max-sm:flex max-sm:flex-col`,children:T2.map(u=>m.jsx(N2,{title:u.title,description:u.description,text:u.text,bg:u.id===2||u.id===3?"bg-black/70":"bg-transparent",sm:u.id===1||u.id===4?"max-sm:bg-black/70":null,path:u.path,onClick:()=>l(u.path)},u.id))})]})})})}const O2=()=>{const l=xt();return m.jsxs("div",{className:"relative w-full min-h-screen overflow-hidden text-white font-Jost",children:[m.jsx("div",{className:"absolute inset-0 bg-[url('../assets/rockBackground.png')] bg-cover bg-center opacity-20 z-0"}),m.jsxs("div",{className:"relative z-10 flex flex-col h-screen overflow-hidden",children:[m.jsx("div",{className:"h-16 shrink-0",children:m.jsx(Ga,{})}),m.jsx("div",{className:"flex-grow overflow-hidden",children:m.jsx(j2,{},l.key)})]})]})},R2="/my-new-Website/assets/followMe-B_06N6S-.png";function C2(l){return m.jsxs(m.Fragment,{children:[m.jsxs("div",{cont:!0,className:`space-y-10\r
         max-md:space-y-5\r
         max-sm:space-y-6`,children:[m.jsx("div",{className:`text-[2rem]\r
                   max-2xl:text-[1.5rem]\r
@@ -751,28 +752,28 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   max-2xl:space-y-10 \r
                   max-lg:text-[1rem] max-lg:space-y-9\r
                   max-sm:space-y-4 max-sm:text-[0.7rem] max-sm:ml-6 max-sm:mt-3`,children:m.jsx("div",{children:l.description})})]})]})}const M2="/my-new-Website/assets/locationLogo-Dnlrgc5A.png",D2="/my-new-Website/assets/phoneLogo-lajyoony.png",z2="/my-new-Website/assets/emailLogo-BAk0LwaG.png",_2=[{question:"How can I help you?",title:"CONTACT",inquiry:"I'm here to help and answer any questions you might have. I'm looking forward to hearing from you!",id:1,logo:M2,description:"Caloocan City, Metro Manila"},{id:2,logo:D2,description:"+639563370343"},{id:3,logo:z2,description:"carlo_damalerio@yahoo.com"}];function L2(l){return m.jsx(m.Fragment,{children:m.jsx("div",{className:`relative w-13 flex z-20 mt-18\r
-                    max-xl:left-0 \r
-                    max-lg:-left-10\r
-                    max-md:ml-10\r
-                    max-sm:gap-4 max-sm:-left-18 max-sm:mt-12\r
-                    `,children:m.jsx("a",{href:l.link,target:"_blank",rel:"noopener noreferrer",className:`border-3 h-10.5 w-10.5 animate-bounce rounded-full hover:scale-110 hover:shadow-lg hover:shadow-blue-100 transition duration-300 ease-in-out cursor-pointer \r
-                    max-2xl:border-2 max-2xl:h-9.5 max-2xl:w-9.5\r
-                    max-sm:h-7.5 max-sm:w-7.5`,children:m.jsx("img",{src:l.logo,alt:"facebookLogo",className:`max-h-[30px] max-w-[30px] mt-1 ml-0.5 
-                        max-2xl:h-[20px] max-2xl:w-[20px] max-2xl:ml-1.5 max-2xl:mt-1.5 
-                        max-sm:h-[15px] max-sm:w-[15px]
-                        ${l.isId2||l.isId3||l.isId4?"h-[24px] w-[24px] mt-1.5 ml-1.5 max-2xl:mt-1.5 max-2xl:ml-1.5 max-2xl:h-[22px] max-2xl:w-[22px]":""}`})})})})}const U2="/my-new-Website/assets/facebookLogo-ChE3wjFP.png",H2="/my-new-Website/assets/instagramLogo-CXxRwKzF.png",B2="/my-new-Website/assets/twitterLogo-DKCx5WeR.png",k2="/my-new-Website/assets/linkedInLogo-D7fHjaEI.png",Y2=[{id:1,link:"https://www.facebook.com/yuyu.ki.31",logo:U2},{id:2,link:"https://www.instagram.com/carloluwaa/",logo:H2},{id:3,link:"https://x.com/Carloluwaa",logo:B2},{id:4,link:"https://www.linkedin.com/in/carlo-aramis-damalerio-164a73176/",logo:k2}],G2="/my-new-Website/assets/waterSplash-lDM3ry7u.gif",q2="/my-new-Website/assets/clickHereLogo-2wXZ6JBx.png";function X2(l){return m.jsxs(m.Fragment,{children:[m.jsx("div",{animation:!0,className:`mt-10 \r
-                  max-md:hidden`,children:l.onWaterAnimate&&m.jsx("img",{src:G2,alt:"WaterSplash",className:`h-[150px] w-[70%]\r
+        max-xl:left-0 \r
+        max-lg:-left-10\r
+        max-md:ml-10\r
+        max-sm:gap-4 max-sm:-left-18 max-sm:mt-12\r
+        `,children:m.jsx("a",{href:l.link,target:"_blank",rel:"noopener noreferrer",className:`border-3 h-10.5 w-10.5 animate-bounce rounded-full hover:scale-110 hover:shadow-lg hover:shadow-blue-100 transition duration-300 ease-in-out cursor-pointer \r
+        max-2xl:border-2 max-2xl:h-9.5 max-2xl:w-9.5\r
+        max-sm:h-7.5 max-sm:w-7.5`,children:m.jsx("img",{src:l.logo,alt:"facebookLogo",className:`max-h-[30px] max-w-[30px] mt-1 ml-0.5 
+        max-2xl:h-[20px] max-2xl:w-[20px] max-2xl:ml-1.5 max-2xl:mt-1.5 
+        max-sm:h-[15px] max-sm:w-[15px]
+        ${l.isId2||l.isId3||l.isId4?"h-[24px] w-[24px] mt-1.5 ml-1.5 max-2xl:mt-1.5 max-2xl:ml-1.5 max-2xl:h-[22px] max-2xl:w-[22px]":""}`})})})})}const U2="/my-new-Website/assets/facebookLogo-ChE3wjFP.png",H2="/my-new-Website/assets/instagramLogo-CXxRwKzF.png",B2="/my-new-Website/assets/twitterLogo-DKCx5WeR.png",k2="/my-new-Website/assets/linkedInLogo-D7fHjaEI.png",Y2=[{id:1,link:"https://www.facebook.com/yuyu.ki.31",logo:U2},{id:2,link:"https://www.instagram.com/carloluwaa/",logo:H2},{id:3,link:"https://x.com/Carloluwaa",logo:B2},{id:4,link:"https://www.linkedin.com/in/carlo-aramis-damalerio-164a73176/",logo:k2}],G2="/my-new-Website/assets/waterSplash-lDM3ry7u.gif",q2="/my-new-Website/assets/clickHereLogo-2wXZ6JBx.png";function X2(l){return m.jsxs(m.Fragment,{children:[m.jsx("div",{animation:!0,className:`mt-10 \r
+        max-md:hidden`,children:l.onWaterAnimate&&m.jsx("img",{src:G2,alt:"WaterSplash",className:`h-[150px] w-[70%]\r
             max-xl:w-[90%]\r
-            max-lg:w-980%] max-lg:mt-0`})}),m.jsx("div",{onClick:l.onHandleClick,className:`left-30 top-130 hover:scale-105 transition duration-300 ease-in-out animate-pulse mt-10 cursor-pointer z-50 absolute h-[180px] w-[180px]\r
-                  max-2xl:-ml-0 max-2xl:top-130\r
-                  max-xl:-ml-5 \r
-                  max-md:top-0 max-md:-left-35\r
-                  max-sm:-left-20 max-sm:top-0`,style:{visibility:l.hideClick?"hidden":"visible"},children:m.jsx("img",{src:q2,alt:"clickHere",className:`h-full w-full pointer-events-auto \r
-                      max-2xl:h-[130px] max-2xl:w-[130px] \r
-                      max-sm:h-[80px] max-sm:w-[80px]`})})]})}const Z2=()=>{const[l,u]=C.useState(!1),[s,c]=C.useState(!1),[o,d]=C.useState(!1),g=()=>{u(!0),c(!1),d(!0),setTimeout(()=>{c(!0)},100)},v=Ya();return m.jsx(dn,{children:m.jsx("div",{className:"animate-fade-in relative text-white w-[100%] mr-auto ml-auto h-screen border-white font-Jost flex justify-center items-center",children:m.jsxs("div",{className:`relative mb-10 w-full h-[80vh] bg-black/50 flex items-center max-w-screen-2xl\r
-        max-2xl:h-[75vh] max-2xl:max-w-screen-xl max-h-900\r
+            max-lg:w-980%] max-lg:mt-0`})}),m.jsx("div",{onClick:l.onHandleClick,className:`left-30 top-50 hover:scale-105 transition duration-300 ease-in-out animate-pulse mt-10 cursor-pointer z-50 absolute h-[180px] w-[180px]\r
+        max-2xl:-ml-0 max-2xl:top-110\r
+        max-xl:-ml-5 \r
+        max-md:top-0 max-md:-left-35\r
+        max-sm:-left-20 max-sm:top-0`,style:{visibility:l.hideClick?"hidden":"visible"},children:m.jsx("img",{src:q2,alt:"clickHere",className:`h-full w-full pointer-events-auto \r
+        max-2xl:h-[130px] max-2xl:w-[130px] \r
+        max-sm:h-[80px] max-sm:w-[80px]`})})]})}const Z2=()=>{const[l,u]=C.useState(!1),[s,c]=C.useState(!1),[o,d]=C.useState(!1),g=()=>{u(!0),c(!1),d(!0),setTimeout(()=>{c(!0)},100)},v=Ya();return m.jsx(dn,{children:m.jsx("div",{className:"animate-fade-in relative text-white w-[100%] mr-auto ml-auto h-screen border-white font-Jost flex justify-center items-center",children:m.jsxs("div",{className:`relative mb-10 w-full max-h-screen bg-black/50 flex items-center max-w-screen-2xl\r
+        max-2xl:h-[80vh] max-2xl:max-w-screen-xl border-1\r
         max-xl:max-w-screen-lg \r
-        max-lg:max-w-screen-md\r
+        max-lg:max-w-screen-md max-lg:\r
         max-md:max-w-screen-sm max-md:flex-col max-md:overflow-y-scroll`,children:[m.jsx("button",{onClick:()=>v("/"),className:`animate-fade-in absolute top-5 right-5 z-50 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition\r
             max-2xl:text-2xl\r
             max-md:hidden`,children:"×"}),m.jsx(vi,{}),m.jsx("div",{sm:!0,cont:!0,className:`animate-sm-lg w-[60%] ml-20 h-full\r
@@ -781,9 +782,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
            max-md:text-center max-md:w-full\r
            max-sm:w-full`,children:m.jsx("div",{className:`p-15\r
             max-md:p-8\r
-            max-sm:p-10`,children:_2.map(y=>m.jsx(C2,{question:y.question,title:y.title,inquiry:y.inquiry,logo:y.logo,description:y.description,isId1:y.id===1,isId3:y.id===2,isId2:y.id===3},y.id))})}),m.jsxs("div",{sm:!0,cont:!0,right:!0,className:"animate-sm-lg w-[45%] h-full",children:[m.jsx("div",{logo:!0,className:`h-[40%] ml-10 flex\r
-            max-2xl:mt-10\r
-            max-md:hidden max-md:h-60`,children:m.jsx("img",{src:R2,alt:"followLogo",className:`h-[320px] w-[320px] \r
+            max-sm:p-10`,children:_2.map(y=>m.jsx(C2,{question:y.question,title:y.title,inquiry:y.inquiry,logo:y.logo,description:y.description,isId1:y.id===1,isId3:y.id===2,isId2:y.id===3},y.id))})}),m.jsxs("div",{sm:!0,cont:!0,right:!0,className:"animate-sm-lg w-[45%] h-full",children:[m.jsx("div",{logo:!0,className:`ml-10 -mt-40\r
+            max-2xl:mt-0\r
+            max-md:hidden max-md:h-60`,children:m.jsx("img",{src:R2,alt:"followLogo",className:`h-[340px] w-[380px] max-xl:w-[350px] max-lg:h-[300px]\r
                 max-lg:-ml-10`})}),s&&m.jsx("div",{className:`flex gap-5 pl-20\r
               max-lg:gap-2 \r
               max-md:pl-0 max-md:gap-1 max-md:h-full\r
@@ -813,7 +814,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         max-lg:text-center max-lg:text-[0.75rem]/7\r
         max-md:text-[0.7rem] max-md:mt-10 max-md:text-sm/7 \r
         max-sm:text-xs/7`,children:l.description})]})]})}),K2="/my-new-Website/assets/STACLogo-C_h9sgsG.png",J2="/my-new-Website/assets/FEULogo-L94gxa6G.png",I2="/my-new-Website/assets/MyUdemyCert-B3ZuxNFy.jpg",W2=[{id:1,logo:K2,title:"SAINT THOMAS AQUINAS COLLEGE",level:"High School Level",course:"",description:"Saint Thomas Aquinas College (STAC) is a Roman Catholic private school located at the corner of Bagares Street and Concepcion Street, Barangay Zone IV, Sogod, Southern Leyte, Philippines. It is considered one of the oldest schools in Southern Leyte, serving the community since January 6, 1946. Two of its sister schools are the Saint Teresa School of Hilongos (STSH) and Saint Anthony's High School (SAHS) of Anahawan."},{id:2,logo:J2,title:"FAR EASTERN UNIVERSITY",level:"College Level",course:"BACHELOR OF SCIENCE IN BIOLOGY",description:"Far Eastern University (Filipino: Pamantasan ng Malayong Silanganan), also referred to by its acronym FEU, is a private research non-sectarian university in Manila, Philippines. Created by the merger of Far Eastern College and the Institute of Accounts, Business and Finance, FEU became a university in 1934 during the term of its first president, Nicanor Reyes Sr."},{id:3,logo:I2,title:"UDEMY ONLINE COURSE",level:"Front-End Development",course:"WEB DEVELOPMENT BOOTCAMP",description:"Udemy, Inc. is an education technology company, founded in May 2010 by Eren Bali, Gagan Biyani, and Oktay Caglar. It is based in San Francisco, California, United States. The platform hosts online courses, mostly connected to job-related skills."}],F2=l=>{const u=Ya();return m.jsxs("div",{className:"relative w-full min-h-screen overflow-hidden text-white font-Jost",children:[m.jsx("div",{className:"absolute inset-0 bg-[url('../assets/rockBackground.png')] bg-cover bg-center opacity-20 z-0"}),m.jsxs("div",{className:"relative z-10 h-screen flex flex-col overflow-hidden",children:[m.jsx("div",{className:"h-16 shrink-0",children:m.jsx(Ga,{})}),m.jsx(dn,{children:m.jsx("div",{className:"w-full h-[100vh] text-white bg-trans flex justify-center items-center font-Jost",children:m.jsxs("div",{className:`relative animate-fade-in mb-10 w-full h-[80vh] bg-black/50 max-w-screen-2xl\r
-            max-2xl:h-[85vh] max-2xl:max-w-screen-xl\r
+            max-2xl:min-h-[86vh] max-2xl:max-w-screen-xl\r
             max-xl:max-w-screen-lg max-xl:h-[75vh] max-xl:overflow-y-scroll\r
             max-lg:max-w-screen-md \r
             max-md:max-w-screen-sm`,children:[m.jsx(vi,{}),m.jsx("button",{onClick:()=>u("/resume"),className:`absolute top-7 right-15 z-50 text-white text-3xl font-bold px-3 rounded hover:bg-white/10 transition \r
@@ -871,7 +872,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               max-lg:flex max-lg:justify-center`,children:m.jsx("img",{src:Jr,alt:"Down + Arrow",onClick:u=>{var s;u.stopPropagation(),(s=l.onArrowDown)==null||s.call(l)},className:`h-[60px] z-5 absolute cursor-pointer animate-arrow-downward 
                     max-2xl:h-[40px] max-2xl:w-[40px]
                     max-xl:invisible
-                    max-lg:rotate-90 max-lg:visible max-lg:-mb-10 ${l.isId2?"max-lg:-mb-24":null}`})})]}),m.jsx("div",{line:!0,className:` animate-sm-lg w-[3%] max-h-[95%]\r
+                    max-lg:rotate-90 max-lg:visible max-lg:-mb-10 ${l.isId2?"max-lg:-mb-24":null}`})})]}),m.jsx("div",{line:!0,className:` animate-sm-lg w-[3%] min-h-100 max-h-150\r
             max-2xl:mt-1\r
             max-xl:hidden`,children:m.jsxs("div",{className:`ml-1 mt-10 h-full\r
               max-2xl:mt-5`,children:[m.jsx("div",{className:"w-[30px] h-[30px] mt-2 bg-white rounded-full"}),m.jsx("div",{className:`rotate-180 h-[85%] w-[5%] bg-white ml-3.5
@@ -918,12 +919,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       max-lg:text-[0.65rem] 
                       max-sm:text-[0.55rem] ${l.isId2||l.isId3?"mt-12 space-y-4 max-lg:mt-11":""} `,children:[l.li5&&m.jsx("li",{children:l.li5}),l.li6&&m.jsx("li",{children:l.li6}),l.li7&&m.jsx("li",{children:l.li7})]})]})]})]}),l.id!==3&&m.jsx("div",{className:"h-[100%] w-[9%] animate-fade-in",children:m.jsx("img",{src:Jr,alt:"Right Arrow",onClick:u=>{var s;u.stopPropagation(),(s=l.onArrowRight)==null||s.call(l)},className:`h-[60px] absolute z-5 w-[60px] mt-65 mr-[-150px] cursor-pointer animate-arrow-forward 
                     max-2xl:h-[40px] max-2xl:w-[40px]
-                    max-lg:invisible`})})]})}),tS=({onArrowRight:l,onArrowLeft:u,onArrowDown:s,onClick:c,...o})=>{const d=Ya();return m.jsx(dn,{children:m.jsx("div",{className:"relative w-full h-screen text-white flex justify-center items-center font-Jost",onClick:c,children:m.jsxs("div",{className:`relative max-h-[900px] w-full h-[80vh] bg-black/50 max-w-screen-2xl overflow-y-scroll\r
-        max-2xl:h-[75vh] max-2xl:max-w-screen-xl\r
-        max-xl:max-w-screen-lg max-xl:h-[70vh]\r
-        max-lg:max-w-screen-md \r
+                    max-lg:invisible`})})]})}),tS=({onArrowRight:l,onArrowLeft:u,onArrowDown:s,onClick:c,...o})=>{const d=Ya();return m.jsx(dn,{children:m.jsx("div",{className:"relative w-full h-screen text-white flex justify-center items-center font-Jost",onClick:c,children:m.jsxs("div",{className:`relative max-h-[90vh] w-full bg-black/50 max-w-screen-2xl overflow-y-scroll\r
+        max-2xl:h-[80vh] max-2xl:max-w-screen-xl\r
+        max-xl:max-w-screen-lg max-xl:h-[80vh]\r
+        max-lg:max-w-screen-md max-lg:h-[75vh]\r
         max-md:max-w-screen-sm max-md:h-[85vh]\r
-        max-sm:w-full`,children:[m.jsx(vi,{}),m.jsxs("div",{className:"w-full h-[14%] pl-10 pr-10 pt-6",children:[m.jsxs("div",{className:`animate-sm-lg flex justify-between\r
+        max-sm:w-full border-1`,children:[m.jsx(vi,{}),m.jsxs("div",{className:"w-full h-[14%] pl-10 pr-10 pt-6",children:[m.jsxs("div",{className:`animate-sm-lg flex justify-between\r
             max-md:justify-center`,children:[m.jsx("div",{className:`text-[2.5rem] font-bold mb-3 \r
               max-2xl:text-[1.6rem]\r
               max-xl:text-[1.6rem]`,children:o.title}),m.jsx("button",{onClick:()=>d("/resume"),className:`h-10 w-auto animate-fade-in z-50 text-white text-4xl font-bold px-3 rounded hover:bg-white/10 transition\r
