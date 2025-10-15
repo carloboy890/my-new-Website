@@ -1,5 +1,5 @@
 import HomeDesign from "./HomeDesign";
-import followLogo from "../assets/followLogo.png";
+import followMe from "../assets/followMe.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LineStyle from "./LineStyle";
@@ -30,10 +30,10 @@ const ContactContainer = () => {
     <HomeDesign>
       <div className="animate-fade-in relative text-white w-[100%] mr-auto ml-auto h-screen border-white font-Jost flex justify-center items-center">
         <div
-          className="relative mb-10 w-full h-[80vh] bg-black/50 flex items-center max-w-screen-2xl
-        max-2xl:h-[75vh] max-2xl:max-w-screen-xl max-h-900
+          className="relative mb-10 w-full max-h-screen bg-black/50 flex items-center max-w-screen-2xl
+        max-2xl:h-[80vh] max-2xl:max-w-screen-xl border-1
         max-xl:max-w-screen-lg 
-        max-lg:max-w-screen-md
+        max-lg:max-w-screen-md max-lg:
         max-md:max-w-screen-sm max-md:flex-col max-md:overflow-y-scroll"
         >
           <button
@@ -82,14 +82,14 @@ const ContactContainer = () => {
           <div sm cont right className="animate-sm-lg w-[45%] h-full">
             <div
               logo
-              className="h-[40%] ml-10 flex
-            max-2xl:mt-10
+              className="ml-10 -mt-40
+            max-2xl:mt-0
             max-md:hidden max-md:h-60"
             >
               <img
-                src={followLogo}
+                src={followMe}
                 alt="followLogo"
-                className="h-[320px] w-[320px] 
+                className="h-[340px] w-[380px] max-xl:w-[350px] max-lg:h-[300px]
                 max-lg:-ml-10"
               />
             </div>

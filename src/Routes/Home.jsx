@@ -8,7 +8,7 @@ const Home = () => {
   const location = useLocation();
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden font-Jost text-white">
+    <div className="relative w-full border-1 min-h-screen overflow-hidden font-Jost text-white">
       <div
         className={`absolute inset-0 bg-[url('../assets/rockBackground.png')] bg-cover bg-center opacity-15`}
       ></div>

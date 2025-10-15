@@ -25,12 +25,12 @@ const ContainerCard = ({
       >
         {/* sm container */}
         <div
-          className="relative max-h-[900px] w-full h-[80vh] bg-black/50 max-w-screen-2xl overflow-y-scroll
-        max-2xl:h-[75vh] max-2xl:max-w-screen-xl
-        max-xl:max-w-screen-lg max-xl:h-[70vh]
-        max-lg:max-w-screen-md 
+          className="relative max-h-[90vh] w-full bg-black/50 max-w-screen-2xl overflow-y-scroll
+        max-2xl:h-[80vh] max-2xl:max-w-screen-xl
+        max-xl:max-w-screen-lg max-xl:h-[80vh]
+        max-lg:max-w-screen-md max-lg:h-[75vh]
         max-md:max-w-screen-sm max-md:h-[85vh]
-        max-sm:w-full"
+        max-sm:w-full border-1"
         >
           {/* Line Design */}
           <LineStyle />

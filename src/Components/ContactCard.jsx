@@ -68,8 +68,6 @@ function ContactCard(props) {
                   max-sm:space-y-4 max-sm:text-[0.7rem] max-sm:ml-6 max-sm:mt-3"
         >
           <div>{props.description}</div>
-          {/* <div>{props.phone}</div>
-          <div>{props.email}</div> */}
         </div>
       </div>
     </>

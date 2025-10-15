@@ -6,11 +6,12 @@ function AboutContainerCardDesc(props) {
   return (
     <>
       <div
-        className="w-[70%] text-white mt-12 space-y-8 p-4 sm:p-6 
+        className="w-[70%] max-h-screen  text-white mt-12 space-y-8 p-4 sm:p-6 
               max-2xl:mt-5
-              max-xl:mt-0 
-              max-lg:p-8 max-lg:w-3/3 max-lg:mt-15
-              max-md:-mt-60"
+              max-xl:mt-0 max-xl:min-h-[82vh]
+              max-lg:p-8 max-lg:w-3/3 max-lg:mt-15 max-lg:min-h-[75vh]
+              max-md:-mt-60 max-md:min-h-[90vh]
+              max-sm:min-h-[100vh] max-sm:-mt-70"
       >
         <div className="animate-sm-lg">
           <h2

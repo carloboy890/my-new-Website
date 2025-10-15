@@ -37,9 +37,9 @@ function ResumeContainer() {
             </div>
             <div
               className="
-                aspect-square w-[70%] h-[60%] ml-[15%] border-3 border-white rounded-full cursor-pointer hover:shadow-buttonShadow
-                max-2xl:w-75 max-2xl:h-[45%] max-2xl:ml-30 max-2xl:mt-20
-                max-xl:w-60 max-xl:h-[35%] max-xl:ml-18 max-xl:mt-25
+                aspect-square w-[70%] max-h-120 ml-[15%] border-3 border-white rounded-full cursor-pointer hover:shadow-buttonShadow
+                max-2xl:w-75 max-2xl:max-h-75 max-2xl:ml-30 max-2xl:mt-20
+                max-xl:w-75 max-xl:h-80 max-xl:ml-18 max-xl:mt-25
                 max-lg:w-[80%] max-lg:h-[60%] max-lg:ml-10 max-lg:mt-12
                 max-md:hidden
               "

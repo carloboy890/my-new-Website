@@ -9,7 +9,7 @@ import { div } from "motion/react-client";
 function HomeContainerCardDesc(props) {
   return (
     <div
-      className="pt-25 -ml-15 w-2/5 font-Jost
+      className="pt-25 -ml-15 w-2/5 font-Jost min-h-[70vh]
       max-lg:left-25 max-lg:w-auto max-lg:top-10 max-lg:absolute
       max-md:left-30
       max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:left-0 max-sm:-top-20 max-sm:w-full max-sm:ml-0"
@@ -53,7 +53,7 @@ function HomeContainerCardDesc(props) {
             </p>
           </div>
 
-          <div className="animate-pic-slide mt-10 flex max-md:flex-col max-md:space-y-10">
+          <div className="animate-pic-slide mt-5 flex max-md:flex-col max-md:space-y-10">
             <div>
               <img
                 src={arrowView}
@@ -82,10 +82,10 @@ function HomeContainerCardDesc(props) {
       {/* Screen Video Overlay */}
       {props.showVideo && (
         <div
-          className="max-2xl:max-w-screen-xl max-2xl:-ml-15 max-2xl:-mt-20 max-2xl:w-310
-        max-xl:max-w-screen-lg max-xl:-ml-0 max-xl:w-240 max-xl:h-200 max-xl:-mt-35
-        max-lg:max-w-screen-md max-lg:h-190 max-lg:ml-0 max-lg:-mt-40 max-lg:w-170
-        max-md:max-w-screen-sm max-md:w-140 max-md:h-180 max-md:left-5 max-md:-bottom-140
+          className="max-2xl:max-w-screen-xl max-2xl:ml-5 max-2xl:-mt-25 max-2xl:w-280
+        max-xl:max-w-screen-lg max-xl:-ml-0 max-xl:w-240 max-xl:h-170 max-xl:-mt-35
+        max-lg:max-w-screen-md max-lg:h-170 max-lg:ml-0 max-lg:-mt-40 max-lg:w-170
+        max-md:max-w-screen-sm max-md:w-140 max-md:h-160 max-md:left-5 max-md:-bottom-140
         max-sm:-mt-10 max-sm:w-full max-sm:h-130 max-sm:left-2.5 max-sm:rounded-none
         bg-black/90 w-350 z-50 rounded-lg shadow-lg mr-auto ml-auto -mt-35"
         >
@@ -98,10 +98,10 @@ function HomeContainerCardDesc(props) {
           <button
             onClick={props.onCloseVideo}
             className="absolute z-10 cursor-pointer top-0 right-25 text-white text-3xl font-bold hover:text-gray-400
-            max-2xl:top-15 max-2xl:right-22
-            max-xl:right-18 max-xl:-top-3
+            max-2xl:top-10 max-2xl:right-25
+            max-xl:right-18 max-xl:-top-0
             max-lg:right-10 max-lg:-top-6
-            max-sm:top-17 max-sm:right-6 max-sm:text-2xl"
+            max-sm:top-28 max-sm:right-6 max-sm:text-2xl"
           >
             ×
           </button>

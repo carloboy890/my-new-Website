@@ -21,7 +21,7 @@ const Education = (props) => {
           <div className="w-full h-[100vh] text-white bg-trans flex justify-center items-center font-Jost">
             <div
               className="relative animate-fade-in mb-10 w-full h-[80vh] bg-black/50 max-w-screen-2xl
-            max-2xl:h-[85vh] max-2xl:max-w-screen-xl
+            max-2xl:min-h-[86vh] max-2xl:max-w-screen-xl
             max-xl:max-w-screen-lg max-xl:h-[75vh] max-xl:overflow-y-scroll
             max-lg:max-w-screen-md 
             max-md:max-w-screen-sm"

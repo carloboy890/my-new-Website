@@ -33,9 +33,9 @@ const HomeContainer = (props) => {
   return (
     <div className="relative w-full h-screen bg-transparent flex justify-center items-center font-Jost">
       <div
-        className="animate-fade-in relative h-[76.5vh] flex w-full text-white max-w-screen-2xl
-    max-2xl:max-w-screen-xl
-    max-xl:max-w-screen-lg
+        className="animate-fade-in relative flex w-full min-h-[80vh] max-h-screen text-white max-w-screen-2xl
+    max-2xl:max-w-screen-xl max-2xl:max-h-screen-xl
+    max-xl:max-w-screen-lg max-xl:max-h-screen-lg
     max-lg:max-w-screen-md"
       >
         <div

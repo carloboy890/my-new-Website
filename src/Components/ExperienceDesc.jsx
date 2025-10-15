@@ -116,7 +116,7 @@ const ExperienceDesc = (props) => {
         {/* Line container */}
         <div
           line
-          className=" animate-sm-lg w-[3%] max-h-[95%]
+          className=" animate-sm-lg w-[3%] min-h-100 max-h-150
             max-2xl:mt-1
             max-xl:hidden"
         >
