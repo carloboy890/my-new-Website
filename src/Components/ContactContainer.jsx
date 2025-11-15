@@ -31,7 +31,7 @@ const ContactContainer = () => {
       <div className="animate-fade-in relative text-white w-[100%] mr-auto ml-auto h-screen border-white font-Jost flex justify-center items-center">
         <div
           className="relative mb-10 w-full max-h-screen bg-black/50 flex items-center max-w-screen-2xl
-        max-2xl:h-[80vh] max-2xl:max-w-screen-xl border-1
+        max-2xl:h-[80vh] max-2xl:max-w-screen-xl
         max-xl:max-w-screen-lg 
         max-lg:max-w-screen-md max-lg:
         max-md:max-w-screen-sm max-md:flex-col max-md:overflow-y-scroll"

@@ -41,6 +41,12 @@ function NavbarLink() {
             <span className="line absolute left-0 -bottom-1 h-[2px] bg-white"></span>
           </Link>
         </li>
+        <li className="fade-cont line-container relative inline-block">
+          <Link to="/project" className="inline-block">
+            <span className="fade text-white">PROJECTS</span>
+            <span className="line absolute left-0 -bottom-1 h-[2px] bg-white"></span>
+          </Link>
+        </li>
       </ul>
       <ul className="max-md:flex max-md:w-3/4 max-md:h-16 max-md:justify-between max-md:rounded-3xl max-md:bg-[#242424]/60 hidden">
         <li className="max-md:w-full max-md:flex max-md:justify-center max-md:items-center">
