@@ -58,7 +58,7 @@ function SimonGame() {
 
     // WRONG CLICK
     else {
-      console.log("❌ Wrong!");
+      console.log("❌ Wrong");
       setWrong(true);
 
       setTimeout(() => setWrong(false), 1000);
@@ -72,7 +72,7 @@ function SimonGame() {
     }
   }
 
-  // 🔥 Start game after closing instructions
+  // Start game after closing instructions
   function startGame() {
     setInstruction(false);
     setSequence([]);

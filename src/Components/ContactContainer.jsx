@@ -7,7 +7,6 @@ import ContactCard from "./ContactCard";
 import ContactDesc from "./ContactDesc";
 import ContactSM from "./ContactSM";
 import ContactSMDesc from "./ContactSMDesc";
-import { div } from "motion/react-client";
 import ContactWaterSplash from "./ContactWaterSplash";
 
 const ContactContainer = () => {

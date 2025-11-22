@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import { animate } from "motion";
 import HomeDesign from "./HomeDesign";
 import "./AboutContainer.css";
 import { useNavigate } from "react-router-dom";

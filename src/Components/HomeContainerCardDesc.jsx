@@ -4,7 +4,6 @@ import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
 import playButton from "../assets/playButton.gif";
 import arrowView from "../assets/arrowView.gif";
 import myWorkplace1 from "../assets/myWorkplace1.mp4";
-import { div } from "motion/react-client";
 
 function HomeContainerCardDesc(props) {
   return (

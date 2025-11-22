@@ -43,6 +43,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  bottom: 60px;
 }
 
 .card1::before {
@@ -107,4 +108,57 @@ body {
   font-family: "Tiny5", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+/* Quiz Game Card*/
+
+.card2 {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-color: whitesmoke;
+  border-radius: 30px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3),
+    -6px -6px 12px rgba(255, 255, 255, 0.3),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.4),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Quiz Game */
+
+.card3 {
+  width: 700px;
+  height: 550px;
+  padding: 20px;
+  background: #eceaea;
+  border-radius: 30px;
+  box-shadow: 12px 12px 0 #000;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card3:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 17px 17px 0 #000;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(2px, 2px);
+  }
+  25% {
+    transform: translate(-2px, -2px);
+  }
+  50% {
+    transform: translate(-2px, 2px);
+  }
+  75% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(2px, 2px);
+  }
+}
+
+.glitch {
+  animation: glitch 0.3s infinite;
 }

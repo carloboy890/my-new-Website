@@ -9,8 +9,9 @@ import Experience from "./Routes/Experience";
 import Skills from "./Routes/Skills";
 import Hobbies from "./Routes/Hobbies";
 import SimonGame from "./GameProject/SimonGame";
+import QuizGame from "./GameProject/QuizGame";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
-import MusicPlayer from "./Components/MusicPlayer";
+// import MusicPlayer from "./Components/MusicPlayer";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/Skills" element={<Skills />} />
         <Route path="/Hobbies" element={<Hobbies />}></Route>
         <Route path="/simon" element={<SimonGame />}></Route>
+        <Route path="/quiz" element={<QuizGame />}></Route>
       </Routes>
     </>
   );
