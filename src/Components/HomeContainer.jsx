@@ -63,7 +63,7 @@ const HomeContainer = (props) => {
           >
             {!showVideo && (
               <img
-                className="opacity-90 absolute left-[1px] w-[100rem] h-[55rem]"
+                className="opacity-90 absolute left-[1px] w-[100rem] h-[60rem]"
                 src={profilePic}
                 alt="MyPic"
               />
