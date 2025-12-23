@@ -9,7 +9,6 @@ export default function GameProjects() {
   const SimonControl = useAnimation();
   const DailyWOControl = useAnimation();
   const gameCards = createGameCards(QuizControl, SimonControl, DailyWOControl);
-  const [isPointer, setIsPointer] = useState(false);
 
   const [cardsOrder, setCardsOrder] = useState([0, 1, 2]);
 
@@ -42,7 +41,7 @@ export default function GameProjects() {
   }
 
   return (
-    <div className="relative flex h-full w-full justify-center items-center border-1">
+    <div className="relative flex h-full w-full justify-center items-center ">
       {/* Left Arrow */}
       <img
         src={leftArrowG}

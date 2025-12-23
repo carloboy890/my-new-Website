@@ -1,10 +1,9 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import ProjectContainer from "../Components/ProjectContainer";
+import { Outlet } from "react-router-dom";
 
 const Project = () => {
-  const location = useLocation();
   return (
     <div className="relative w-full min-h-screen overflow-hidden text-white font-Jost">
       <div className="absolute inset-0 bg-[url('../assets/rockBackground.png')] bg-cover bg-center opacity-20 z-0"></div>
@@ -14,7 +13,7 @@ const Project = () => {
           <Navbar />
         </div>
         <div className="flex-grow overflow-hidden">
-          <ProjectContainer key={location.key} />
+          <Outlet />
         </div>
       </div>
     </div>
