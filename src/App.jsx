@@ -11,9 +11,13 @@ import SimonGame from "./GameProject/SimonGame";
 import QuizGame from "./GameProject/QuizGame";
 import GameProjects from "./Components/GameProjects";
 import ProjectContainer from "./Components/ProjectContainer";
+import FreeCommentApp from "./OtherProjects/FreeComment/FreeCommentApp";
+import WeatherApp from "./OtherProjects/WeatherApps/WeatherApp";
+import MovieApp from "./OtherProjects/MovieApps/MovieApp";
 import Project from "./Routes/Project";
 import OtherProjects from "./Components/OtherProjects";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
+
 // import MusicPlayer from "./Components/MusicPlayer";
 
 function App() {
@@ -35,9 +39,16 @@ function App() {
         <Route path="/Education" element={<Education />} />
         <Route path="/Experience" element={<Experience />} />
         <Route path="/Skills" element={<Skills />} />
-        <Route path="/Hobbies" element={<Hobbies />}></Route>
-        <Route path="/simon" element={<SimonGame />}></Route>
-        <Route path="/quiz" element={<QuizGame />}></Route>
+        <Route path="/freeCommentApp" element={<FreeCommentApp />} />
+        {/* <Route path="/weatherApp" element={<WeatherApp />}>
+          <Route index element={<WeatherSmallCards />} />
+        </Route> */}
+        <Route path="/weatherApp" element={<WeatherApp />} />
+        <Route path="movieApp" element={<MovieApp />} />
+        <Route path="/Hobbies" element={<Hobbies />} />
+        <Route path="/simon" element={<SimonGame />} />
+        <Route path="/quiz" element={<QuizGame />} />
+        {/* <Route path="/weatherSmallCards" element={<WeatherSmallCards />} /> */}
       </Routes>
     </>
   );

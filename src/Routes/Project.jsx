@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
-import ProjectContainer from "../Components/ProjectContainer";
+import ProjectContainer from "../Components/OtherProjects";
 import { Outlet } from "react-router-dom";
 
 const Project = () => {
