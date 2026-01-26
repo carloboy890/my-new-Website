@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 
-function WeatherSearch({ getData }) {
+function WeatherSearch({ getData, setShowSearch, setShow }) {
   const [search, setSearch] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     getData(search);
+    setShowSearch(true);
+    setShow(false);
     setSearch("");
   };
 
@@ -12,7 +14,7 @@ function WeatherSearch({ getData }) {
     <>
       <form
         onSubmit={handleSubmit}
-        className="w-full border-2 rounded-2xl bg-amber-50/95"
+        className="w-full rounded-2xl bg-white/10 backdrop-blur-sm"
       >
         <div
           className="flex items-center justify-center p-5 mt-5 

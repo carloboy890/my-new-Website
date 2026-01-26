@@ -243,25 +243,6 @@
   z-index: 10;
 }
 
-.weatherInfo .leftSide:not(.icon) {
-  width: 20%;
-  font-size: 11pt;
-  font-weight: 600;
-  align-self: baseline;
-  padding-left: 40px;
-  padding-top: 14px;
-}
-
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon svg {
-  width: 40px;
-}
-
 .weatherInfo .rightSide {
   display: flex;
   flex-direction: column;

@@ -5,7 +5,7 @@ export const weatherIconMap = {
   3: "cloudy",
   45: "fog",
   48: "fog",
-  51: "drizzle",
+  51: "fog",
   61: "rain",
   63: "rain",
   65: "rain",

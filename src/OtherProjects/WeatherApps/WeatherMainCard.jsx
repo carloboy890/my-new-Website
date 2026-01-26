@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./WeatherApp.module.css";
 import Sunny from "../../assets/ProjectsLogos/OtherProjectsSVG/WeatherLookUpLogos/SunnyLogo.svg";
 import Cloudy from "../../assets/ProjectsLogos/OtherProjectsSVG/WeatherLookUpLogos/CloudyLogo.svg";
@@ -10,21 +10,30 @@ import ThunderStorm from "../../assets/ProjectsLogos/OtherProjectsSVG/WeatherLoo
 import { getWeatherIcon } from "./WeatherlookUpIcons";
 import { useWeatherDays } from "./WeatherDays";
 import WeatherDaysMainCard from "./WeatherDaysMainCard";
+import { getWeatherMetrics } from "./WeatherHeaderCardData";
+import { formatTimeForTimezone } from "./formatTime";
+import { getWeatherWallpaper } from "./WeatherWallpapers";
 
-function WeatherMainCard({ passCurrentWeather }) {
+function WeatherMainCard({
+  passCurrentWeather,
+  setPassMetrics,
+  setWeatherWallpaper,
+  setWallpaperSource,
+  isNight,
+}) {
   const {
     daily_result,
+    hourly_Result,
     location,
     weatherText,
     date,
     timezone,
     current_weather,
   } = passCurrentWeather;
-  const liveTimeRef = useRef(new Date());
-  const [, forceRender] = useState(0);
+
   const [isID, setisID] = useState(0);
 
-  const { weathercode } = daily_result;
+  const { weathercode, sunrise, sunset } = daily_result;
 
   const FLLocation = location.slice(0, 1).toUpperCase();
   const RLocation = location.slice(1);
@@ -47,44 +56,30 @@ function WeatherMainCard({ passCurrentWeather }) {
     return iconMap[text];
   });
 
+  const [tick, setTick] = useState(0);
+
   useEffect(() => {
-    if (!timezone) return;
+    const id = setInterval(() => {
+      setTick((t) => t + 1);
+    }, 1000);
 
-    const tick = () => {
-      const now = new Date();
-
-      const options = {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false,
-        timeZone: timezone,
-      };
-      const parts = new Intl.DateTimeFormat("en-US", options).formatToParts(
-        now
-      );
-
-      const hour = parseInt(parts.find((p) => p.type === "hour").value);
-      const minute = parseInt(parts.find((p) => p.type === "minute").value);
-      const second = parseInt(parts.find((p) => p.type === "second").value);
-
-      liveTimeRef.current.setHours(hour, minute, second);
-
-      forceRender((prev) => prev + 1);
-    };
-
-    const interval = setInterval(tick, 1000);
-    return () => clearInterval(interval);
-  }, [timezone]);
-
-  const formattedTime = liveTimeRef.current.toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+    return () => clearInterval(id);
+  }, []);
 
   const date4Slice = date.slice(0, 4);
 
-  const handleClick = (id) => setisID(id);
+  const handleClick = (id) => {
+    setisID(id);
+
+    const dayMetrics = getWeatherMetrics(
+      current_weather,
+      daily_result,
+      hourly_Result,
+      id,
+    );
+
+    setPassMetrics(dayMetrics);
+  };
 
   const weatherTextSliced = weatherText.slice(0, 4);
 
@@ -93,11 +88,41 @@ function WeatherMainCard({ passCurrentWeather }) {
     daily_result,
     weatherTextSliced,
     date4Slice,
-    iconsArray
+    iconsArray,
   );
 
+  const formattedTime = formatTimeForTimezone(timezone);
+
+  useEffect(() => {
+    if (!timezone || !sunrise || !sunset) return;
+
+    const wallpaper = getWeatherWallpaper(
+      weathercode,
+      formattedTime,
+      sunrise,
+      sunset,
+      timezone,
+      isID,
+    );
+
+    setWeatherWallpaper(wallpaper);
+    setWallpaperSource("day");
+  }, [
+    isID,
+    formattedTime,
+    weathercode,
+    sunrise,
+    sunset,
+    setWeatherWallpaper,
+    setWallpaperSource,
+    timezone,
+  ]);
+
   return (
-    <div className="w-full h-1/2 flex justify-center items-center">
+    <div
+      className="w-full h-1/2 mb-10 flex justify-center items-center 
+    max-xl:mb-10"
+    >
       <div
         className={`${styles.card} scale-175
       max-2xl:scale-160
@@ -122,9 +147,9 @@ function WeatherMainCard({ passCurrentWeather }) {
               </div>
             </div>
             <div className={styles.temperature}>
-              {days.find((day) => day.id === isID)?.temperature}°
+              {days.find((day) => day.id === isID)?.temperature} °C
             </div>
-            <div className={styles.range}>
+            <div className="ml-3 text-[0.9rem]">
               {days.find((day) => day.id === isID)?.range}°
             </div>
           </div>
@@ -168,10 +193,14 @@ function WeatherMainCard({ passCurrentWeather }) {
           {date4Slice.map((value, i) => {
             return (
               <WeatherDaysMainCard
-                onClick={() => handleClick(i)}
+                onClick={() => {
+                  handleClick(i);
+                }}
                 id={i}
                 key={i}
                 iconsArray={iconsArray}
+                setPassMetrics={setPassMetrics}
+                isNight={isNight}
                 props={{
                   id: i,
                   dateSlice: value.slice(0, 3).toUpperCase(),
