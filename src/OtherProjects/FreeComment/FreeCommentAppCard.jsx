@@ -10,7 +10,7 @@ function FreeCommentAppCard(props) {
   }
 
   return (
-    <div>
+    <div className="max-sm:mt-20">
       <form
         onSubmit={handleSubmit}
         className="bg-white border border-slate-200 w-100 grid grid-cols-6 gap-2 rounded-xl p-2 text-sm"

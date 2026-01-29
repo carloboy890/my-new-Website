@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import QuizGameDesc from "../GameProject/QuizGameDesc";
 import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
+import BackButtonAnimation from "../Components/BackButtonAnimation";
 
 function QuizGame(props) {
   const subjects = ["Science", "Math", "Logic", "Bonus!"];
@@ -16,7 +17,7 @@ function QuizGame(props) {
   const [passSub, setPassSub] = useState("");
   const [mathExplanation, setMathExplanation] = useState(false);
   const [scoreEva, setScoreEva] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const totalQuestions = QuizGameDesc[0].Science.length;
 
@@ -79,26 +80,31 @@ function QuizGame(props) {
   /* Modal */
   function chooseSubjects() {
     return createPortal(
-      <div className="absolute justify-center items-center flex flex-col bottom-100 left-165 modal h-60 w-200 bg-amber-50 rounded-4xl opacity-80 z-30">
-        <p className="text-4xl font-bold">Choose A Subject!</p>
-        <div className="mt-2 h-40 w-80 flex gap-4 justify-center flex-wrap">
-          {subjects.map((value, i) => (
-            <div
-              key={i}
-              onClick={() => {
-                setQuizBox(!quizBox);
-                setHideSubject(!hideSubject);
-                passSubject(value);
-                showExplanation(value);
-              }}
-              className="border-3 hover:bg-amber-300 cursor-pointer w-30 pt-3 text-3xl font-medium text-center rounded-2xl "
-            >
-              {value}
-            </div>
-          ))}
+      <div className="-mt-150 border-white flex justify-center">
+        <div
+          className="justify-center items-center flex flex-col h-60 w-200 bg-amber-50 rounded-4xl opacity-80 z-30 
+      max-lg:scale-80"
+        >
+          <p className="text-4xl font-bold">Choose A Subject!</p>
+          <div className="mt-2 h-40 w-80 flex gap-4 justify-center flex-wrap">
+            {subjects.map((value, i) => (
+              <div
+                key={i}
+                onClick={() => {
+                  setQuizBox(!quizBox);
+                  setHideSubject(!hideSubject);
+                  passSubject(value);
+                  showExplanation(value);
+                }}
+                className="border-3 hover:bg-amber-300 cursor-pointer w-30 pt-3 text-3xl font-medium text-center rounded-2xl "
+              >
+                {value}
+              </div>
+            ))}
+          </div>
         </div>
       </div>,
-      document.getElementById("modal-root")
+      document.getElementById("modal-root"),
     );
   }
   /* end of modal */
@@ -121,7 +127,7 @@ function QuizGame(props) {
   }
   useEffect(() => {
     if (nextQ >= totalQuestions) {
-      scoreDesc(); // ✔ runs once when quiz ends
+      scoreDesc();
     }
   }, [nextQ]);
 
@@ -149,7 +155,7 @@ function QuizGame(props) {
           </>
         )}
       </div>,
-      document.getElementById("modal-result")
+      document.getElementById("modal-result"),
     );
   }
 
@@ -160,6 +166,9 @@ function QuizGame(props) {
       {" "}
       {/* Quiz Box */}
       <div className="relative flex justify-center items-center h-[100vh] border-white">
+        <div onClick={() => navigate(-1)} className="absolute left-15 top-10 ">
+          <BackButtonAnimation />
+        </div>
         {hideSubject && chooseSubjects()}
         {quizBox && (
           <div className="card3 flex flex-col">

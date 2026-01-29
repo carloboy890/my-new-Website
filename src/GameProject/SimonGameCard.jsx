@@ -14,7 +14,7 @@ function SimonGameCard(props) {
         animate={props.simonControl}
       >
         <div
-          className="card1 h-120 w-90 cursor-pointer scale-85 hover:scale-100 transition-all duration-1000"
+          className={`card1 h-120 w-90 cursor-pointer scale-85 hover:scale-100 transition-all duration-1000`}
           onClick={() => navigate("/simon")}
         >
           <div className="absolute z-4 font-Tiny5 text-6xl top-5 text-center ">

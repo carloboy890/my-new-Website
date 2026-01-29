@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import BackButtonAnimation from "../Components/BackButtonAnimation";
+import { useNavigate } from "react-router-dom";
 
 function SimonGame() {
+  const navigate = useNavigate();
   const colors = ["bg-red-500", "bg-blue-500", "bg-yellow-500", "bg-green-500"];
 
   const [sequence, setSequence] = useState([]); // full sequence
@@ -44,20 +47,14 @@ function SimonGame() {
 
     // CORRECT CLICK
     if (id === sequence[userStep]) {
-      // Finished the whole sequence → next level
       if (userStep + 1 === sequence.length) {
         setLevel((prev) => prev + 1);
         setUserStep(0);
         setTimeout(() => nextSequence(), 800);
-      }
-      // Move to next number
-      else {
+      } else {
         setUserStep((prev) => prev + 1);
       }
-    }
-
-    // WRONG CLICK
-    else {
+    } else {
       console.log("❌ Wrong");
       setWrong(true);
 
@@ -72,7 +69,6 @@ function SimonGame() {
     }
   }
 
-  // Start game after closing instructions
   function startGame() {
     setInstruction(false);
     setSequence([]);
@@ -84,8 +80,17 @@ function SimonGame() {
 
   return (
     <>
-      <div className="flex h-[100vh] justify-center items-center border-1">
-        <div className="card flex flex-col items-center">
+      <div className="flex h-[100vh] relative justify-center items-center">
+        <div onClick={() => navigate(-1)} className="absolute left-15 top-10 ">
+          <BackButtonAnimation />
+        </div>
+        <div
+          className="card flex flex-col items-center 
+        max-2xl:scale-90
+        max-xl:scale-70
+        max-md:scale-70
+        max-sm:scale-60"
+        >
           <div className="text-white text-6xl h-25 pt-6 text-center">
             Level {level}
           </div>
@@ -103,7 +108,6 @@ function SimonGame() {
               ></button>
             ))}
 
-            {/* WRONG X NOTICE */}
             <div
               className="absolute text-red-800 text-[20rem]"
               style={{ display: wrong ? "block" : "none" }}

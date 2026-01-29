@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 import { FaHouse } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa6";
 import { FaFolder } from "react-icons/fa6";
+import { FaFile } from "react-icons/fa";
 import { FaAddressBook } from "react-icons/fa6";
 
 function NavbarLink() {
@@ -30,6 +31,12 @@ function NavbarLink() {
           </Link>
         </li>
         <li className="fade-cont line-container relative inline-block">
+          <Link to="/project" className="inline-block">
+            <span className="fade text-white">PROJECTS</span>
+            <span className="line absolute left-0 -bottom-1 h-[2px] bg-white"></span>
+          </Link>
+        </li>
+        <li className="fade-cont line-container relative inline-block">
           <Link to="/resume" className="inline-block">
             <span className="fade text-white">RESUME</span>
             <span className="line absolute left-0 -bottom-1 h-[2px] bg-white"></span>
@@ -38,12 +45,6 @@ function NavbarLink() {
         <li className="fade-cont line-container relative inline-block">
           <Link to="/contact" className="inline-block">
             <span className="fade text-white">CONTACT</span>
-            <span className="line absolute left-0 -bottom-1 h-[2px] bg-white"></span>
-          </Link>
-        </li>
-        <li className="fade-cont line-container relative inline-block">
-          <Link to="/project" className="inline-block">
-            <span className="fade text-white">PROJECTS</span>
             <span className="line absolute left-0 -bottom-1 h-[2px] bg-white"></span>
           </Link>
         </li>
@@ -64,9 +65,16 @@ function NavbarLink() {
           </Link>
         </li>
         <li className="max-md:w-full max-md:flex max-md:justify-center max-md:items-center">
-          <Link to="/resume">
+          <Link to="/project">
             <span>
               <FaFolder className="invisible max-md:visible max-md:h-[20px] max-md:w-[20px]" />
+            </span>
+          </Link>
+        </li>
+        <li className="max-md:w-full max-md:flex max-md:justify-center max-md:items-center">
+          <Link to="/resume">
+            <span>
+              <FaFile className="invisible max-md:visible max-md:h-[20px] max-md:w-[20px]" />
             </span>
           </Link>
         </li>
