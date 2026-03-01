@@ -15,6 +15,12 @@ import Rain from "../../assets/ProjectsLogos/OtherProjectsSVG/WeatherLookUpLogos
 import Snow from "../../assets/ProjectsLogos/OtherProjectsSVG/WeatherLookUpLogos/SnowLogo.svg";
 import HeavySnow from "../../assets/ProjectsLogos/OtherProjectsSVG/WeatherLookUpLogos/HeavynowLogo.svg";
 import ThunderStorm from "../../assets/ProjectsLogos/OtherProjectsSVG/WeatherLookUpLogos/ThunderstormLogo.svg";
+import { Virtual, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const iconMap = {
   sunny: Sunny,
@@ -27,7 +33,7 @@ const iconMap = {
   thunderStorm: ThunderStorm,
 };
 
-function WeatherDefaultTenCities({
+function WeatherTenCitiesSlider({
   tenCities,
   setPassCurrentWeather,
   setPassMetrics,
@@ -88,9 +94,19 @@ function WeatherDefaultTenCities({
   ]);
 
   return (
-    <div
-      className="h-220 justify-center flex flex-wrap
-    max-xl:h-230 max-lg:h-auto"
+    <Swiper
+      className="max-md:h-80"
+      modules={[Navigation, Pagination]}
+      slidesPerView={4}
+      spaceBetween={0}
+      navigation
+      pagination={{ clickable: true }}
+      breakpoints={{
+        320: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+        1536: { slidesPerView: 4 },
+      }}
     >
       {tenCities.map((value, i) => {
         const {
@@ -159,68 +175,72 @@ function WeatherDefaultTenCities({
         const icon = iconMap[weatherKey] || Sunny;
 
         return (
-          <div
-            className="w-60
-          max-2xl:w-63 max-xl:h-10 max-xl:-mt-30
-          max-lg:w-58 max-lg:h-65 max-lg:-mt-10
-          max-md:h-55 max-md:w-53"
-          >
-            {nightTime ? (
-              <>
-                <NightWeatherPieceCard
-                  key={i}
-                  setNightWeatherTheme={setNightWeatherTheme}
-                  nightTime={nightTime}
-                  icon={icon}
-                  setWeatherWallpaper={setWeatherWallpaper}
-                  timezone={currentWeather.timezone}
-                  passName={value?.city}
-                  newDates0={newDates[0]}
-                  newDates1={newDates[1]}
-                  newDates2={newDates[2]}
-                  newDates3={newDates[3]}
-                  temperature={temperature}
-                  maxTemp1={avgTemp.temp1}
-                  maxTemp2={avgTemp.temp2}
-                  maxTemp3={avgTemp.temp3}
-                  setPassCurrentWeather={setPassCurrentWeather}
-                  setPassMetrics={setPassMetrics}
-                  setShow={setShow}
-                  metrics={metrics}
-                  weatherMP={weatherMP}
-                  currentWeather={currentWeather}
-                />
-              </>
-            ) : (
-              <>
-                <WeatherPieceCards
-                  key={i}
-                  icon={icon}
-                  setWeatherWallpaper={setWeatherWallpaper}
-                  timezone={currentWeather.timezone}
-                  passName={value?.city}
-                  newDates0={newDates[0]}
-                  newDates1={newDates[1]}
-                  newDates2={newDates[2]}
-                  newDates3={newDates[3]}
-                  temperature={temperature}
-                  maxTemp1={avgTemp.temp1}
-                  maxTemp2={avgTemp.temp2}
-                  maxTemp3={avgTemp.temp3}
-                  setPassCurrentWeather={setPassCurrentWeather}
-                  setPassMetrics={setPassMetrics}
-                  setShow={setShow}
-                  metrics={metrics}
-                  weatherMP={weatherMP}
-                  currentWeather={currentWeather}
-                />
-              </>
-            )}
-          </div>
+          <SwiperSlide key={i}>
+            <div
+              className="w-60 ml-9
+          max-2xl:w-63 max-2xl:ml-13 
+          max-xl:-mt-5 max-xl:ml-2
+          max-lg:w-63 max-lg:ml-5
+          max-md:w-57 max-md:ml-23 max-md:-mt-10
+          max-sm:ml-25"
+            >
+              {nightTime ? (
+                <>
+                  <NightWeatherPieceCard
+                    key={i}
+                    setNightWeatherTheme={setNightWeatherTheme}
+                    nightTime={nightTime}
+                    icon={icon}
+                    setWeatherWallpaper={setWeatherWallpaper}
+                    timezone={currentWeather.timezone}
+                    passName={value?.city}
+                    newDates0={newDates[0]}
+                    newDates1={newDates[1]}
+                    newDates2={newDates[2]}
+                    newDates3={newDates[3]}
+                    temperature={temperature}
+                    maxTemp1={avgTemp.temp1}
+                    maxTemp2={avgTemp.temp2}
+                    maxTemp3={avgTemp.temp3}
+                    setPassCurrentWeather={setPassCurrentWeather}
+                    setPassMetrics={setPassMetrics}
+                    setShow={setShow}
+                    metrics={metrics}
+                    weatherMP={weatherMP}
+                    currentWeather={currentWeather}
+                  />
+                </>
+              ) : (
+                <>
+                  <WeatherPieceCards
+                    key={i}
+                    icon={icon}
+                    setWeatherWallpaper={setWeatherWallpaper}
+                    timezone={currentWeather.timezone}
+                    passName={value?.city}
+                    newDates0={newDates[0]}
+                    newDates1={newDates[1]}
+                    newDates2={newDates[2]}
+                    newDates3={newDates[3]}
+                    temperature={temperature}
+                    maxTemp1={avgTemp.temp1}
+                    maxTemp2={avgTemp.temp2}
+                    maxTemp3={avgTemp.temp3}
+                    setPassCurrentWeather={setPassCurrentWeather}
+                    setPassMetrics={setPassMetrics}
+                    setShow={setShow}
+                    metrics={metrics}
+                    weatherMP={weatherMP}
+                    currentWeather={currentWeather}
+                  />
+                </>
+              )}
+            </div>
+          </SwiperSlide>
         );
       })}
-    </div>
+    </Swiper>
   );
 }
 
-export default WeatherDefaultTenCities;
+export default WeatherTenCitiesSlider;

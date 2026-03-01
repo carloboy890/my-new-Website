@@ -12,6 +12,7 @@ import { getIsNight } from "./WeatherWallpapers";
 import Lottie from "lottie-react";
 import centerLoadingAnimation from "../../assets/ProjectsLogos/OtherProjectsSVG/Clouds.json";
 import { useNavigate } from "react-router-dom";
+import WeatherTenCitiesSlider from "./WeatherTenCitiesSlider";
 
 function WeatherApp() {
   const [weather, setWeather] = useState([]);
@@ -131,7 +132,7 @@ function WeatherApp() {
         max-lg:max-w-screen-md
         max-md:max-w-screen-sm
         max-sm:max-w-full
-        max-sm:max-h-full"
+        "
       >
         {" "}
         <video
@@ -148,13 +149,13 @@ function WeatherApp() {
         </div>
         <div
           className="mt-5 min-h-[700px] w-full flex
-        max-xl:-mt-10 
-        max-lg:mt-20 justify-center"
+        max-xl:-mt-0 
+        max-lg:-mt-5 justify-center"
         >
           {loading ? (
             loadingTheme()
           ) : (
-            <div className="flex w-full pt-1 flex-col">
+            <div className="flex w-full pt-1 flex-col items-center">
               {show &&
                 (isNight ? (
                   <NightMainCardWeather
@@ -173,7 +174,7 @@ function WeatherApp() {
                     isNight={isNight}
                   />
                 ))}
-              {showMainCards && !showSearch && (
+              {/* {showMainCards && !showSearch && (
                 <WeatherDefaultTenCities
                   tenCities={tenCities}
                   setPassCurrentWeather={setPassCurrentWeather}
@@ -184,7 +185,28 @@ function WeatherApp() {
                   setWallpaperSource={setWallpaperSource}
                   setNightWeatherTheme={setNightWeatherTheme}
                 />
-              )}
+              )} */}
+              <div
+                className="w-300
+              max-2xl:w-250
+              max-xl:w-190
+              max-lg:w-140
+              max-md:w-100 max-md:flex max-md:justify-center
+              max-sm:w-110"
+              >
+                {showMainCards && !showSearch && (
+                  <WeatherTenCitiesSlider
+                    tenCities={tenCities}
+                    setPassCurrentWeather={setPassCurrentWeather}
+                    setPassMetrics={setPassMetrics}
+                    setShow={setShow}
+                    setWeatherWallpaper={setWeatherWallpaper}
+                    setDefaultWallpaper={setDefaultWallpaper}
+                    setWallpaperSource={setWallpaperSource}
+                    setNightWeatherTheme={setNightWeatherTheme}
+                  />
+                )}
+              </div>
               {showSearch && (
                 <WeatherSmallCards
                   setShow={setShow}
@@ -198,7 +220,7 @@ function WeatherApp() {
             </div>
           )}
         </div>
-        <div>
+        <div className="mt-21">
           <WeatherSearch
             getData={getData}
             setShowSearch={setShowSearch}

@@ -39,10 +39,10 @@ function WeatherPieceCards(props) {
             if (weatherMP) setWeatherWallpaper(weatherMP);
           }}
           className={`cursor-pointer scale-75 hover:scale-85 transition duration-400 ease-in-out ${styles.card}
-              max-2xl:scale-75 max-2xl:hover:scale-90
-              max-xl:scale-60 max-xl:hover:scale-70
-              max-md:scale-45 max-lg:hover:scale-55
-              max-sm:scale-50 border-1`}
+              max-2xl:scale-65 max-2xl:hover:scale-70
+              max-xl:scale-55 max-xl:hover:scale-60
+              max-md:scale-65 max-lg:hover:scale-70
+              max-sm:scale-65 border-1`}
         >
           <section className={`${styles.landscapeSection}`}>
             <div className={styles.sky}></div>

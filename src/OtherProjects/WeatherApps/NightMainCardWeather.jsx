@@ -116,7 +116,7 @@ function NightMainCardWeather({
       max-2xl:scale-160
       max-xl:scale-140
       max-md:scale-120
-      max-sm:scale-110`}
+      max-sm:scale-120`}
       >
         <section className={styles.infoSection}>
           <div className={`${styles.backgroundDesign}`}>
