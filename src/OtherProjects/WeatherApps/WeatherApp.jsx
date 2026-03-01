@@ -143,6 +143,7 @@ function WeatherApp() {
           autoPlay
           muted
           loop
+          playsInline
         />
         <div className="relative z-10">
           <WeatherHeader metrics={passMetrics} onBack={handleBack} />
@@ -190,7 +191,7 @@ function WeatherApp() {
                 className="w-300
               max-2xl:w-250
               max-xl:w-190
-              max-lg:w-140
+              max-lg:w-140 
               max-md:w-100 max-md:flex max-md:justify-center
               max-sm:w-110"
               >
