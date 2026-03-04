@@ -127,10 +127,6 @@ function WeatherApp() {
     <>
       <div
         className="relative w-full min-h-screen overflow-hidden text-white
-        max-2xl:max-w-screen-xl
-        max-xl:max-w-screen-lg 
-        max-lg:max-w-screen-md
-        max-md:max-w-screen-sm
         max-sm:max-w-full
         "
       >

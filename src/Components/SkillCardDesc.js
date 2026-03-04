@@ -4,6 +4,8 @@ import javascriptLogo from "../assets/skillsLogos/javascriptLogo.png";
 import reactLogo from "../assets/skillsLogos/reactLogo.png";
 import tailwindLogo from "../assets/skillsLogos/tailwindLogo.png";
 import bootstrapLogo from "../assets/skillsLogos/bootstrapLogo.png";
+import nodeJSLogo from "../assets/skillsLogos/nodeJSLogo.svg";
+import expressJSLogo from "../assets/skillsLogos/expressJSLogo.svg";
 import chatgptLogo from "../assets/skillsLogos/chatgptLogo.png";
 import githubLogo from "../assets/skillsLogos/githubLogo.png";
 import canvaLogo from "../assets/skillsLogos/canvaLogo.png";
@@ -67,6 +69,22 @@ const SkillCardDesc = [
   },
   {
     id: 7,
+    logo: nodeJSLogo,
+    circleAnimation: circle80,
+    title: "NODE JS",
+    description:
+      "Node.JS is an open-source, cross-platform JavaScript runtime enviro nment that allows developers to execute JavaScript code outside of a web browser.",
+  },
+  {
+    id: 8,
+    logo: expressJSLogo,
+    circleAnimation: circle80,
+    title: "EXPRESS JS",
+    description:
+      "Express is a fast, unopinionated, minimalist web framework for Node.js, providing a robust set of features for web and mobile applications.",
+  },
+  {
+    id: 9,
     logo: chatgptLogo,
     circleAnimation: circle90,
     title: "CHAT GPT",
@@ -74,7 +92,7 @@ const SkillCardDesc = [
       "ChatGPT is a large language model chatbot developed by OpenAI that uses natural language processing to generate human-like text and engage in conversations.",
   },
   {
-    id: 8,
+    id: 10,
     logo: githubLogo,
     circleAnimation: circle85,
     title: "GITHUB",
@@ -82,7 +100,7 @@ const SkillCardDesc = [
       "GitHub is a cloud-based platform where you can store, share, and work together with others to write code. Storing your code in a repository on GitHub allows you to: Showcase or share your work.",
   },
   {
-    id: 9,
+    id: 11,
     logo: canvaLogo,
     circleAnimation: circle70,
     title: "CANVA",
@@ -90,7 +108,7 @@ const SkillCardDesc = [
       "Canva is a free, online graphic design tool that allows users to create a wide range of visual content, including social media graphics, presentations, posters, and more.",
   },
   {
-    id: 10,
+    id: 12,
     logo: figmaLogo,
     circleAnimation: circleDot,
     title: "FIGMA",
@@ -98,7 +116,7 @@ const SkillCardDesc = [
       "Figma is a powerful, collaborative interface design tool that allows designers to create, share, and test designs for digital products and experiences.",
   },
   {
-    id: 11,
+    id: 13,
     logo: wordpressLogo,
     circleAnimation: circleDot,
     title: "WORDPRESS",
@@ -106,7 +124,7 @@ const SkillCardDesc = [
       "WordPress is a free and open-source content management system (CMS) that allows users to easily create and manage websites, including blogs, business websites, and e-commerce stores.",
   },
   {
-    id: 12,
+    id: 14,
     logo: microsoftLogo,
     circleAnimation: circle90,
     title: "MICROSOFT TOOLS",

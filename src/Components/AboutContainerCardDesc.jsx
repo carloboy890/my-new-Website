@@ -6,7 +6,7 @@ function AboutContainerCardDesc(props) {
   return (
     <>
       <div
-        className="w-[70%] max-h-screen h-[75vh] text-white space-y-8 p-4 sm:p-6 
+        className="w-[70%] max-h-screen h-[75vh] overflow-auto text-white space-y-8 p-4 sm:p-6 
               max-2xl:mt-5
               max-xl:mt-0 max-xl:min-h-[82vh]
               max-lg:p-8 max-lg:w-3/3 max-lg:mt-15 max-lg:min-h-[75vh]
@@ -49,61 +49,74 @@ function AboutContainerCardDesc(props) {
                 max-xl:mb-7"
         />
 
-        <div className="animate-sm-lg ">
-          <h3
-            className="text-2xl font-bold mb-4
+        <div className="animate-sm-lg w-full ">
+          <div className="w-full flex justify-center">
+            <h3
+              className="text-2xl font-bold mb-4
                   max-xl:text-[1.4rem] 
                   max-lg:text-center
                   max-md:text-center 
                   max-sm:mb-7"
-          >
-            {props.service}
-          </h3>
-          <div className="flex flex-wrap gap-6">
+            >
+              {props.service}
+            </h3>
+          </div>
+          <div className="flex flex-wrap justify-around space-y-15 ">
             <div
-              className="w-full sm:w-[47%] space-y-2 
-                    max-sm:text-center max-sm:flex max-sm:flex-col max-sm:items-center"
+              className="w-auto space-y-2 
+                    max-sm:text-center max-sm:flex max-sm:flex-col max-sm:items-center max-sm:border-1 max-sm:w-full max-sm:p-5"
             >
               <div
-                className="w-12 h-12
+                className="flex pl-18 
+              max-lg:pl-0"
+              >
+                <div
+                  className="w-12 h-12
                     max-lg:w-full
                     max-xl:w-10 max-xl:h-10"
-              >
-                <img
-                  src={UIUX}
-                  alt="UI/UX"
-                  className="w-full h-full object-contain"
-                />
+                >
+                  <img
+                    src={UIUX}
+                    alt="UI/UX"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               </div>
               <h4
                 className="font-bold text-lg
                     max-lg:text-center  
-                    max-xl:text-[1rem]"
+                    max-xl:text-[1rem] "
               >
                 {props.service1}
               </h4>
+
               <p
                 className="text-sm text-white/90
-                    max-lg:text-center 
-                    max-xl:text-[0.8rem]"
+                    max-lg:text-center
+                    max-xl:text-[0.8rem] whitespace-pre-line"
               >
                 {props.service1Desc}
               </p>
             </div>
             <div
-              className="w-full sm:w-[47%] space-y-2 
-                    max-sm:text-center max-sm:flex max-sm:flex-col max-sm:items-center"
+              className="w-auto space-y-2 
+                    max-sm:text-center max-sm:flex max-sm:flex-col max-sm:items-center max-sm:border-1 max-sm:w-full max-sm:p-5"
             >
               <div
-                className="w-12 h-12
+                className="flex pl-16 
+              max-lg:pl-0"
+              >
+                <div
+                  className="w-12 h-12
                     max-lg:w-full 
                     max-xl:w-10 max-xl:h-10"
-              >
-                <img
-                  src={responsiveDes}
-                  alt="Responsive Design"
-                  className="w-full h-full object-contain"
-                />
+                >
+                  <img
+                    src={responsiveDes}
+                    alt="Responsive Design"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               </div>
               <h4
                 className="font-bold text-lg 
@@ -114,8 +127,8 @@ function AboutContainerCardDesc(props) {
               </h4>
               <p
                 className="text-sm text-white/90 
-                    max-lg:text-center 
-                    max-xl:text-[0.8rem]"
+                    max-lg:text-center
+                    max-xl:text-[0.8rem] whitespace-pre-line"
               >
                 {props.service2Desc}
               </p>

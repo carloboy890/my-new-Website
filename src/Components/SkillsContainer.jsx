@@ -37,7 +37,7 @@ const SkillsContainer = () => {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     cardRefs.current.forEach((ref) => ref && observer.observe(ref));
@@ -70,7 +70,8 @@ const SkillsContainer = () => {
           <SkillsUpperLayer showDownArrow={showDownArrow} />
           <div
             className="flex flex-wrap justify-center mt-70 gap-5
-          max-xl:space-y-30 
+          max-xl:space-y-0 
+          max-lg:space-y-0 max-lg:mt-30
           max-md:hidden"
           >
             {SkillCardDesc.map((value, index) => (
