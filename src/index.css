@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,500;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,500;1,500&family=Tiny5&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Coiny&display=swap");
 @import "tailwindcss";
 
 * {
@@ -26,6 +27,7 @@ body {
   --shadow-buttonShadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   --font-Jost: Jost, sans-serif;
   --font-Tiny5: Tiny5, sans-serif;
+  --font-Coiny: "Coiny", system-ui;
 }
 
 .card {
@@ -34,7 +36,9 @@ body {
   border-radius: 30px;
   opacity: 0.8;
   background: #212121;
-  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+  box-shadow:
+    15px 15px 30px rgb(25, 25, 25),
+    -15px -15px 30px rgb(60, 60, 60);
 }
 
 .card1 {
@@ -118,7 +122,8 @@ body {
   height: 180px;
   background-color: whitesmoke;
   border-radius: 30px;
-  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.3),
     -6px -6px 12px rgba(255, 255, 255, 0.3),
     inset 2px 2px 4px rgba(255, 255, 255, 0.4),
     inset -2px -2px 4px rgba(0, 0, 0, 0.5);
@@ -133,7 +138,9 @@ body {
   background: #eceaea;
   border-radius: 30px;
   box-shadow: 12px 12px 0 #000;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .card3:hover {

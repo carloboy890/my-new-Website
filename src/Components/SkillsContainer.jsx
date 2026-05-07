@@ -92,6 +92,7 @@ const SkillsContainer = () => {
                   circleAnimation={value.circleAnimation}
                   title={value.title}
                   description={value.description}
+                  logo6Size={value.id === 8 ? "w-[70px] h-[70px]" : ""}
                 />
               </div>
             ))}

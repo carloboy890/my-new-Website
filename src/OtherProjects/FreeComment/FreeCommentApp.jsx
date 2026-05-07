@@ -1,76 +1,58 @@
-import React, { useEffect, useState } from "react";
-import FreeCommentAppCard from "../FreeComment/FreeCommentAppCard";
-import FreeCommentStart from "../FreeComment/FreeCommentStart";
-import { useNavigate } from "react-router-dom";
+import React, { useState, createContext } from "react";
 import BackButtonAnimation from "../../Components/BackButtonAnimation";
+import FreeCommentBG from "./FreeCommentBG";
+import chatConvoLogo from "../../assets/ProjectsLogos/OtherProjectsSVG/CommentAppWallpaper/chatConvoLogo.svg";
+import CommentInfoField from "./CommentInfoField";
+import UserFormInfo from "./UserFormInfo";
+import ChatField from "./ChatField";
+import AskMeChatField from "./AskMeChatField";
+import CommunityChatField from "./CommunityChatField";
+
+export const UsernameContext = createContext();
 
 function FreeCommentApp() {
-  const navigate = useNavigate();
-  const [passComment, setPassComment] = useState(() => {
-    const saved = localStorage.getItem("comments");
-    return saved ? JSON.parse(saved) : [];
-  });
+  const [switchField, setSwitchField] = useState("");
+  const [openUserInfo, setOpenUserInfo] = useState(true);
+  const [hideUserInfo, setHideUserInfo] = useState(true);
+  const [passedUsername, setPassedUsername] = useState("");
+  const [passedAdminUsername, setPassedAdminUsername] = useState("");
+  const [toGender, setToGender] = useState(false);
 
-  const [start, setStart] = useState(true);
-
-  const [theUsername, setTheUsername] = useState(() => {
-    return localStorage.getItem("username") || "";
-  });
-
-  function getSubmit(comment) {
-    setPassComment((prev) => [...prev, comment]);
-  }
-
-  function handleStart() {
-    setStart(false);
-  }
-
-  useEffect(() => {
-    localStorage.setItem("comments", JSON.stringify(passComment));
-  }, [passComment]);
-
-  useEffect(() => {
-    if (theUsername) {
-      localStorage.setItem("username", theUsername);
-    }
-  }, [theUsername]);
-
-  const passedUsername = (username) => {
-    setTheUsername(username);
-  };
-
-  return start ? (
-    <>
-      <div onClick={() => navigate(-1)} className="absolute left-15 top-10 ">
-        <BackButtonAnimation />
-      </div>
-      <div>
-        <FreeCommentStart
-          username={passedUsername}
-          text="Type Your Username"
-          enter="Enter!"
-          onClick={handleStart}
-        />
-      </div>
-    </>
-  ) : (
-    <div className="border-white border-1 h-[100vh]">
-      <div onClick={() => navigate(-1)} className="absolute left-15 top-10 ">
-        <BackButtonAnimation />
-      </div>
-      <div className="flex justify-center mt-20">
-        <FreeCommentAppCard title="Send Feedback" comment={getSubmit} />
-      </div>
-      <div className="h-100 border-1 mt-20 w-full border-white text-white">
-        {passComment.map((value, i) => {
-          return (
-            <div className="font-Jost text-3xl " key={i}>
-              {theUsername} : {value}
-            </div>
-          );
-        })}
-      </div>
-    </div>
+  return (
+    <FreeCommentBG>
+      {hideUserInfo ? (
+        <div className="">
+          <div className="relative top-65 left-10 w-210 h-90 ">
+            <img src={chatConvoLogo} alt="chatConvoLogo" className="absolute" />
+            {openUserInfo ? (
+              <UserFormInfo
+                setOpenUserInfo={setOpenUserInfo}
+                setSwitchField={setSwitchField}
+              />
+            ) : (
+              <CommentInfoField
+                setHideUserInfo={setHideUserInfo}
+                setPassedUsername={setPassedUsername}
+                setPassedAdminUsername={setPassedAdminUsername}
+                setToGender={setToGender}
+              />
+            )}
+          </div>
+        </div>
+      ) : (
+        <UsernameContext.Provider
+          value={{
+            passedAdminUsername,
+            passedUsername,
+            switchField,
+            toGender,
+            setToGender,
+          }}
+        >
+          <ChatField />
+        </UsernameContext.Provider>
+      )}
+    </FreeCommentBG>
   );
 }
 
