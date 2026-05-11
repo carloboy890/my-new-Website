@@ -18,7 +18,7 @@ function InnerChatBox({
     >
       {switchField === "AskMe" && (
         <div className="w-full box-border">
-          {(passedAdminUsername ? passUserInfo : messageSent).map((msg) => (
+          {messageSent.map((msg) => (
             <ChatBubble
               key={msg._id}
               messageSent={msg}

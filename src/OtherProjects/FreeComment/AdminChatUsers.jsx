@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import femaleProfile from "../../assets/ProjectsLogos/OtherProjectsSVG/CommentAppWallpaper/femaleProfile.svg";
 import maleProfile from "../../assets/ProjectsLogos/OtherProjectsSVG/CommentAppWallpaper/maleProfile.svg";
+import axios from "axios";
 
 function AdminChatUsers({
   passedUsername,
   messageSent,
   setPassUserInfo,
   isGender,
+  setSelectedUser,
+  readCounts,
+  setReadCounts,
 }) {
   const users = [
     ...new Map(
@@ -19,17 +23,42 @@ function AdminChatUsers({
     ).values(),
   ];
 
-  function usersInfoMessage(selectedUser) {
+  console.log(readCounts);
+  async function handleUserClick(user) {
+    const conversationId = [user.username, "admin8080"].sort().join("_");
+
     const conversation = messageSent.filter(
-      (msg) =>
-        msg.username === selectedUser || // user messages
-        msg.role === "admin", // admin messages
+      (msg) => msg.conversationId === conversationId,
     );
 
+    setSelectedUser(user.username);
     setPassUserInfo(conversation);
+
+    setReadCounts((prev) => ({
+      ...prev,
+      [user.username]: conversation.length,
+    }));
+
+    await axios.put("http://localhost:5000/update-read-count", {
+      username: user.username,
+      readCount: conversation.length,
+    });
   }
 
-  console.log(isGender);
+  function getUserData(user) {
+    const conversationId = [user.username, "admin8080"].sort().join("_");
+
+    const userMessages = messageSent.filter(
+      (msg) => msg.conversationId === conversationId,
+    );
+
+    console.log(userMessages);
+
+    return {
+      count: userMessages.length,
+      latest: userMessages[userMessages.length - 1]?.text || "",
+    };
+  }
 
   return (
     <div className="bg-[#f1eeee] fixed rounded-3xl h-110 w-80 right-17 top-90 overflow-y-scroll">
@@ -43,13 +72,19 @@ function AdminChatUsers({
       </div>
       <div className="">
         {users.map((user, i) => {
+          const { count, latest } = getUserData(user);
+          const unreadCount = count - (readCounts[user.username] || 0);
+
           return (
             <div
-              onClick={() => usersInfoMessage(user.username)}
+              onClick={() => {
+                handleUserClick(user);
+                setSelectedUser(user.username);
+              }}
               key={i}
               className="h-20 w-full pl-3 pt-3 cursor-pointer justify-around hover:bg-amber-400 flex"
             >
-              <div className="flex space-x-3 w-full ">
+              <div className="flex  space-x-3 w-full ">
                 <div>
                   <img
                     src={
@@ -63,10 +98,19 @@ function AdminChatUsers({
                     alt="user"
                   />
                 </div>
-
-                <div className="space-y-2">
-                  <div className="font-Jost font-bold">{user.username}</div>
-                  <div>Message</div>
+                <div className=" flex w-57 justify-between">
+                  <div className="space-y-2">
+                    <div className="font-Jost font-bold">{user.username}</div>
+                    <div>{latest}</div>
+                  </div>
+                  <div className="w-1/8 space-y-2 text-center">
+                    <div className="text-[0.6rem] font-bold">4 mins</div>
+                    <div className="relative border-1 h-4 w-4 bg-red-600 rounded-full flex justify-center ml-2">
+                      <div className="absolute text-[0.5rem] font-bold text-white">
+                        {unreadCount}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

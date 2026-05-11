@@ -28,9 +28,9 @@ function ChatField() {
   const [openChatHead, setOpenChatHead] = useState(false);
   const [passUserInfo, setPassUserInfo] = useState([]);
   const [isGender, setIsGender] = useState("");
-
-  console.log(messageSent);
-  console.log(isGender);
+  const [selectedUser, setSelectedUser] = useState("");
+  const [allMessages, setAllMessages] = useState([]);
+  const [readCounts, setReadCounts] = useState({});
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,6 +46,7 @@ function ChatField() {
             chatText,
             passedUsername,
             passedAdminUsername,
+            selectedUser,
           }),
         });
         const data = await response.json();
@@ -59,7 +60,7 @@ function ChatField() {
         }
 
         const updatedMessages = await fetchMessages(0);
-        setMessageSent(updatedMessages.reverse());
+        setMessageSent(updatedMessages);
       }
       setChatText("");
     } catch (err) {
@@ -67,14 +68,56 @@ function ChatField() {
     }
   };
 
+  // const fetchMessages = async (skip = 0) => {
+  //   const response = await axios.get("http://localhost:5000/AskMe-Messages", {
+  //     params: {
+  //       username: selectedUser,
+  //       adminUsername: passedAdminUsername,
+  //       limit: 20,
+  //       skip: skip,
+  //     },
+  //   });
+
+  //   return response.data.data;
+  // };
+  useEffect(() => {
+    const fetchAllMessages = async () => {
+      if (!passedAdminUsername) return;
+
+      const response = await axios.get("http://localhost:5000/AskMe-Messages", {
+        params: {
+          adminUsername: passedAdminUsername,
+        },
+      });
+
+      setAllMessages(response.data.data);
+      setReadCounts(response.data.readCounts);
+    };
+
+    fetchAllMessages();
+  }, [passedAdminUsername]);
+
+  //FETCHED MESSAGES
+
   const fetchMessages = async (skip = 0) => {
+    let params = {
+      limit: 20,
+      skip,
+    };
+
+    // ADMIN VIEW
+    if (passedAdminUsername) {
+      params.adminUsername = passedAdminUsername;
+      params.selectedUser = selectedUser;
+    }
+
+    // NORMAL USER VIEW
+    else {
+      params.username = passedUsername;
+    }
+
     const response = await axios.get("http://localhost:5000/AskMe-Messages", {
-      params: {
-        username: passedUsername,
-        adminUsername: passedAdminUsername,
-        limit: 20,
-        skip: skip,
-      },
+      params,
     });
 
     return response.data.data;
@@ -82,12 +125,21 @@ function ChatField() {
 
   useEffect(() => {
     const loadMessages = async () => {
+      if (passedAdminUsername && !selectedUser) {
+        setMessageSent([]);
+        return;
+      }
+
       const data = await fetchMessages(0);
-      setMessageSent(data.reverse());
+      setMessageSent(data);
     };
 
     loadMessages();
-  }, [passedUsername, passedAdminUsername]);
+  }, [passedUsername, passedAdminUsername, selectedUser]);
+
+  //------>
+
+  //SCROLL ANIMATION
 
   const scrollToBottom = () => {
     const el = chatEndRef.current;
@@ -102,7 +154,30 @@ function ChatField() {
     scrollToBottom();
   }, [messageSent]);
 
+  //----->
+
   console.log(passedUsername);
+  console.log(messageSent);
+
+  //User count and updated message
+  // useEffect(() => {
+  //   const userMessages = messageSent.filter(
+  //     (msg) => msg.username === passedUsername,  //Filter the user
+  //   );
+
+  //   console.log(userMessages);
+  //   if (passedUsername || passedAdminUsername) {
+  //     if (userMessages.length > 0) {
+  //       setMessCount(userMessages.length);
+  //       setInitialMess(userMessages[userMessages.length - 1].text);
+  //     } else {
+  //       setMessCount(0);
+  //       setInitialMess("");
+  //     }
+  //   }
+  // }, [messageSent, passedUsername]);
+
+  // console.log(`Count: ${messCount}  Text: ${initialMess}`);
 
   return (
     <div className="fixed w-full h-full border-1">
@@ -165,18 +240,22 @@ function ChatField() {
       {passedAdminUsername && (
         <AdminChatHead
           setOpenChatHead={setOpenChatHead}
-          messageSent={messageSent}
+          messageSent={allMessages}
           passedUsername={passedUsername}
           passedAdminUsername={passedAdminUsername}
+          readCounts={readCounts}
         />
       )}
       {passedAdminUsername
         ? openChatHead && (
             <AdminChatUsers
               passedUsername={passedUsername}
-              messageSent={messageSent}
+              messageSent={allMessages}
               setPassUserInfo={setPassUserInfo}
               isGender={isGender}
+              setSelectedUser={setSelectedUser}
+              readCounts={readCounts}
+              setReadCounts={setReadCounts}
             />
           )
         : null}
