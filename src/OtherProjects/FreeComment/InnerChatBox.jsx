@@ -6,11 +6,8 @@ function InnerChatBox({
   passedAdminUsername,
   messageSent,
   chatEndRef,
-  passUserInfo,
   switchField,
 }) {
-  console.log(passUserInfo);
-
   return (
     <div
       className="absolute p-3 justify-between flex bottom-39 h-140 w-270 overflow-y-scroll"
@@ -18,19 +15,23 @@ function InnerChatBox({
     >
       {switchField === "AskMe" && (
         <div className="w-full box-border">
-          {messageSent.map((msg) => (
-            <ChatBubble
-              key={msg._id}
-              messageSent={msg}
-              isMine={
-                passedAdminUsername
-                  ? msg.role === "admin"
-                  : msg.username === passedUsername
-              }
-            />
-          ))}
+          {messageSent.map((msg) => {
+            return (
+              <ChatBubble
+                key={msg._id}
+                messageSent={msg}
+                firstMess={messageSent}
+                isMine={
+                  passedAdminUsername
+                    ? msg.role === "admin" || msg.role === "system"
+                    : msg.username === passedUsername
+                }
+              />
+            );
+          })}
         </div>
       )}
+
       {switchField === "Community" && (
         <div className="w-full box-border">
           {messageSent.map((msg) => {

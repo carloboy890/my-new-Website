@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import maleProfile from "../../assets/ProjectsLogos/OtherProjectsSVG/CommentAppWallpaper/maleProfile.svg";
 import femaleProfile from "../../assets/ProjectsLogos/OtherProjectsSVG/CommentAppWallpaper/femaleProfile.svg";
 
 function PickGender({ setToGender, setIsGender, passedUsername }) {
+  const [loading, setLoading] = useState(true);
+
   const handleGenderSelect = async (gender) => {
     setIsGender(gender);
     setToGender(false);
@@ -27,7 +29,6 @@ function PickGender({ setToGender, setIsGender, passedUsername }) {
         `http://localhost:5000/get-user?username=${passedUsername}`,
       );
       const data = await res.json();
-      //   setUserGender(data.user?.gender);
 
       if (data.user?.gender) {
         setIsGender(data.user.gender);
@@ -35,6 +36,7 @@ function PickGender({ setToGender, setIsGender, passedUsername }) {
       } else {
         setToGender(true); // show selection
       }
+      setLoading(false);
     };
 
     if (passedUsername) {

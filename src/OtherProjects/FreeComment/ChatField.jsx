@@ -36,6 +36,8 @@ function ChatField() {
     e.preventDefault();
 
     try {
+      // const firstLoad = await fetchMessages(0);
+
       if (switchField === "AskMe") {
         const response = await fetch("http://localhost:5000/AskMe-Messages", {
           method: "POST",
@@ -55,12 +57,14 @@ function ChatField() {
         if (data.code === "MESSAGE_FAIL") {
           setErrorMess(data.message);
         }
+
         if (data.code === "MESSAGE_SENT") {
           setMessageSucc(data.message);
         }
 
         const updatedMessages = await fetchMessages(0);
-        setMessageSent(updatedMessages);
+
+        setMessageSent(updatedMessages.data);
       }
       setChatText("");
     } catch (err) {
@@ -68,18 +72,6 @@ function ChatField() {
     }
   };
 
-  // const fetchMessages = async (skip = 0) => {
-  //   const response = await axios.get("http://localhost:5000/AskMe-Messages", {
-  //     params: {
-  //       username: selectedUser,
-  //       adminUsername: passedAdminUsername,
-  //       limit: 20,
-  //       skip: skip,
-  //     },
-  //   });
-
-  //   return response.data.data;
-  // };
   useEffect(() => {
     const fetchAllMessages = async () => {
       if (!passedAdminUsername) return;
@@ -95,7 +87,15 @@ function ChatField() {
     };
 
     fetchAllMessages();
+
+    // const interval = setInterval(() => {
+    //   fetchAllMessages();
+    // }, 3000);
+
+    // return () => clearInterval(interval);
   }, [passedAdminUsername]);
+
+  console.log(readCounts);
 
   //FETCHED MESSAGES
 
@@ -120,7 +120,7 @@ function ChatField() {
       params,
     });
 
-    return response.data.data;
+    return response.data;
   };
 
   useEffect(() => {
@@ -131,13 +131,21 @@ function ChatField() {
       }
 
       const data = await fetchMessages(0);
-      setMessageSent(data);
+
+      setMessageSent(data.data);
+
+      console.log(messageSent.length);
+
+      console.log(data);
     };
-
     loadMessages();
-  }, [passedUsername, passedAdminUsername, selectedUser]);
 
-  //------>
+    // const interval = setInterval(() => {
+    //   loadMessages();
+    // }, 3000);
+
+    // return () => clearInterval(interval);
+  }, [passedUsername, passedAdminUsername, selectedUser]);
 
   //SCROLL ANIMATION
 
@@ -156,31 +164,14 @@ function ChatField() {
 
   //----->
 
-  console.log(passedUsername);
-  console.log(messageSent);
-
-  //User count and updated message
-  // useEffect(() => {
-  //   const userMessages = messageSent.filter(
-  //     (msg) => msg.username === passedUsername,  //Filter the user
-  //   );
-
-  //   console.log(userMessages);
-  //   if (passedUsername || passedAdminUsername) {
-  //     if (userMessages.length > 0) {
-  //       setMessCount(userMessages.length);
-  //       setInitialMess(userMessages[userMessages.length - 1].text);
-  //     } else {
-  //       setMessCount(0);
-  //       setInitialMess("");
-  //     }
-  //   }
-  // }, [messageSent, passedUsername]);
-
-  // console.log(`Count: ${messCount}  Text: ${initialMess}`);
+  useEffect(() => {
+    console.log(passedUsername);
+    console.log(messageSent);
+  }, [messageSent, passedUsername]);
 
   return (
-    <div className="fixed w-full h-full border-1">
+    <div className="fixed w-full h-full">
+      <div className="absolute right-20 top-3">Log Out</div>
       {toGender ? (
         <PickGender
           setIsGender={setIsGender}

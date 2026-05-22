@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import femaleProfile from "../../assets/ProjectsLogos/OtherProjectsSVG/CommentAppWallpaper/femaleProfile.svg";
 import maleProfile from "../../assets/ProjectsLogos/OtherProjectsSVG/CommentAppWallpaper/maleProfile.svg";
 import axios from "axios";
 
 function AdminChatUsers({
-  passedUsername,
   messageSent,
   setPassUserInfo,
-  isGender,
   setSelectedUser,
   readCounts,
   setReadCounts,
 }) {
+  const [isCountTrue, setIsCountTrue] = useState("");
+
+  // SORTING
   const users = [
     ...new Map(
       messageSent
@@ -21,27 +22,53 @@ function AdminChatUsers({
           { username: msg.username, gender: msg.gender },
         ]),
     ).values(),
-  ];
+  ].sort((a, b) => {
+    const aMessages = messageSent.filter(
+      (msg) =>
+        msg.conversationId === [a.username, "admin8080"].sort().join("_"),
+    );
+
+    const bMessages = messageSent.filter(
+      (msg) =>
+        msg.conversationId === [b.username, "admin8080"].sort().join("_"),
+    );
+
+    const aLatest = aMessages[aMessages.length - 1]?.createdAt || 0;
+
+    const bLatest = bMessages[bMessages.length - 1]?.createdAt || 0;
+
+    return new Date(bLatest) - new Date(aLatest);
+  });
+
+  // END OF SORTING
 
   console.log(readCounts);
+
   async function handleUserClick(user) {
     const conversationId = [user.username, "admin8080"].sort().join("_");
 
     const conversation = messageSent.filter(
       (msg) => msg.conversationId === conversationId,
     );
+    const onlyUserMessages = conversation.filter(
+      (msg) => msg.username === user.username,
+    );
 
     setSelectedUser(user.username);
     setPassUserInfo(conversation);
 
+    const messageCount = onlyUserMessages.length;
+
     setReadCounts((prev) => ({
       ...prev,
-      [user.username]: conversation.length,
+      [user.username]: messageCount,
     }));
+
+    setIsCountTrue(false);
 
     await axios.put("http://localhost:5000/update-read-count", {
       username: user.username,
-      readCount: conversation.length,
+      readCount: messageCount,
     });
   }
 
@@ -52,11 +79,27 @@ function AdminChatUsers({
       (msg) => msg.conversationId === conversationId,
     );
 
-    console.log(userMessages);
+    const onlyUserMessages = userMessages.filter(
+      (msg) => msg.username === user.username,
+    );
+
+    // console.log(JSON.stringify(userMessages));
+    // if(userMessages[userMessages.length - 1] )
+
+    // console.log(`Only User Message: ${JSON.stringify(onlyUserMessages)}`);
+    // console.log(`User Messages: ${userMessages.length}`);
+    // const counts = onlyUserMessages.length - readCounts[user.username];
+    // console.log(`Counts: ${counts}`);
+    // const total = onlyUserMessages.length;
+    // const read = readCounts[user.username] || 0;
+
+    // const unreadCount = Math.max(0, total - read);
+    const count = onlyUserMessages.length > (readCounts[user.username] || 0);
 
     return {
-      count: userMessages.length,
+      count,
       latest: userMessages[userMessages.length - 1]?.text || "",
+      latestTime: userMessages[userMessages.length - 1]?.createdAt || null,
     };
   }
 
@@ -72,8 +115,16 @@ function AdminChatUsers({
       </div>
       <div className="">
         {users.map((user, i) => {
-          const { count, latest } = getUserData(user);
-          const unreadCount = count - (readCounts[user.username] || 0);
+          const { count, latest, latestTime } = getUserData(user);
+
+          function formatMessageTime(dateString) {
+            const date = new Date(dateString);
+
+            return date.toLocaleTimeString([], {
+              hour: "2-digit",
+              minute: "2-digit",
+            });
+          }
 
           return (
             <div
@@ -82,7 +133,7 @@ function AdminChatUsers({
                 setSelectedUser(user.username);
               }}
               key={i}
-              className="h-20 w-full pl-3 pt-3 cursor-pointer justify-around hover:bg-amber-400 flex"
+              className={`h-20 w-full pl-3 pt-3 cursor-pointer justify-around hover:bg-amber-400 flex`}
             >
               <div className="flex  space-x-3 w-full ">
                 <div>
@@ -101,15 +152,15 @@ function AdminChatUsers({
                 <div className=" flex w-57 justify-between">
                   <div className="space-y-2">
                     <div className="font-Jost font-bold">{user.username}</div>
-                    <div>{latest}</div>
+                    <div className="w-40 truncate">{latest}</div>
                   </div>
                   <div className="w-1/8 space-y-2 text-center">
-                    <div className="text-[0.6rem] font-bold">4 mins</div>
-                    <div className="relative border-1 h-4 w-4 bg-red-600 rounded-full flex justify-center ml-2">
-                      <div className="absolute text-[0.5rem] font-bold text-white">
-                        {unreadCount}
-                      </div>
+                    <div className="text-[0.6rem] font-bold">
+                      {latestTime ? formatMessageTime(latestTime) : ""}
                     </div>
+                    {count ? (
+                      <div className="relative border-1 h-2 w-2 bg-red-600 rounded-full flex justify-center ml-3"></div>
+                    ) : null}
                   </div>
                 </div>
               </div>

@@ -26,7 +26,6 @@ function AdminLoginInfo({
     setTimeout(() => {
       setStatus("success");
       setLogSuccess(success);
-      setStatus("loading");
     }, 2000);
 
     setTimeout(() => {
@@ -89,7 +88,7 @@ function AdminLoginInfo({
 
   return (
     <>
-      <div className="h-full relative z-10 flex flex-col items-center justify-center border-1">
+      <div className="h-full relative z-10 flex flex-col items-center justify-center">
         <form onSubmit={handleSubmit} className="flex flex-col items-center">
           {step === "loginAdmin" &&
             (status === "loggingIn" ? (

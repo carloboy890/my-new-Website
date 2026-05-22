@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import MessageBoxTheme from "../../assets/ProjectsLogos/OtherProjectsSVG/CommentAppWallpaper/MessageBoxTheme.svg";
 import MessageAlert from "../../assets/ProjectsLogos/OtherProjectsSVG/CommentAppWallpaper/MessageAlert.svg";
 
-function AdminChatHead({
-  setOpenChatHead,
-  messageSent,
-  passedUsername,
-  readCounts,
-}) {
+function AdminChatHead({ setOpenChatHead, messageSent, readCounts }) {
   const users = [
     ...new Set(
       messageSent
@@ -16,7 +11,7 @@ function AdminChatHead({
     ),
   ];
 
-  const unreadUsers = users.filter((username) => {
+  const textCount = users.reduce((total, username) => {
     const conversationId = [username, "admin8080"].sort().join("_");
 
     const userMessages = messageSent.filter(
@@ -25,19 +20,20 @@ function AdminChatHead({
 
     const totalUserMessages = userMessages.length;
 
-    const unreadCount = totalUserMessages - (readCounts[username] || 0);
+    const unreadCount = Math.max(
+      0,
+      totalUserMessages - (readCounts[username] || 0),
+    );
 
-    return unreadCount > 0;
-  });
-
-  const textCount = unreadUsers.length;
+    return total + unreadCount;
+  }, 0);
 
   return (
     <div
       onClick={() => setOpenChatHead((prev) => !prev)}
       className="fixed right-20 top-205 hover:scale-110 transition duration-300"
     >
-      <span className="font absolute text-[0.6rem] text-white top-8.5 left-35 z-10 font-Jost">
+      <span className="font absolute text-[0.5rem] text-white top-8.5 left-35.5 z-10 font-Jost">
         {textCount}
       </span>
 

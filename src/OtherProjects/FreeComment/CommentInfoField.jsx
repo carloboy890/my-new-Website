@@ -71,6 +71,7 @@ function CommentInfoField({
           setHideInfoField={setHideInfoField}
           switchField={switchField}
           setPassedAdminUsername={setPassedAdminUsername}
+          setToGender={setToGender}
         />
       )}
     </>

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import sadEmoji from "../../assets/ProjectsLogos/OtherProjectsSVG/CommentAppWallpaper/Emojis/sadEmoji.png";
 import happyEmoji from "../../assets/ProjectsLogos/OtherProjectsSVG/CommentAppWallpaper/Emojis/happyEmoji.png";
 import angryEmoji from "../../assets/ProjectsLogos/OtherProjectsSVG/CommentAppWallpaper/Emojis/angryEmoji.png";
@@ -18,9 +18,9 @@ import superAngryEmoji from "../../assets/ProjectsLogos/OtherProjectsSVG/Comment
 import thinkingEmoji from "../../assets/ProjectsLogos/OtherProjectsSVG/CommentAppWallpaper/Emojis/thinkingEmoji.png";
 import { UsernameContext } from "./FreeCommentApp";
 
-function ChatBubble({ isMine, messageSent }) {
-  const { passedUsername, passedAdminUsername, switchField } =
-    useContext(UsernameContext);
+function ChatBubble({ isMine, messageSent, firstMess }) {
+  // const { passedUsername, passedAdminUsername, switchField } =
+  //   useContext(UsernameContext);
 
   const emojiMap = {
     ":sad:": sadEmoji,
@@ -59,6 +59,15 @@ function ChatBubble({ isMine, messageSent }) {
     });
   }
 
+  function formatMessageTime(dateString) {
+    const date = new Date(dateString);
+
+    return date.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  }
+
   return (
     <div className={`flex ${isMine ? "justify-end" : "justify-start"} w-full`}>
       <div
@@ -68,7 +77,9 @@ function ChatBubble({ isMine, messageSent }) {
         <div className="flex items-center space-x-1.5">
           <span className="text-sm font-semibold">{messageSent.username}</span>
 
-          <span className="text-sm">11:46</span>
+          <span className="text-sm">
+            {formatMessageTime(messageSent.createdAt)}
+          </span>
         </div>
 
         <p className="text-sm py-2.5 break-words whitespace-pre-wrap">

@@ -127,15 +127,3 @@ function LoginInfo({
 }
 
 export default LoginInfo;
-
-// 1. db.users.find({age: {$gt: 21}}, {name: 1, age: 1, _id: 0})
-// 2. db.users.find({city: "Manila"}, {name: 1, course: 1, _id: 0})
-// 3. db.users.find({age: {$gt : 20, $lt : 30}}, {name: 1, age: 1, city: 1, _id: 0})
-// 4. db.users.find({course: {$in : [IT, CS]}}, {name: 1, course : 1, _id: 0})
-// 5. db.users.find({city: {$ne : "Manila"}}, {name: 1, city: 1, _id: 0})
-// 6. db.users.find({salary : {$gt : 20,000}}, {name: 1, salary: 1, _id: 0})
-// 7. db.users.find({age : {$gte : 21}, city: "Manila"}, {name: 1, age: 1, _id: 0})
-// 8. db.users.find({name : {$regex : "C"}}, {name: 1, _id: 0})
-// 9. db.users.find({age : {$gt : 20, $lt : 25}, course: {$ne : "Engineering"}}, {name: 1, age: 1, course: 1, _id: 0})
-
-// db.users.find({salary: {$gte : 20000, $lte: 30000}, city: { $in: ["Manila", "Cebu"]}, name: {$regex: "^J"}}, {name: 1, salary: 1, _id: 0})
